@@ -1,3 +1,23 @@
-*{
-    background: rgb(230, 173, 229);
-}
+@import 
+ "base/typography",
+ "base/animations";
+
+@import 
+ "components/button",
+ "components/card",
+ "components/navigation";
+
+@import 
+ "layout/header",
+ "layout/footer",
+ "layout/grid";
+
+@import 
+ "pages/home",
+ "pages/restaurants";
+
+@import 
+ "utils/variables",
+ "utils/mixins",
+ "utils/functions",
+ "utils/helpers";
