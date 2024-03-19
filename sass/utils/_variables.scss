@@ -1,11 +1,57 @@
-//font
-$title-font:"Shrikhand";
-$text-font:"Roboto";
+//fonts
+$fontFamily: (
+  title:"Shrikhand",
+  text:"Roboto",
+);
+
+$fontSize: (
+  'xx-large':40px,
+  'x-large': 28px,
+  'large': 24px,
+  'mediumSize': 19px,
+  'x-mediumSize':18px,
+  'xx-mediumSize':17px,
+  'normal':16px,
+  'small': 15px,
+  'x-small':14px,
+  // 'xx-small': ,
+);
+
+$fontWeight: (
+  'Weight':1000,
+  'Black':900,
+  'ExtraBold':800,
+  'Bold':700,
+  'SemiBold':600,
+  'Medium':500,
+  'Regular':400,
+  'Light':300,
+  'ExtraLight':200,
+  'Thin':100,
+);
 
 // color
-$primary-color:#9356DC;
-$secondary-color:#FF79DA;
-$tertiary-color:#99E2D0;
+$color: (
+  primary-purple:#9356DC,
+  secondary-pink:#FF79DA,
+  tertiary-green:#99E2D0,
+
+  darkBlue: #003A68,
+  blue: #89C8FA,
+  darkGreen: #008766,
+  lightPink:#fcc0ce,
+
+  lightGrey:#F6F6F6,//header+hero+"choice"
+  grey:#EAEAEA,//location into header
+  white:#FFFFFF,//fonctionnement
+  lightBlack:#353535,//footer
+
+   lightWhite:#F3F3F3,
+   shadow:#d5d5d5,
+   icon:#7E7E7E,
+   black:#000,
+);
+
 
 //breakpoints (responsive)
 $breakpoints: (
