@@ -6,3 +6,10 @@ $text-font:"Roboto";
 $primary-color:#9356DC;
 $secondary-color:#FF79DA;
 $tertiary-color:#99E2D0;
+
+//breakpoints (responsive)
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
