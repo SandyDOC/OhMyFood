@@ -1,56 +1,76 @@
 //fonts
-$fontFamily: (
-  title:"Shrikhand",
-  text:"Roboto",
-);
 
-$fontSize: (
-  'xx-large':40px,
-  'x-large': 28px,
-  'large': 24px,
-  'mediumSize': 19px,
-  'x-mediumSize':18px,
-  'xx-mediumSize':17px,
-  'normal':16px,
-  'small': 15px,
-  'x-small':14px,
+// fontFamily
+  $fontTitle:"Shrikhand",sans-serif;
+  $fontText:"Roboto",sans-serif;
+
+// fontSize
+  $size-xx-large:40px;
+  $size-x-large: 28px;
+  $size-large: 24px;
+  $size-mediumSize: 19px;
+  $size-x-mediumSize:18px;
+  $size-xx-mediumSize:17px;
+  $size-normal:16px;
+  $size-small: 15px;
+  $size-x-small:14px;
   // 'xx-small': ,
-);
 
-$fontWeight: (
-  'Weight':1000,
-  'Black':900,
-  'ExtraBold':800,
-  'Bold':700,
-  'SemiBold':600,
-  'Medium':500,
-  'Regular':400,
-  'Light':300,
-  'ExtraLight':200,
-  'Thin':100,
-);
+
+// fontWeight
+  $fontWeight:1000;
+  $fontBlack:900;
+  $fontExtraBold:800;
+  $fontBold:700;
+  $fontSemiBold:600;
+  $fontMedium:500;
+  $fontRegular:400;
+  $fontLight:300;
+  $fontExtraLight:200;
+  $fontThin:100;
 
 // color
-$color: (
-  primary-purple:#9356DC,
-  secondary-pink:#FF79DA,
-  tertiary-green:#99E2D0,
+  $primary-purple:#9356DC;
+  $secondary-pink:#FF79DA;
+  $tertiary-green:#99E2D0;
 
-  darkBlue: #003A68,
-  blue: #89C8FA,
-  darkGreen: #008766,
-  lightPink:#fcc0ce,
+  $darkBlue: #003A68;
+  $blue: #89C8FA;
+  $darkGreen: #008766;
+  $lightPink:#fcc0ce;
 
-  lightGrey:#F6F6F6,//header+hero+"choice"
-  grey:#EAEAEA,//location into header
-  white:#FFFFFF,//fonctionnement
-  lightBlack:#353535,//footer
+  $lightGrey:#F6F6F6;//header+hero+"choice"
+  $grey:#EAEAEA;//location into header
+  $white:#FFFFFF;//fonctionnement
+  $lightBlack:#353535;//footer
 
-   lightWhite:#F3F3F3,
-   shadow:#d5d5d5,
-   icon:#7E7E7E,
-   black:#000,
-);
+   $lightWhite:#F3F3F3;
+   $shadow:#d5d5d5;
+   $icon:#7E7E7E;
+   $black:#000;
+
+// $color: (
+//   primary-purple:#9356DC,
+//   secondary-pink:#FF79DA,
+//   tertiary-green:#99E2D0,
+
+//   darkBlue: #003A68,
+//   blue: #89C8FA,
+//   darkGreen: #008766,
+//   lightPink:#fcc0ce,
+
+//   lightGrey:#F6F6F6,
+//   grey:#EAEAEA,
+//   white:#FFFFFF,
+//   lightBlack:#353535,
+
+//    lightWhite:#F3F3F3,
+//    shadow:#d5d5d5,
+//    icon:#7E7E7E,
+//    black:#000,
+// );
+
+// $gradient-color:linear-gradient($color(primary-purple, secondary-pink));
 
 
 //breakpoints (responsive)

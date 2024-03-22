@@ -1,0 +1,32 @@
+
+
+//restaurants
+.restaurants {
+    padding-top: 3vw;
+    padding-left: 3vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+
+    // padding-left: 5vw;
+    // padding-right: 5vw;
+    // display: flex;
+    // flex-direction: column;
+    // border: 3px solid #e61111;
+}
+// .retaurants h2{
+//     padding-left: 5vw;
+//     font-size: 24px;
+//     font-weight: 700;
+//     color: #000000;
+//     border: 3px solid #2611e6;
+// }
+.resto-cards{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 4vw;
+    // width: 95%;
+    // border: 3px solid #044717;
+}
