@@ -1,4 +1,10 @@
 @import 
+"utils/variables",
+"utils/mixins",
+"utils/functions",
+"utils/helpers";
+
+@import 
  "base/typography",
  "base/animations";
 
@@ -17,11 +23,11 @@
  "pages/home",
  "pages/restaurants";
 
-@import 
- "utils/variables",
- "utils/mixins",
- "utils/functions",
- "utils/helpers";
+// @import 
+//  "utils/variables",
+//  "utils/mixins",
+//  "utils/functions",
+//  "utils/helpers";
 
 
 

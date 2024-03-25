@@ -11,13 +11,13 @@
     display: flex;
     // justify-content: center;
     // margin: 0px;
-    // font :$fontSize(normal),$fontWeight('Regular')!default;
+   //  font :$size-normal,$fontRegular; !default
  }
 
  .main-container {
     min-width: 320px;
     box-sizing: border-box;
-    background:#F6F6F6;
+    background:$lightGrey;
  } //!default
 
  a {
