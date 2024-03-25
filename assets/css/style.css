@@ -4,10 +4,15 @@
 
 body {
   display: flex;
+  justify-content: center;
+  margin: 0px;
 }
 
 .main-container {
+  width: 100%;
   min-width: 320px;
+  padding-top: 0;
+  padding-right: 3.472vw;
   box-sizing: border-box;
   background: #F6F6F6;
 }
@@ -16,6 +21,11 @@ a {
   color: inherit;
   text-decoration: none;
   list-style: none;
+}
+
+.section-title {
+  margin: 0px;
+  font-size: 24px;
 }
 
 .card {
@@ -86,12 +96,13 @@ header .logo-header {
   align-items: center;
   gap: 12vw;
   padding-bottom: 3vw;
+  background: #FFFFFF;
 }
 header .fa-arrow-left {
   width: 30px;
   height: 30px;
   padding: 17px 0 0 17px;
-  color: color(lightBlack);
+  color: #353535;
 }
 header .logo {
   width: 162px;
@@ -132,26 +143,28 @@ footer .link .illustration {
 }
 
 .location {
-  justify-content: center;
-  display: flex;
   height: 50px;
   background: #EAEAEA;
+  display: flex;
+  justify-content: center;
   align-items: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-
 .location i {
   color: #353535;
   width: 12px;
   height: 16px;
 }
-
 .location .search {
   background: inherit;
   font-size: 16px;
   font-weight: 500;
   border: none;
   padding-left: 3vw;
+}
+.location input::placeholder {
+  color: #353535;
+  opacity: 1;
 }
 
 .hero {
@@ -161,14 +174,12 @@ footer .link .illustration {
   box-sizing: border-box;
   padding-bottom: 10vw;
 }
-
 .hero h1 {
   font-weight: 700;
   font-size: 24px;
   color: #000;
   margin-bottom: 2vw;
 }
-
 .hero p {
   font-weight: 300;
   font-size: 18px;
@@ -176,7 +187,6 @@ footer .link .illustration {
   margin-top: 0px;
   padding-bottom: 5vw;
 }
-
 .hero a.button {
   border-radius: 25px;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
@@ -195,7 +205,6 @@ footer .link .illustration {
   padding-bottom: 5vw;
   background: #FFFFFF;
 }
-
 .fonctionnement h2 {
   font-size: 24px;
   font-weight: 700;
@@ -210,8 +219,7 @@ footer .link .illustration {
   align-items: center;
   gap: 3vw;
 }
-
-.step {
+.step-group .step {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -222,29 +230,25 @@ footer .link .illustration {
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
   background: #F6F6F6;
 }
-
-.number span {
+.step-group .number span {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: #FFFFFF;
   background: #9356DC;
 }
-
-.step i.icon {
+.step-group i.icon {
   display: flex;
   align-items: center;
   color: #7E7E7E;
 }
-
-.step i.fa-store {
+.step-group i.fa-store {
   color: #9356DC;
 }
-
-.step p {
+.step-group p {
   font-size: 16px;
   font-weight: 500;
 }

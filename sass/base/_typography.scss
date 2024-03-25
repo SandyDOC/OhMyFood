@@ -1,27 +1,32 @@
 // Typography rules 
 
-// @use "../utils" as *;
-
 *{
-    // background: white;
-    font-family: "Roboto", sans-serif;
+    font-family: $fontText;
  }
 
  body {
     display: flex;
-    // justify-content: center;
-    // margin: 0px;
-   //  font :$size-normal,$fontRegular; !default
+    justify-content: center;
+    margin: 0px;
  }
 
  .main-container {
+    width: 100%;
     min-width: 320px;
+   //  padding: 0 3.472vw;
+    padding-top: 0;
+    padding-right: 3.472vw;
     box-sizing: border-box;
     background:$lightGrey;
- } //!default
+ } 
 
  a {
     color: inherit;
     text-decoration: none;
     list-style: none; 
+ }
+
+ .section-title {
+   margin: 0px;
+   font-size:$size-large;
  }

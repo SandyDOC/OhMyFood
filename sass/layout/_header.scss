@@ -8,12 +8,13 @@ header {
      align-items: center;
      gap: 12vw;
      padding-bottom: 3vw;
+     background: $white;
     }
     .fa-arrow-left {
      width: 30px;
      height: 30px;
      padding: 17px 0 0 17px;
-     color: color(lightBlack);
+     color: $lightBlack;
     }
     .logo {
      width:162px;

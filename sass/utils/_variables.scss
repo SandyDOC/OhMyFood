@@ -17,16 +17,13 @@
   // 'xx-small': ,
 
 // fontWeight
-  $fontWeight:1000;
-  $fontBlack:900;
-  $fontExtraBold:800;
+
   $fontBold:700;
-  $fontSemiBold:600;
+  // $fontSemiBold:600;
   $fontMedium:500;
   $fontRegular:400;
   $fontLight:300;
-  $fontExtraLight:200;
-  $fontThin:100;
+
 
 // color
   $primary-purple:#9356DC;
@@ -35,7 +32,7 @@
 
   $darkBlue: #003A68;
   $blue: #89C8FA;
-  $darkGreen: #008766;
+  $green-font: #008766;
   $lightPink:#fcc0ce;
 
   $lightGrey:#F6F6F6;
@@ -69,7 +66,7 @@
 //    black:#000,
 // );
 
-// $gradient-color:linear-gradient($color(primary-purple, secondary-pink));
+$gradient-color:linear-gradient($secondary-pink, $primary-purple);
 
 
 //breakpoints (responsive)
