@@ -1,12 +1,25 @@
 
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+// @mixin center {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 
 @mixin columnDirection {
     display: flex;
     flex-direction: column;
 }
 
+@mixin typography($fontF, $fontS, $fontW, $lineH, $colorT){
+    font-family: map-get(fonts.$fontFamily, $fontF);
+    font-size: map-get(fonts.$fontSize, $fontS);
+    font-weight: map-get(fonts.$fontWeight, $fontW);
+    
+    line-height: map-get(fonts.$lineHeight, $lineH);
+    
+    @if (fonts.$fontFamily == "Shrikhand"){
+        font-style: italic;
+    }
+
+    color: map-get(colors.$color, $colorT);
+}
