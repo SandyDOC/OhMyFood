@@ -22,9 +22,40 @@
 //     color: #000000;
 //     border: 3px solid #2611e6;
 // }
+.restaurant-name {
+    font-family: $fontTitle;
+    font-weight: $fontRegular;
+    font-size: $size-x-large;
+    font-style: italic;
+}
+
+.restaurant-menu {
+    .type-menu {
+        font-weight: $fontLight;
+        font-size: $size-normal;
+        color: $black;
+    }
+}
+.content-menu{
+    .title-menu {
+        font-weight: $fontMedium;
+        font-size: $size-x-mediumSize;
+        color: $black;
+    }
+    .txt-menu {
+        font-weight: $fontLight;
+        font-size: $size-small;
+        color: $black;
+    }
+    .price-menu {
+        font-family: $fontBold;
+        font-size: $size-small;
+        color: $lightBlack;
+    }
+}
+
 .resto-cards{
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column;
     box-sizing: border-box;
     gap: 4vw;
     // width: 95%;

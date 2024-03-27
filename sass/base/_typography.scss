@@ -5,8 +5,9 @@
  }
 
  body {
-    display: flex;
-    justify-content: center;
+   //  display: flex;
+   //  align-items: center;
+   //  justify-content: center;
     margin: 0px;
  }
 
@@ -14,8 +15,8 @@
     width: 100%;
     min-width: 320px;
    //  padding: 0 3.472vw;
-    padding-top: 0;
-    padding-right: 3.472vw;
+   //  padding-top: 0;
+   //  padding-right: 3.472vw;
     box-sizing: border-box;
     background:$lightGrey;
  } 
@@ -29,4 +30,13 @@
  .section-title {
    margin: 0px;
    font-size:$size-large;
+   font-weight: $fontBold;
+   color: $black;
  }
+
+ .text {
+   font-size: $fontMedium;
+   font-size: $size-normal;
+ }
+
+ 

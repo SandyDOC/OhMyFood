@@ -1,15 +1,16 @@
-
-
 //location
 .location {
-    height:50px;
+    // height:50px;
     background: $grey;
     @extend %flex-center;
+    padding: 2vw;
+    // aspect-ratio: 1/0.06;
+    width: 100%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
       i {
         color: $lightBlack;
-        width: 12px;
-        height: 16px;
+        // width: 12px;
+        // height: 16px;
       }
       .search {
         background: inherit;
@@ -24,34 +25,22 @@
       }
 }
     
-  //hero
+//hero
 .hero {
+    text-align: center;
     padding-left: 4vw;
     padding-right: 4vw;
-    text-align: center;
-    box-sizing: border-box;
+    padding-top: 4vw;
     padding-bottom: 10vw;
+    // aspect-ratio: 1/0.3;
+    box-sizing: border-box;
+    // @extend %flex-column;
     h1 {
-        font-weight: 700;
-        font-size: 24px;
-        color: $black;
         margin-bottom: 2vw;
     }
     p {
-        font-weight: 300;
-        font-size: 18px;
-        color: $lightBlack;
         margin-top: 0px;
         padding-bottom: 5vw;
-    }
-    a.button {
-        border-radius:25px ;
-        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
-        font-size: $size-normal;
-        font-weight: $fontMedium;
-        color: $white;
-        padding: 1vw;
-        background: $gradient-color;
     }
   }
   
@@ -59,7 +48,7 @@
 .fonctionnement{
     padding-left: 1vw;
     padding-right: 1vw;
-    @include columnDirection;
+    @extend %flex-column;
     padding-bottom: 5vw;
     background:$white;
     h2 {
@@ -72,9 +61,10 @@
 }
 
 .step-group {
-    @include columnDirection;
+    @extend %flex-column;
     align-items: center;
     gap: 3vw;
+    position: relative;
     .step {
         display: flex;
         flex-direction: row;
@@ -93,6 +83,7 @@
         @extend %flex-center;
         color: $white;
         background: $primary-purple;
+        position: absolute;
     }
     i.icon {
         display: flex;

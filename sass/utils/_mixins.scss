@@ -1,15 +1,4 @@
 
-// @mixin center {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-@mixin columnDirection {
-    display: flex;
-    flex-direction: column;
-}
-
 @mixin typography($fontF, $fontS, $fontW, $lineH, $colorT){
     font-family: map-get(fonts.$fontFamily, $fontF);
     font-size: map-get(fonts.$fontSize, $fontS);
@@ -23,3 +12,14 @@
 
     color: map-get(colors.$color, $colorT);
 }
+
+// @mixin borderRadius($topLeft, $topRight, $bottomRight, $bottomLeft){
+//     border-radius:($topLeft, $topRight, $bottomRight, $bottomLeft);
+// }
+
+// filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));button
+// filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));card
+// filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));badge
+// filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));instructions
+
+

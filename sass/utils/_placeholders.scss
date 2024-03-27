@@ -1,8 +1,14 @@
-// Class & placeholders helpers : %btn exple
+// Class & placeholders helpers 
 
 %flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 

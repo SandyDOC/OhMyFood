@@ -5,25 +5,21 @@
   $fontText:"Roboto",sans-serif;
 
 // fontSize
-  $size-xx-large:40px;
+  // $size-xx-large:40px;
   $size-x-large: 28px;
   $size-large: 24px;
-  $size-mediumSize: 19px;
+  // $size-mediumSize: 19px;
   $size-x-mediumSize:18px;
   $size-xx-mediumSize:17px;
   $size-normal:16px;
   $size-small: 15px;
-  $size-x-small:14px;
-  // 'xx-small': ,
+  // $size-x-small:14px;
 
 // fontWeight
-
   $fontBold:700;
-  // $fontSemiBold:600;
   $fontMedium:500;
   $fontRegular:400;
   $fontLight:300;
-
 
 // color
   $primary-purple:#9356DC;
@@ -33,7 +29,7 @@
   $darkBlue: #003A68;
   $blue: #89C8FA;
   $green-font: #008766;
-  $lightPink:#fcc0ce;
+  // $lightPink:#fcc0ce;
 
   $lightGrey:#F6F6F6;
   $grey:#EAEAEA;
@@ -43,7 +39,10 @@
    $lightWhite:#F3F3F3;
    $shadow:#d5d5d5;
    $icon:#7E7E7E;
+   $darkTitleRestaurant:#101010;
    $black:#000;
+
+   $gradient-color:linear-gradient($secondary-pink, $primary-purple);
 
 // $color: (
 //   primary-purple:#9356DC,
@@ -65,9 +64,6 @@
 //    icon:#7E7E7E,
 //    black:#000,
 // );
-
-$gradient-color:linear-gradient($secondary-pink, $primary-purple);
-
 
 //breakpoints (responsive)
 $breakpoints: (
