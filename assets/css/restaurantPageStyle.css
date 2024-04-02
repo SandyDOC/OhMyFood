@@ -1,10 +1,10 @@
-.step-group .number span, .location, .header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.step-group, .fonctionnement, .header {
+.resto-cards, .header {
   display: flex;
   flex-direction: column;
 }
@@ -162,93 +162,45 @@ footer .link .illustration {
   gap: 2vw;
 }
 
-.location {
-  background: #EAEAEA;
-  padding: 2vw;
-  width: 100%;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.location i {
-  color: #353535;
-}
-.location .search {
-  background: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  border: none;
+.restaurants {
+  padding-top: 3vw;
   padding-left: 3vw;
-}
-.location input::placeholder {
-  color: #353535;
-  opacity: 1;
-}
-
-.hero {
-  text-align: center;
-  padding-left: 4vw;
-  padding-right: 4vw;
-  padding-top: 4vw;
-  padding-bottom: 10vw;
   box-sizing: border-box;
-}
-.hero h1 {
-  margin-bottom: 2vw;
-}
-.hero p {
-  margin-top: 0px;
-  padding-bottom: 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
 }
 
-.fonctionnement {
-  padding-left: 1vw;
-  padding-right: 1vw;
-  padding-bottom: 5vw;
-  background: #FFFFFF;
-}
-.fonctionnement h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #000;
-  padding-left: 5vw;
-  padding-bottom: 1vw;
+.restaurant-name {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  font-style: italic;
 }
 
-.step-group {
-  align-items: center;
-  gap: 3vw;
-}
-.step-group .step {
-  display: flex;
-  justify-content: flex-start;
-  border-radius: 20px;
-  width: 335px;
-  height: 72.38px;
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
-  background: #F6F6F6;
-}
-.step-group .number span {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  color: #FFFFFF;
-  background: #9356DC;
-  position: absolute;
-  left: -12px;
-  top: 23px;
-}
-.step-group .indications {
-  display: flex;
-  align-items: center;
-  gap: 4vw;
-  padding-left: 10vw;
-}
-.step-group i.icon {
-  color: #7E7E7E;
-}
-.step-group i.fa-store {
-  color: #9356DC;
-}
-.step-group p {
+.restaurant-menu .type-menu {
+  font-weight: 300;
   font-size: 16px;
+  color: #000;
+}
+
+.content-menu .title-menu {
   font-weight: 500;
+  font-size: 18px;
+  color: #000;
+}
+.content-menu .txt-menu {
+  font-weight: 300;
+  font-size: 15px;
+  color: #000;
+}
+.content-menu .price-menu {
+  font-family: 700;
+  font-size: 15px;
+  color: #353535;
+}
+
+.resto-cards {
+  box-sizing: border-box;
+  gap: 4vw;
 }
