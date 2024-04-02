@@ -1,20 +1,28 @@
 .header {
-    padding: 2vw;
+    // width: 100%;
+    @extend %flex-column, %flex-center;
+    // text-align: center;
     .logo-header {
         margin: 0px;
-        text-align: center;
-        display: flex;
         gap: 22vw;
         background-color: $white;
-        // padding: 0.02vw;
         // aspect-ratio: 1/0.1;
         }
     .fa-arrow-left {
         padding: 5vw 4vw;
         }
     .logo {
-        width: 33%;
-        object-fit: contain;
+        height:36px ;
+        width: 197px;
+        // color: #101010;
+        // color: $primary-purple;
+        // filter: opacity(0.4) drop-shadow(0 0 0 #de1313)
+        // opacity: 1;
+        // font-family: $fontTitle;
+        // font-weight: $fontRegular;
+        // font-size: 30px;
+        // font-style: italic;
+        // object-fit: contain;
         }
 }
 // .header {

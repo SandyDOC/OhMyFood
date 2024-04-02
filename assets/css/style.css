@@ -1,19 +1,16 @@
-.step-group .number span, .location {
+.step-group .number span, .location, .header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.resto-cards, .step-group, .fonctionnement {
+.resto-cards, .step-group, .fonctionnement, .header {
   display: flex;
   flex-direction: column;
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-}
-
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0px;
 }
 
@@ -118,13 +115,8 @@ a.button {
   color: #ff79da;
 }
 
-.header {
-  padding: 2vw;
-}
 .header .logo-header {
   margin: 0px;
-  text-align: center;
-  display: flex;
   gap: 22vw;
   background-color: #FFFFFF;
 }
@@ -132,8 +124,8 @@ a.button {
   padding: 5vw 4vw;
 }
 .header .logo {
-  width: 33%;
-  object-fit: contain;
+  height: 36px;
+  width: 197px;
 }
 
 footer {
@@ -223,7 +215,7 @@ footer .link .illustration {
 }
 .step-group .step {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   border-radius: 20px;
   width: 335px;
   height: 72.38px;
@@ -243,7 +235,8 @@ footer .link .illustration {
 .step-group .indications {
   display: flex;
   align-items: center;
-  gap: 8vw;
+  gap: 4vw;
+  padding-left: 10vw;
 }
 .step-group i.icon {
   color: #7E7E7E;

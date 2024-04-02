@@ -1,13 +1,14 @@
 // Typography rules 
 
 *{
-    font-family: $fontText;
+   //  font-family: $fontText;
  }
 
  body {
    //  display: flex;
    //  align-items: center;
    //  justify-content: center;
+   font-family: $fontText;
     margin: 0px;
  }
 
@@ -25,6 +26,10 @@
     color: inherit;
     text-decoration: none;
     list-style: none; 
+ }
+
+ span, a {
+  display: block;
  }
 
  .section-title {
