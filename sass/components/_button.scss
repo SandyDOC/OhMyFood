@@ -2,6 +2,7 @@ a.button {
     @extend %flex-center;
     border-radius:25px ;
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    // box-shadow:0px 4px 10px rgba(0, 0, 0, 0.25) ;
     font-size: $size-normal;
     font-weight: $fontMedium;
     color: $white;
@@ -11,4 +12,9 @@ a.button {
     width: 70%;
     text-align: center;
     background: $gradient-color;
+    &:hover {
+        background: lighten($primary-purple, 10);
+        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.75));
+        // box-shadow: darken($black, 10);
+    }
 }

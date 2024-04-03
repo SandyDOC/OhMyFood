@@ -63,6 +63,10 @@ a.button {
   text-align: center;
   background: linear-gradient(#FF79DA, #9356DC);
 }
+a.button:hover {
+  background: #ae80e5;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.75));
+}
 
 .resto-cards {
   gap: 3vw;
