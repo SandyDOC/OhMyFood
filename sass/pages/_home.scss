@@ -1,9 +1,9 @@
 //location
 .location {
-    // height:50px;
+    height:50px;
     background: $grey;
     @extend %flex-center;
-    padding: 2vw;
+    // padding: 2vw;
     // aspect-ratio: 1/0.06;
     width: 100%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -32,9 +32,10 @@
     padding-right: 4vw;
     padding-top: 4vw;
     padding-bottom: 10vw;
+    @extend %flex-column;
+    align-items: center;
     // aspect-ratio: 1/0.3;
     box-sizing: border-box;
-    // @extend %flex-column;
     h1 {
         margin-bottom: 2vw;
     }
@@ -45,32 +46,40 @@
   }
   
 //fonctionnement
-.fonctionnement{
-    padding-left: 1vw;
-    padding-right: 1vw;
+.fonctionnement,
+.restaurants {
+    // padding-left: 1vw;
+    // padding-right: 1vw;
     @extend %flex-column;
-    padding-bottom: 5vw;
-    background:$white;
-    h2 {
-        font-size: $size-large;
-        font-weight: $fontBold;
-        color: $black;
-        padding-left: 5vw;
-        padding-bottom: 1vw;
-    }
+    padding-top: 2vw;
+    padding-bottom: 7vw;
 }
+
+.fonctionnement {
+     background:$white;
+     h2 {
+         font-size: $size-large;
+         font-weight: $fontBold;
+         color: $black;
+         // padding-left: 5vw;
+         // padding-bottom: 1vw;
+     }
+ }   
+
 
 .step-group {
     @extend %flex-column;
     align-items: center;
-    gap: 3vw;
+    gap: 6vw;
     .step {
         display: flex;
         // flex-direction: row;
         // align-items: center;
         justify-content: flex-start;
         border-radius: 20px;
-        width: 335px;
+        
+        width: 87%;
+        // width: 340px;
         height: 72.38px;
         filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
         background: $lightGrey;
@@ -105,5 +114,9 @@
         font-weight: $fontMedium;
     }
 }
+
+// .restaurants {
+//     background: $lightGrey;
+// }
 
 

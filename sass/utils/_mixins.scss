@@ -17,6 +17,10 @@
 //     border-radius:($topLeft, $topRight, $bottomRight, $bottomLeft);
 // }
 
+// @mixin title-shadow($color){
+//     text-shadow: .55rem .55rem $color;
+// }
+
 // filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));button
 // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));card
 // filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));badge

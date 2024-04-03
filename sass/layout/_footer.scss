@@ -1,4 +1,4 @@
-footer {
+.footer-home {
     background: #353535;
     color:white;
     display: flex;
@@ -8,7 +8,8 @@ footer {
     padding: 22px 25px 22px 25px;
 
     font-size: 16px;
-    font-weight: 500;    
+    font-weight: 500;
+     
 }
 
 footer .logo img{
@@ -29,3 +30,12 @@ footer .link .illustration {
     display: flex;
     gap: 2vw;
 }
+
+.footer {
+    @extend .footer-home;
+    position: absolute;
+    bottom: -75vh;
+    width: 100%;  
+
+}
+

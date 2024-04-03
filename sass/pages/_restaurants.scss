@@ -1,6 +1,23 @@
 
-
+.header {
+    .banner img{
+        height: 275px;
+        object-fit: cover;
+        width: 100%;
+        position: relative;
+    }
+}
 //restaurants
+.restaurant-presentation {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    // left: -12px;
+    top: 27vh;
+    z-index: 1;
+    
+    width100%: 27px;
+}
 .restaurants {
     padding-top: 3vw;
     padding-left: 3vw;
@@ -34,6 +51,9 @@
         font-weight: $fontLight;
         font-size: $size-normal;
         color: $black;
+        text-transform: uppercase;
+        border-bottom: 2px solid $tertiary-green;
+        width: 13%;
     }
 }
 .content-menu{

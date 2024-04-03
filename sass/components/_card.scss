@@ -1,7 +1,14 @@
 
-
+.resto-cards {
+    @extend %flex-column;
+    gap: 3vw;
+    align-items: center;
+    a {
+        width: 90%;
+    }
+}
 .card {
-    width: 95%;
+    width: 100%;
     // width: 340px;
     // height: 251px;
     border-radius: 15px;

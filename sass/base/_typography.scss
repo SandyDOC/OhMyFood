@@ -37,11 +37,19 @@
    font-size:$size-large;
    font-weight: $fontBold;
    color: $black;
+   padding: 3vw;
  }
 
  .text {
    font-size: $fontMedium;
    font-size: $size-normal;
+ }
+
+ .hero,
+ .indications,
+ .restaurants,
+ .restaurant-presentation {
+  background: $lightGrey;
  }
 
  
