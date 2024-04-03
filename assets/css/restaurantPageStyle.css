@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.header, .header-home, .resto-cards {
+.content-menu, article, .restaurant-presentation, .header, .header-home, .resto-cards {
   display: flex;
   flex-direction: column;
 }
@@ -183,7 +183,7 @@ footer .link .illustration {
 
 .footer {
   position: absolute;
-  bottom: -75vh;
+  bottom: -116vh;
   width: 100%;
 }
 
@@ -195,12 +195,14 @@ footer .link .illustration {
 }
 
 .restaurant-presentation {
-  margin: 0px;
-  padding: 0px;
+  padding: 3vw;
   position: absolute;
   top: 27vh;
   z-index: 1;
-  border-radius: 27px;
+  border-radius: 30px;
+  padding-bottom: 3vw;
+  align-items: center;
+  gap: 5vw;
 }
 
 .restaurants {
@@ -225,8 +227,21 @@ footer .link .illustration {
   color: #000;
   text-transform: uppercase;
   border-bottom: 2px solid #99E2D0;
+  width: 13%;
 }
 
+article {
+  gap: 4vw;
+  padding-top: 3vw;
+}
+
+.content-menu {
+  border: 3px solid black;
+  border-radius: 20px;
+  width: 96%;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+  background: #FFFFFF;
+}
 .content-menu .title-menu {
   font-weight: 500;
   font-size: 18px;
