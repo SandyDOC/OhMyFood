@@ -51,6 +51,14 @@
     font-style: italic;
 }
 
+.restaurant-name,
+.content-menu {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0.556vw 0 0.556vw 1.042vw;
+}
+
 .restaurant-menu {
     .type-menu {
         font-weight: $fontLight;

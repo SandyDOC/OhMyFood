@@ -1,10 +1,6 @@
 // Typography rules 
 
-
  body {
-   //  display: flex;
-   //  align-items: center;
-   //  justify-content: center;
    font-family: $fontText;
     margin: 0px;
  }
@@ -12,11 +8,7 @@
  .main-container {
     width: 100%;
     min-width: 320px;
-   //  padding: 0 3.472vw;
-   //  padding-top: 0;
-   //  padding-right: 3.472vw;
     box-sizing: border-box;
-    background:$lightGrey;
  } 
 
  a {
@@ -31,13 +23,16 @@
 
  .section-title {
    margin: 0px;
-   font-size:$size-large;
-   font-weight: $fontBold;
-   color: $black;
+   @include typography(large, bold, black); 
+  //  font-size:$size-large;
+  //  font-weight: $fontBold;
+  //  color: $black;
    padding: 3vw;
  }
 
  .text {
+   @include typography(roboto, large, bold, black); 
+
    font-size: $fontMedium;
    font-size: $size-normal;
  }

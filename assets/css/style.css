@@ -19,7 +19,6 @@ body {
   width: 100%;
   min-width: 320px;
   box-sizing: border-box;
-  background: #F6F6F6;
 }
 
 a {
@@ -65,8 +64,8 @@ a.button {
   background: linear-gradient(#FF79DA, #9356DC);
 }
 a.button:hover {
-  background: #ae80e5;
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.75));
+  opacity: 0.88;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.45));
 }
 
 .resto-cards {
