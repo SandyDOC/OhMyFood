@@ -11,8 +11,10 @@
     font-weight:  $fontMedium;
      
     .logo img{
+        // width: 33%;
         width: 137.58px;
-        height: 27px;
+        object-fit: contain;
+        // height: 27px;
         padding-top: 3vw;
         filter: invert(100%);
     }

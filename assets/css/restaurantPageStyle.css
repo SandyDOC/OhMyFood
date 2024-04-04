@@ -69,7 +69,7 @@ a.button:hover {
 }
 
 .resto-cards {
-  gap: 3vw;
+  gap: 6vw;
   align-items: center;
   box-sizing: border-box;
 }
@@ -81,6 +81,7 @@ a.button:hover {
   width: 100%;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   background: #FFFFFF;
+  border-radius: 15px;
 }
 .card .card-view {
   position: relative;
@@ -146,7 +147,7 @@ a.button:hover {
   padding: 5vw 4vw;
 }
 .header .logo, .header-home .logo {
-  width: 162px;
+  width: 50.625vw;
   padding-top: 3vw;
   padding-bottom: 2vw;
   object-fit: contain;
@@ -163,7 +164,7 @@ a.button:hover {
 }
 .footer-home .logo img, .footer .logo img {
   width: 137.58px;
-  height: 27px;
+  object-fit: contain;
   padding-top: 3vw;
   filter: invert(100%);
 }
@@ -193,8 +194,8 @@ a.button:hover {
   height: 70px;
   width: 100%;
   background-color: #F6F6F6;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
   left: 0;
 }
 .header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
@@ -205,7 +206,7 @@ a.button:hover {
 }
 
 .restaurant-presentation {
-  margin-top: -2vh;
+  margin-top: -5.063vw;
 }
 .restaurant-presentation .restaurants {
   padding-top: 3vw;
