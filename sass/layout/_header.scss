@@ -1,10 +1,6 @@
 .header {
     @extend %flex-column;
-    // align-items: center;
-    // justify-content: center;
-    // aspect-ratio: 1/0.2;
     margin: 0px;
-    // gap: 22vw;
     background-color: $white;
 
     .logo-header {
@@ -14,19 +10,9 @@
         padding: 5vw 4vw;
     }
     .logo {
-        // max-height:100% ;
         width: 162px;
         padding-top: 3vw;
         padding-bottom: 2vw;
-        // padding: 20px 0px 12px 0px;
-        // color: #101010;
-        // color: $primary-purple;
-        // filter: opacity(0.4) drop-shadow(0 0 0 #de1313)
-        // opacity: 1;
-        // font-family: $fontTitle;
-        // font-weight: $fontRegular;
-        // font-size: 30px;
-        // font-style: italic;
         object-fit: contain;
         }
 }

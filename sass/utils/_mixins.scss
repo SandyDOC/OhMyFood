@@ -1,17 +1,17 @@
 
-@mixin typography($fontF, $fontS, $fontW, $lineH, $colorT){
-    font-family: map-get(fonts.$fontFamily, $fontF);
-    font-size: map-get(fonts.$fontSize, $fontS);
-    font-weight: map-get(fonts.$fontWeight, $fontW);
+// @mixin typography($fontF, $fontS, $fontW, $lineH, $colorT){
+//     font-family: map-get(fonts.$fontFamily, $fontF);
+//     font-size: map-get(fonts.$fontSize, $fontS);
+//     font-weight: map-get(fonts.$fontWeight, $fontW);
     
-    line-height: map-get(fonts.$lineHeight, $lineH);
+//     line-height: map-get(fonts.$lineHeight, $lineH);
     
-    @if (fonts.$fontFamily == "Shrikhand"){
-        font-style: italic;
-    }
+//     @if (fonts.$fontFamily == "Shrikhand"){
+//         font-style: italic;
+//     }
 
-    color: map-get(colors.$color, $colorT);
-}
+//     color: map-get(colors.$color, $colorT);
+// }
 
 // @mixin borderRadius($topLeft, $topRight, $bottomRight, $bottomLeft){
 //     border-radius:($topLeft, $topRight, $bottomRight, $bottomLeft);

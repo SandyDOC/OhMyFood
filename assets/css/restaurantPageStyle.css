@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.content-menu, article, .restaurant-presentation, .header, .header-home, .resto-cards {
+.content-menu, article, .restaurant-presentation .restaurants, .footer-home .link, .footer .link, .footer-home, .footer, .header, .header-home, .resto-cards {
   display: flex;
   flex-direction: column;
 }
@@ -26,7 +26,8 @@ a {
   list-style: none;
 }
 
-span, a {
+span,
+a {
   display: block;
 }
 
@@ -52,7 +53,8 @@ span, a {
 
 a.button {
   border-radius: 25px;
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(#FF79DA, #9356DC);
   font-size: 16px;
   font-weight: 500;
   color: #FFFFFF;
@@ -60,16 +62,16 @@ a.button {
   height: 50px;
   width: 70%;
   text-align: center;
-  background: linear-gradient(#FF79DA, #9356DC);
 }
 a.button:hover {
   opacity: 0.88;
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.45));
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
 }
 
 .resto-cards {
   gap: 3vw;
   align-items: center;
+  box-sizing: border-box;
 }
 .resto-cards a {
   width: 90%;
@@ -77,16 +79,13 @@ a.button:hover {
 
 .card {
   width: 100%;
-  border-radius: 15px;
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   background: #FFFFFF;
 }
-
-.card-view {
+.card .card-view {
   position: relative;
 }
-
-.card .card-view img {
+.card img {
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -98,7 +97,7 @@ a.button:hover {
   border-radius: 2px;
   width: 80px;
   height: 29px;
-  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   color: #008766;
   font-size: 14px;
   font-weight: 500;
@@ -117,13 +116,12 @@ a.button:hover {
   gap: 15vw;
 }
 
-.card-txt h3 {
+.card-txt .card-title {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 0;
 }
-
-.card-txt p {
+.card-txt .card-subtitle {
   font-size: 17px;
   font-weight: 300;
   margin-top: 1vw;
@@ -156,80 +154,61 @@ a.button:hover {
 
 .footer-home, .footer {
   background: #353535;
-  color: white;
-  display: flex;
-  flex-direction: column;
+  color: #FFFFFF;
   justify-content: space-around;
   gap: 4vw;
   padding: 22px 25px 22px 25px;
   font-size: 16px;
   font-weight: 500;
 }
-
-footer .logo img {
+.footer-home .logo img, .footer .logo img {
   width: 137.58px;
   height: 27px;
   padding-top: 3vw;
   filter: invert(100%);
 }
-
-footer .link {
-  display: flex;
-  flex-direction: column;
+.footer-home .link, .footer .link {
   gap: 2vw;
 }
-
-footer .link .illustration {
+.footer-home .illustration, .footer .illustration {
   display: flex;
   gap: 2vw;
 }
 
 .footer {
-  position: absolute;
-  bottom: -116vh;
   width: 100%;
 }
 
+.header .banner, .header-home .banner {
+  position: relative;
+}
 .header .banner img, .header-home .banner img {
   height: 275px;
   object-fit: cover;
   width: 100%;
-  position: relative;
 }
-
-.restaurant-presentation {
-  padding: 3vw;
+.header .banner .restaurant-name, .header-home .banner .restaurant-name {
   position: absolute;
-  top: 27vh;
-  z-index: 1;
-  border-radius: 30px;
-  padding-bottom: 3vw;
-  align-items: center;
-  gap: 5vw;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background-color: #F6F6F6;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  left: 0;
 }
-
-.restaurants {
-  padding-top: 3vw;
-  padding-left: 3vw;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 2vw;
-}
-
-.restaurant-name {
+.header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 400;
   font-size: 28px;
   font-style: italic;
 }
 
-.restaurant-name,
-.content-menu {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0.556vw 0 0.556vw 1.042vw;
+.restaurant-presentation .restaurants {
+  padding-top: 3vw;
+  padding-left: 3vw;
+  box-sizing: border-box;
+  gap: 2vw;
 }
 
 .restaurant-menu .type-menu {
@@ -267,9 +246,4 @@ article {
   font-family: 700;
   font-size: 15px;
   color: #353535;
-}
-
-.resto-cards {
-  box-sizing: border-box;
-  gap: 4vw;
 }

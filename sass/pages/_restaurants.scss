@@ -1,63 +1,58 @@
 
 .header {
-    .banner img{
-        height: 275px;
-        object-fit: cover;
-        width: 100%;
+    .banner {
         position: relative;
+        img {
+            height: 275px;
+            object-fit: cover;
+            width: 100%;
+            
+        }
+        .restaurant-name {
+            position: absolute;
+            bottom: 0;
+            height: 70px;
+            width: 100%;
+            background-color:$lightGrey;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            left: 0; 
+            // right: 0;
+            h1 {
+                font-family: $fontTitle;
+                font-weight: $fontRegular;
+                font-size: $size-x-large;
+                font-style: italic;
+            }
+        }
+
     }
 }
 //restaurants
 .restaurant-presentation {
-    // margin: 0px;
-    padding: 3vw;
-    position: absolute;
-    // left: -12px;
-    top: 27vh;
-    z-index: 1;
-    border-radius: 30px;
-    padding-bottom: 3vw;
-    @extend %flex-column;
-    align-items: center;
-    gap: 5vw;
+    // padding: 3vw;
+    // padding-bottom: 3vw;
+
+    .restaurants {
+        padding-top: 3vw;
+        padding-left: 3vw;
     
-    // width:100%;
-}
-.restaurants {
-    padding-top: 3vw;
-    padding-left: 3vw;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 2vw;
+        box-sizing: border-box;
+        @extend %flex-column;
+        gap: 2vw;
+    }
+   
 
-    // padding-left: 5vw;
-    // padding-right: 5vw;
-    // display: flex;
-    // flex-direction: column;
-    // border: 3px solid #e61111;
+    
 }
-// .retaurants h2{
-//     padding-left: 5vw;
-//     font-size: 24px;
-//     font-weight: 700;
-//     color: #000000;
-//     border: 3px solid #2611e6;
+
+// .restaurant-name,
+// .content-menu {
+//     text-overflow: ellipsis;
+//     overflow: hidden;
+//     white-space: nowrap;
+//     margin: 0.556vw 0 0.556vw 1.042vw;
 // }
-.restaurant-name {
-    font-family: $fontTitle;
-    font-weight: $fontRegular;
-    font-size: $size-x-large;
-    font-style: italic;
-}
-
-.restaurant-name,
-.content-menu {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0.556vw 0 0.556vw 1.042vw;
-}
 
 .restaurant-menu {
     .type-menu {
@@ -69,6 +64,7 @@
         width: 13%;
     }
 }
+
 article {
     @extend %flex-column;
     gap: 4vw;
@@ -76,21 +72,13 @@ article {
 }
 .content-menu {
     border: 3px solid black;
+
     border-radius: 20px;
-        @extend %flex-column;
-        // gap: 6vw;
-            // display: flex;
-            // flex-direction: row;
-            // align-items: center;
-            // justify-content: flex-start;
-            
-            width: 96%;
-            // width: 340px;
-            // height: 69px;
-            filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
-            background: $white;
+     @extend %flex-column;
+    width: 96%;
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+    background: $white;
        
-    
     .title-menu {
         font-weight: $fontMedium;
         font-size: $size-x-mediumSize;
@@ -108,10 +96,8 @@ article {
     }
 }
 
-.resto-cards{
-    @extend %flex-column;
-    box-sizing: border-box;
-    gap: 4vw;
-    // width: 95%;
-    // border: 3px solid #044717;
-}
+// .resto-cards{
+//     @extend %flex-column;
+//     box-sizing: border-box;
+//     gap: 4vw;
+// }

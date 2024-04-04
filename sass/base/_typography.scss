@@ -1,47 +1,45 @@
 // Typography rules 
 
- body {
-   font-family: $fontText;
-    margin: 0px;
- }
+body {
+  font-family: $fontText;
+  margin: 0px;
+}
 
- .main-container {
-    width: 100%;
-    min-width: 320px;
-    box-sizing: border-box;
- } 
+.main-container {
+  width: 100%;
+  min-width: 320px;
+  box-sizing: border-box;
+}
 
- a {
-    color: inherit;
-    text-decoration: none;
-    list-style: none; 
- }
+a {
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+}
 
- span, a {
+span,
+a {
   display: block;
- }
+}
 
- .section-title {
-   margin: 0px;
-   @include typography(large, bold, black); 
-  //  font-size:$size-large;
-  //  font-weight: $fontBold;
-  //  color: $black;
-   padding: 3vw;
- }
+.section-title {
+  margin: 0px;
+  //  @include typography(large, bold, black); 
+  font-size: $size-large;
+  font-weight: $fontBold;
+  color: $black;
+  padding: 3vw;
+}
 
- .text {
-   @include typography(roboto, large, bold, black); 
+.text {
+  //  @include typography(roboto, large, bold, black); 
+  font-size: $fontMedium;
+  font-size: $size-normal;
+}
 
-   font-size: $fontMedium;
-   font-size: $size-normal;
- }
-
- .hero,
- .indications,
- .restaurants,
- .restaurant-presentation {
+.hero,
+.indications,
+.restaurants,
+.restaurant-presentation {
   background: $lightGrey;
- }
-
- 
+}

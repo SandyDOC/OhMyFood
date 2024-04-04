@@ -3,14 +3,10 @@
     height:50px;
     background: $grey;
     @extend %flex-center;
-    // padding: 2vw;
-    // aspect-ratio: 1/0.06;
     width: 100%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
       i {
         color: $lightBlack;
-        // width: 12px;
-        // height: 16px;
       }
       .search {
         background: inherit;
@@ -28,14 +24,16 @@
 //hero
 .hero {
     text-align: center;
+
     padding-left: 4vw;
     padding-right: 4vw;
     padding-top: 4vw;
     padding-bottom: 10vw;
+
     @extend %flex-column;
     align-items: center;
-    // aspect-ratio: 1/0.3;
     box-sizing: border-box;
+
     h1 {
         margin-bottom: 2vw;
     }
@@ -48,8 +46,6 @@
 //fonctionnement
 .fonctionnement,
 .restaurants {
-    // padding-left: 1vw;
-    // padding-right: 1vw;
     @extend %flex-column;
     padding-top: 2vw;
     padding-bottom: 7vw;
@@ -57,12 +53,11 @@
 
 .fonctionnement {
      background:$white;
+
      h2 {
          font-size: $size-large;
          font-weight: $fontBold;
          color: $black;
-         // padding-left: 5vw;
-         // padding-bottom: 1vw;
      }
  }   
 
@@ -73,13 +68,10 @@
     gap: 6vw;
     .step {
         display: flex;
-        // flex-direction: row;
-        // align-items: center;
         justify-content: flex-start;
         border-radius: 20px;
         
         width: 87%;
-        // width: 340px;
         height: 72.38px;
         filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
         background: $lightGrey;
@@ -88,9 +80,11 @@
         width: 24px;
         height: 24px;
         border-radius: 50%;
+
         @extend %flex-center;
         color: $white;
         background: $primary-purple;
+
         position: absolute;
         left: -12px;
         top: 23px;
@@ -102,8 +96,6 @@
         padding-left: 10vw;
     }
     i.icon {
-        // display: flex;
-        // align-items: center;
         color:$icon ;
     }
     i.fa-store {
@@ -114,9 +106,5 @@
         font-weight: $fontMedium;
     }
 }
-
-// .restaurants {
-//     background: $lightGrey;
-// }
 
 
