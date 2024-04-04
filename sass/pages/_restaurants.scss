@@ -1,23 +1,29 @@
-
-.header {
+header {
     .banner {
         position: relative;
+
         img {
             height: 275px;
             object-fit: cover;
             width: 100%;
-            
+
         }
+
         .restaurant-name {
             position: absolute;
             bottom: 0;
             height: 70px;
             width: 100%;
-            background-color:$lightGrey;
-            border-top-left-radius: 45px;
-            border-top-right-radius: 45px;
-            left: 0; 
-            // right: 0;
+
+            background-color: $lightGrey;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            // left: 0; 
             h1 {
                 font-family: $fontTitle;
                 font-weight: $fontRegular;
@@ -28,32 +34,26 @@
 
     }
 }
+
 //restaurants
 .restaurant-presentation {
     margin-top: -5.063vw;
+    padding-bottom: 5vw;
 
     .restaurants {
         padding-top: 3vw;
         padding-left: 3vw;
-    
+
         box-sizing: border-box;
         @extend %flex-column;
         gap: 2vw;
     }
-   
-
-    
 }
 
-// .restaurant-name,
-// .content-menu {
-//     text-overflow: ellipsis;
-//     overflow: hidden;
-//     white-space: nowrap;
-//     margin: 0.556vw 0 0.556vw 1.042vw;
-// }
-
 .restaurant-menu {
+    @extend %flex-column;
+    padding-bottom: 4vw;
+
     .type-menu {
         font-weight: $fontLight;
         font-size: $size-normal;
@@ -61,42 +61,73 @@
         text-transform: uppercase;
         border-bottom: 2px solid $tertiary-green;
         width: 13%;
+
+        height: 2.5vh;
+        margin-left: 3vw;
+    }
+
+    .card-menu {
+        @extend %flex-column, %flex-center;
+        gap: 3vw;
     }
 }
 
 article {
-    @extend %flex-column;
-    gap: 4vw;
-    padding-top: 3vw;
-}
-.content-menu {
-    border: 3px solid black;
+    display: flex;
+    justify-content: space-between;
 
-    border-radius: 20px;
-     @extend %flex-column;
-    width: 96%;
-    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+    width: 85%;
+    height: 69px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+
     background: $white;
-       
-    .title-menu {
-        font-weight: $fontMedium;
-        font-size: $size-x-mediumSize;
-        color: $black;
-    }
-    .txt-menu {
-        font-weight: $fontLight;
-        font-size: $size-small;
-        color: $black;
-    }
-    .price-menu {
-        font-family: $fontBold;
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+    // border: 3px solid black;
+    border-radius: 20px;
+
+    span.price-menu {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 3vw;
+        // @extend %flex-center;
+        font-weight: $fontBold;
         font-size: $size-small;
         color: $lightBlack;
     }
 }
 
-// .resto-cards{
-//     @extend %flex-column;
-//     box-sizing: border-box;
-//     gap: 4vw;
-// }
+.content-menu {
+    // border-radius: 20px;
+    @extend %flex-column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    text-overflow: ellipsis;
+    overflow: scroll;
+    // overflow: hidden;
+    // white-space: inherit;
+    white-space: nowrap;
+    width: inherit;
+    // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+    // background: $white;
+
+    .title-menu {
+        font-weight: $fontMedium;
+        font-size: $size-x-mediumSize;
+        color: $black;
+        margin: 0px;
+    }
+
+    .txt-menu {
+        font-weight: $fontLight;
+        font-size: $size-small;
+        color: $black;
+        margin: 0px;
+    }
+}
+
+.btn-cmd {
+    @extend %flex-center;
+}

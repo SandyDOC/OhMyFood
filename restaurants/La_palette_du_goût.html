@@ -18,136 +18,148 @@
 </head>
 
 <body>
+  <div class="main-container">
 
-  <!-- header -->
-  <header class="header">
-    <div class="logo-header">
-      <div class="goBack">
+    <!-- header -->
+    <header>
+      <div class="logo-header">
+        <!-- <div class="goBack"> -->
         <a href="../index.html">
           <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
         </a>
+        <!-- </div> -->
+        <img class="logo" src="..\assets\images\logo\ohmyfood.png" alt="logo Oh my food" />
       </div>
-      <img class="logo" src="..\assets\images\logo\ohmyfood.png" alt="logo Oh my food" />
-    </div>
-    <div class="banner">
-      <img src="..\assets\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-        alt="Image d'un plat savoureux servi à table">
-      <div class="restaurant-name">
-        <h1>La palette du goût</h1>
-        <div class="like">
-          <i class="fa-regular fa-heart" aria-hidden="true"></i>
+      <div class="banner">
+        <img src="..\assets\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt="Image d'un plat savoureux servi à table">
+        <div class="restaurant-name">
+          <h1>La palette du goût</h1>
+          <div class="like">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- main -->
-  <main>
-    <div class="restaurant-presentation">
+    <!-- main -->
+    <main>
+      <div class="restaurant-presentation">
 
-      <!-- Entrées -->
-      <section class="restaurant-menu">
-        <h2 class="type-menu">Entrées</h2>
+        <!-- Entrées -->
+        <section class="restaurant-menu">
+          <h2 class="type-menu">Entrées</h2>
 
-        <article>
-          <div class="content-menu">
-            <h3 class="title-menu">Fricassée d'escargots</p>
-              <p class="txt-menu">Au piment d'Espelette</p>
+          <div class="card-menu">
+            <article>
+              <div class="content-menu">
+                <h3 class="title-menu">Fricassée d'escargots</h3>
+                <p class="txt-menu">Au piment d'Espelette</p>
+              </div>
+              <span class="price-menu">25€</span>
+            </article>
+            <article>
+              <div class="content-menu">
+                <h3 class="title-menu">Œuf au plat</h3>
+                <p class="txt-menu">Assaisonné à la truffe sur lit de caviar</p>
+              </div>
+              <span class="price-menu">20€</span>
+            </article>
+            <article>
+              <div class="content-menu">
+                <h3 class="title-menu">Foie gras de canard mi-cuit</h3>
+                <p class="txt-menu">Et ses copeaux de truffe noire</p>
+              </div>
+              <span class="price-menu">35€</span>
+            </article>
           </div>
-          <span class="price-menu">25€</span>
-        </article>
-        <article>
-          <div class="content-menu">
-            <h3 class="title-menu">Œuf au plat</p>
-              <p class="txt-menu">Assaisonné à la truffe sur lit de caviar</p>
-          </div>
-          <span class="price-menu">20€</span>
-        </article>
-        <article>
-          <div class="content-menu">
-            <h3 class="title-menu">Foie gras de canard mi-cuit</p>
-              <p class="txt-menu">Et ses copeaux de truffe noire</p>
-          </div>
-          <span class="price-menu">35€</span>
-        </article>
-      </section>
+        </section>
 
-      <!-- Plats -->
-      <section class="restaurant-menu">
-        <h2 class="type-menu">Plats</h2>
+        <!-- Plats -->
+        <section class="restaurant-menu">
+          <h2 class="type-menu">Plats</h2>
 
-        <article>
-          <div class="content-menu">
-            <h3 class="title-menu">Filet de bœuf aux herbes</p>
-              <p class="txt-menu"> Accompagné de sa ribambelle de légumes</p>
+          <div class="card-menu">
+            <article>
+              <div class="content-menu">
+                <h3 class="title-menu">Filet de bœuf aux herbes</h3>
+                <p class="txt-menu"> Accompagné de sa ribambelle de légumes</p>
+              </div>
+              <span class="price-menu">40€</span>
+            </article>
+            <article>
+              <div class="content-menu">
+                <h3 class="title-menu">Parmentier de queue de bœuf</h3>
+                <p class="txt-menu">Accompagné de sa ribambelle de légumes</p>
+              </div>
+              <span class="price-menu">40€</span>
+            </article>
+            <article>
+              <div class="content-menu">
+                <h3 class="title-menu">Filet de turbot</h3>
+                <p class="txt-menu">Aux agrumes</p>
+              </div>
+              <span class="price-menu">44€</span>
+            </article>
           </div>
-          <span class="price-menu">40€</span>
-        </article>
-        <article>
-          <div class="content-menu">
-            <h3 class="title-menu">Parmentier de queue de bœuf</p>
-              <p class="txt-menu">Accompagné de sa ribambelle de légumes</p>
-          </div>
-          <span class="price-menu">40€</span>
-        </article>
-        <article>
-          <div class="content-menu">
-            <h3 class="title-menu">Filet de turbot</p>
-              <p class="txt-menu">Aux agrumes</p>
-          </div>
-          <span class="price-menu">44€</span>
-        </article>
+        </section>
 
         <!-- Desserts -->
         <section class="restaurant-menu">
           <h2 class="type-menu">Desserts</h2>
 
-          <article>
-            <div class="content-menu">
-              <h3 class="title-menu">Paris-Brest</p>
+          <div class="card-menu">
+            <article>
+              <div class="content-menu">
+                <h3 class="title-menu">Paris-Brest</h3>
                 <p class="txt-menu">Revisité</p>
-            </div>
-            <span class="price-menu">18€</span>
-          </article>
-          <article>
-            <div class="content-menu">
-              <h3 class="title-menu">Macaron au chocolat d'exception</p>
+              </div>
+              <span class="price-menu">18€</span>
+            </article>
+            <article>
+              <div class="content-menu">
+                <h3 class="title-menu">Macaron au chocolat d'exception</h3>
                 <p class="txt-menu">Et glace à la vanille de Madagascar</p>
-            </div>
-            <span class="price-menu">22€</span>
-          </article>
-          <article>
-            <div class="content-menu">
-              <h3 class="title-menu">Mousse au chocolat</p>
+              </div>
+              <span class="price-menu">22€</span>
+            </article>
+            <article>
+              <div class="content-menu">
+                <h3 class="title-menu">Mousse au chocolat</h3>
                 <p class="txt-menu">Au piment d'Espelette et à la truffe noire</p>
-            </div>
-            <span class="price-menu">23€</span>
-          </article>
+              </div>
+              <span class="price-menu">23€</span>
+            </article>
+          </div>
         </section>
 
-        <a href="#" class="button">Commander</a>
-    </div>
-  </main>
+        <div class="btn-cmd">
+          <a href="#" class="button">Commander</a>
+        </div>
 
-  <!-- footer -->
-  <footer class="footer">
-    <div class="logo">
-      <img src="../assets/images/logo/ohmyfood.png" alt="logo Oh my food" />
-    </div>
-    <div class="link">
-      <div class="illustration">
-        <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-        <a href="#">Proposer un restaurant</a>
       </div>
-      <div class="illustration">
-        <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
-        <a href="#">Devenir partenaire</a>
-      </div>
-      <a href="#">Mentions légales</a>
-      <a href="mailto:contact@ohmyfood.com">Contact</a>
-    </div>
-  </footer>
+    </main>
 
+    <!-- footer -->
+    <footer>
+      <div class="logo">
+        <img src="../assets/images/logo/ohmyfood.png" alt="logo Oh my food" />
+      </div>
+      <div class="link">
+        <div class="illustration">
+          <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+          <a href="#">Proposer un restaurant</a>
+        </div>
+        <div class="illustration">
+          <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
+          <a href="#">Devenir partenaire</a>
+        </div>
+        <a href="#">Mentions légales</a>
+        <a href="mailto:contact@ohmyfood.com">Contact</a>
+      </div>
+    </footer>
+
+  </div>
 </body>
 
 </html>

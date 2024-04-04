@@ -25,10 +25,16 @@
     .illustration {
         display: flex;
         gap: 2vw;
+        i {
+            height: 20px;
+            width: 22px;
+            object-fit: contain
+        }
     }
+
 }
 
-.footer {
+footer {
     @extend .footer-home;
   width: 100%;
 }
