@@ -47,12 +47,18 @@ a {
   background: #F6F6F6;
 }
 
-@keyframes spin {
+@keyframes animationFade {
   0% {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-5%);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateX(0);
+    transform: translateY(1%);
   }
 }
 .button, .btn-home {

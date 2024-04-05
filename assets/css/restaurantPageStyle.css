@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.content-menu, .restaurant-menu .card-menu, .restaurant-menu, .restaurant-presentation .restaurants, .footer-home .link, footer .link, .footer-home, footer, header, .header-home, .resto-cards {
+.restaurant-menu .card-menu, .restaurant-menu, .restaurant-presentation .restaurants, .footer-home .link, footer .link, .footer-home, footer, header, .header-home, .resto-cards {
   display: flex;
   flex-direction: column;
 }
@@ -46,12 +46,18 @@ a {
   background: #F6F6F6;
 }
 
-@keyframes spin {
+@keyframes animationFade {
   0% {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-5%);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateX(0);
+    transform: translateY(1%);
   }
 }
 .button, .btn-home {
@@ -266,15 +272,70 @@ header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
 .restaurant-menu {
   padding-bottom: 4vw;
 }
+.restaurant-menu:nth-child(2) h2 {
+  animation-delay: 1.3s;
+}
+.restaurant-menu:nth-child(2) .card-menu > :nth-child(1) {
+  animation-delay: 1.4s;
+}
+.restaurant-menu:nth-child(2) .card-menu > :nth-child(2) {
+  animation-delay: 1.5s;
+}
+.restaurant-menu:nth-child(2) .card-menu > :nth-child(3) {
+  animation-delay: 1.6s;
+}
+.restaurant-menu:nth-child(2) .card-menu > :nth-child(4) {
+  animation-delay: 1.7s;
+}
+.restaurant-menu:nth-child(3) h2 {
+  animation-delay: 1.8s;
+}
+.restaurant-menu:nth-child(3) .card-menu > :nth-child(1) {
+  animation-delay: 1.9s;
+}
+.restaurant-menu:nth-child(3) .card-menu > :nth-child(2) {
+  animation-delay: 2s;
+}
+.restaurant-menu:nth-child(3) .card-menu > :nth-child(3) {
+  animation-delay: 2.1s;
+}
+.restaurant-menu:nth-child(3) .card-menu > :nth-child(4) {
+  animation-delay: 2.2s;
+}
+.restaurant-menu:nth-child(4) h2 {
+  animation-delay: 2.3s;
+}
+.restaurant-menu:nth-child(4) .card-menu > :nth-child(1) {
+  animation-delay: 2.4s;
+}
+.restaurant-menu:nth-child(4) .card-menu > :nth-child(2) {
+  animation-delay: 2.5s;
+}
+.restaurant-menu:nth-child(4) .card-menu > :nth-child(3) {
+  animation-delay: 2.6s;
+}
+.restaurant-menu:nth-child(4) .card-menu > :nth-child(4) {
+  animation-delay: 2.7s;
+}
 .restaurant-menu .type-menu {
   font-weight: 300;
   font-size: 16px;
   color: #000;
   text-transform: uppercase;
-  border-bottom: 3px solid #99E2D0;
   width: 23px;
-  height: 3.5vh;
   margin-left: 3vw;
+  position: relative;
+  height: 27px;
+  animation: animationFade 0.3s backwards;
+}
+.restaurant-menu .type-menu::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
 }
 .restaurant-menu .card-menu {
   gap: 3vw;
@@ -283,13 +344,18 @@ header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
 article {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+  animation: animationFade 0.3s backwards;
   width: 85%;
   height: 69px;
   padding-left: 4vw;
   padding-right: 4vw;
   background: #FFFFFF;
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
-  border-radius: 20px;
+  border-radius: 15px;
 }
 article span.price-menu {
   display: flex;
@@ -301,22 +367,48 @@ article span.price-menu {
   color: #353535;
 }
 
-.content-menu {
-  justify-content: space-evenly;
-  align-items: flex-start;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .content-menu .title-menu {
   font-weight: 500;
   font-size: 18px;
   color: #000;
   margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .content-menu .txt-menu {
   font-weight: 300;
   font-size: 15px;
   color: #000;
   margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content-menu .price-menu {
+  align-self: flex-end;
+}
+.content-menu::after {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  right: -15px;
+  top: -13.5px;
+  height: calc(100% + 27px);
+  width: 0px;
+  background: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: width 600ms ease, border-bottom-right-radius 100ms ease, color 500ms;
+}
+.content-menu:hover::after {
+  width: 59px;
+  color: white;
 }

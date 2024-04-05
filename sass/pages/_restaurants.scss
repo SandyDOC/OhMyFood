@@ -57,28 +57,51 @@ header {
     @extend %flex-column;
     padding-bottom: 4vw;
 
+    @include cardsMenuAnimation;
+
     .type-menu {
         font-weight: $fontLight;
         font-size: $size-normal;
         color: $black;
         text-transform: uppercase;
-        border-bottom: 3px solid $tertiary-green;
+        // border-bottom: 3px solid $tertiary-green;
         width: 23px;
 
-        height: 3.5vh;
+        // height: 3.5vh;
         margin-left: 3vw;
+
+        position: relative;
+        height: 27px;
+        animation: animationFade 0.3s backwards;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #99E2D0;
+        }
+
     }
 
     .card-menu {
         @extend %flex-column, %flex-center;
         gap: 3vw;
-       
+
     }
 }
 
 article {
     display: flex;
     justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor: pointer;
+    animation: animationFade 0.3s backwards;
 
     width: 85%;
     height: 69px;
@@ -88,7 +111,7 @@ article {
     background: $white;
     filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
     // border: 3px solid black;
-    border-radius: 20px;
+    border-radius: 15px;
 
     span.price-menu {
         display: flex;
@@ -99,20 +122,20 @@ article {
         font-weight: $fontBold;
         font-size: $size-small;
         color: $lightBlack;
-       
-        }
+
     }
+}
 
 
 .content-menu {
-    // border-radius: 20px;
-    @extend %flex-column;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    // @extend %flex-column;
+    // justify-content: space-evenly;
+    // align-items: flex-start;
 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+
     // overflow: scroll;
     // white-space: inherit;
 
@@ -125,6 +148,9 @@ article {
         font-size: $size-x-mediumSize;
         color: $black;
         margin: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .txt-menu {
@@ -132,7 +158,48 @@ article {
         font-size: $size-small;
         color: $black;
         margin: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
+
+
+    .price-menu {
+        align-self: flex-end;
+    }
+    &::after{
+        content: "\f058"; 
+        font-family: 'Font Awesome 6 Free'; 
+        font-weight: 600; 
+        font-size: 20px; 
+        color: rgba(#fff, 0);
+
+        position: relative;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        right: -15px;
+        top: -13.5px;
+
+        height: calc(100% + 27px);
+        width: 0px;
+
+        background: #99E2D0; 
+        
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        transition: width 600ms ease, border-bottom-right-radius 100ms ease, color 500ms;
+    }
+    &:hover::after{
+        width: 59px;
+        color: rgba(#fff, 1);
+    }
+
 }
 
 .btn-cmd {
