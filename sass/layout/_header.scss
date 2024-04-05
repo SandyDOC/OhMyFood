@@ -5,13 +5,14 @@ header {
 
     .logo-header {
         display: flex;
+        align-items: center;
     }
     .fa-arrow-left {
-        padding: 5vw 15vw 0 4vw;
+        padding: 0 20vw 0 4vw;
     }
     .logo {
-        width: 50.625vw;
-        // width: 162px;
+        // width: 50.625vw;
+        width: 162px;
         padding-top: 3vw;
         padding-bottom: 1.8vw;
         object-fit: contain;

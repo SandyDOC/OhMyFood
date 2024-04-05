@@ -1,4 +1,4 @@
-.step-group .number span, .location, .header-home, .like, .button, .btn-home {
+.step-group .number span, .location, .header-home, .button, .btn-home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,6 +47,14 @@ a {
   background: #F6F6F6;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .button, .btn-home {
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -56,7 +64,7 @@ a {
   color: #FFFFFF;
   padding: 0.25%;
   height: 50px;
-  width: 57%;
+  width: 173px;
   text-align: center;
 }
 .button:hover, .btn-home:hover {
@@ -65,7 +73,7 @@ a {
 }
 
 .btn-home {
-  width: 70%;
+  width: 233px;
 }
 
 .resto-cards {
@@ -131,7 +139,6 @@ a {
 .like {
   width: 22px;
   height: 21px;
-  padding-top: 3vw;
 }
 
 header, .header-home {
@@ -140,12 +147,13 @@ header, .header-home {
 }
 header .logo-header, .header-home .logo-header {
   display: flex;
+  align-items: center;
 }
 header .fa-arrow-left, .header-home .fa-arrow-left {
-  padding: 5vw 15vw 0 4vw;
+  padding: 0 20vw 0 4vw;
 }
 header .logo, .header-home .logo {
-  width: 50.625vw;
+  width: 162px;
   padding-top: 3vw;
   padding-bottom: 1.8vw;
   object-fit: contain;
@@ -181,6 +189,15 @@ header .logo, .header-home .logo {
 
 footer {
   width: 100%;
+}
+
+.loader {
+  border: #F6F6F6;
+  border-top: #99E2D0;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
 }
 
 .location {

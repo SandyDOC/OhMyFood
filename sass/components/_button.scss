@@ -13,7 +13,7 @@
     // padding: 3vw;
 
     height:50px ;
-    width: 57%;
+    width: $buttonSize;
     // width: 70%;
     text-align: center;
 
@@ -27,5 +27,5 @@
 
 .btn-home {
     @extend .button;
-    width: 70%;
+    width: $buttonSize + 60px;
 }
