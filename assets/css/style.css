@@ -123,6 +123,7 @@ a {
   display: flex;
   justify-content: space-around;
   gap: 15vw;
+  align-items: baseline;
 }
 
 .card-txt .card-title {
@@ -137,8 +138,32 @@ a {
 }
 
 .like {
-  width: 22px;
-  height: 21px;
+  stroke: none;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+.like path {
+  fill-opacity: 1;
+  transition: fill-opacity 400ms ease;
+}
+.like:hover {
+  stroke: #000;
+}
+.like:hover path {
+  fill-opacity: 0;
+}
+.like--inactive {
+  stroke: #000;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+.like--inactive path {
+  fill-opacity: 0;
+  transition: fill-opacity 400ms ease;
+}
+.like--inactive :hover {
+  stroke-width: 0px;
+  fill-opacity: 1;
 }
 
 header, .header-home {

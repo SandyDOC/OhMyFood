@@ -62,7 +62,7 @@ header {
         font-size: $size-normal;
         color: $black;
         text-transform: uppercase;
-        border-bottom: 2px solid $tertiary-green;
+        border-bottom: 3px solid $tertiary-green;
         width: 23px;
 
         height: 3.5vh;
@@ -72,6 +72,7 @@ header {
     .card-menu {
         @extend %flex-column, %flex-center;
         gap: 3vw;
+       
     }
 }
 
@@ -98,8 +99,10 @@ article {
         font-weight: $fontBold;
         font-size: $size-small;
         color: $lightBlack;
+       
+        }
     }
-}
+
 
 .content-menu {
     // border-radius: 20px;
@@ -107,12 +110,13 @@ article {
     justify-content: space-evenly;
     align-items: flex-start;
 
-    text-overflow: ellipsis;
-    overflow: scroll;
-    // overflow: hidden;
-    // white-space: inherit;
     white-space: nowrap;
-    width: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // overflow: scroll;
+    // white-space: inherit;
+
+    // width: inherit;
     // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
     // background: $white;
 

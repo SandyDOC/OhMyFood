@@ -122,6 +122,7 @@ a {
   display: flex;
   justify-content: space-around;
   gap: 15vw;
+  align-items: baseline;
 }
 
 .card-txt .card-title {
@@ -136,8 +137,32 @@ a {
 }
 
 .like {
-  width: 22px;
-  height: 21px;
+  stroke: none;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+.like path {
+  fill-opacity: 1;
+  transition: fill-opacity 400ms ease;
+}
+.like:hover {
+  stroke: #000;
+}
+.like:hover path {
+  fill-opacity: 0;
+}
+.like--inactive {
+  stroke: #000;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+.like--inactive path {
+  fill-opacity: 0;
+  transition: fill-opacity 400ms ease;
+}
+.like--inactive :hover {
+  stroke-width: 0px;
+  fill-opacity: 1;
 }
 
 header, .header-home {
@@ -246,7 +271,7 @@ header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
   font-size: 16px;
   color: #000;
   text-transform: uppercase;
-  border-bottom: 2px solid #99E2D0;
+  border-bottom: 3px solid #99E2D0;
   width: 23px;
   height: 3.5vh;
   margin-left: 3vw;
@@ -279,10 +304,9 @@ article span.price-menu {
 .content-menu {
   justify-content: space-evenly;
   align-items: flex-start;
-  text-overflow: ellipsis;
-  overflow: scroll;
   white-space: nowrap;
-  width: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .content-menu .title-menu {
   font-weight: 500;
