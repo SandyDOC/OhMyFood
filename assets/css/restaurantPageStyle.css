@@ -209,7 +209,7 @@ header .logo, .header-home .logo {
 }
 .footer-home .illustration, footer .illustration {
   display: flex;
-  gap: 2vw;
+  gap: 3px;
 }
 .footer-home .illustration i, footer .illustration i {
   height: 20px;
@@ -344,7 +344,6 @@ header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
 article {
   display: flex;
   justify-content: space-between;
-  position: relative;
   overflow: hidden;
   box-sizing: border-box;
   cursor: pointer;
@@ -360,10 +359,11 @@ article {
 article span.price-menu {
   display: flex;
   align-items: flex-end;
-  padding-bottom: 3vw;
   font-weight: 700;
   font-size: 15px;
   color: #353535;
+  padding-left: 4vw;
+  gap: 2vw;
 }
 
 .content-menu {
@@ -395,14 +395,11 @@ article span.price-menu {
   font-weight: 600;
   font-size: 20px;
   color: rgba(255, 255, 255, 0);
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  right: -15px;
-  top: -13.5px;
-  height: 5vh;
+  height: 100%;
   width: 0px;
   background: #99E2D0;
   border-top-right-radius: 15px;

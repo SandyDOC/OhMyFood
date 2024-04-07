@@ -210,7 +210,7 @@ header .logo, .header-home .logo {
 }
 .footer-home .illustration, footer .illustration {
   display: flex;
-  gap: 2vw;
+  gap: 3px;
 }
 .footer-home .illustration i, footer .illustration i {
   height: 20px;
