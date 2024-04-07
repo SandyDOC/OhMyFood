@@ -115,7 +115,7 @@ article {
 
     span.price-menu {
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         align-items: flex-end;
         padding-bottom: 3vw;
         // @extend %flex-center;
@@ -128,22 +128,9 @@ article {
 
 
 .content-menu {
-    // @extend %flex-column;
-    // justify-content: space-evenly;
-    // align-items: flex-start;
-
-    // white-space: nowrap;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
-
-    // overflow: scroll;
-    // white-space: inherit;
-
-    // width: inherit;
-    // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
-    // background: $white;
-
+    width:64% ;
     .title-menu {
+        padding: 3vw 0 3vw 0;        // width: 70%;
         font-weight: $fontMedium;
         font-size: $size-x-mediumSize;
         color: $black;
@@ -152,8 +139,9 @@ article {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
     .txt-menu {
+        // padding-left: 3vw;
+        // width: 73%;
         font-weight: $fontLight;
         font-size: $size-small;
         color: $black;
@@ -162,45 +150,44 @@ article {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
-
-    .price-menu {
-        align-self: flex-end;
-    }
-    &::after{
-        content: "\f058"; 
-        font-family: 'Font Awesome 6 Free'; 
-        font-weight: 600; 
-        font-size: 20px; 
-        color: rgba(#fff, 0);
-
-        position: relative;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        overflow: hidden;
-
-        right: -15px;
-        top: -13.5px;
-
-        height: calc(100% + 27px);
-        width: 0px;
-
-        background: #99E2D0; 
-        
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-
-        transition: width 600ms ease, border-bottom-right-radius 100ms ease, color 500ms;
-    }
-    &:hover::after{
-        width: 59px;
-        color: rgba(#fff, 1);
-    }
-
 }
+.price-menu {
+        // align-self: flex-end;
+        &::after{
+            content: "\f058"; 
+            font-family: 'Font Awesome 6 Free'; 
+            font-weight: 600; 
+            font-size: 20px; 
+            color: rgba(#fff, 0);
+    
+            position: relative;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            overflow: hidden;
+    
+            right: -15px;
+            top: -13.5px;
+    
+            height: 5vh;
+            // height: calc(100% + 27px);
+            width: 0px;
+    
+            background: #99E2D0; 
+            
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+    
+            transition: width 600ms ease, border-bottom-right-radius 100ms ease, color 500ms;
+        }
+        &:hover::after{
+            width: 59px;
+            color: rgba(#fff, 1);
+        }
+    }
+
 
 .btn-cmd {
     @extend %flex-center;

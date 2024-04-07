@@ -359,7 +359,6 @@ article {
 }
 article span.price-menu {
   display: flex;
-  justify-content: center;
   align-items: flex-end;
   padding-bottom: 3vw;
   font-weight: 700;
@@ -367,7 +366,11 @@ article span.price-menu {
   color: #353535;
 }
 
+.content-menu {
+  width: 64%;
+}
 .content-menu .title-menu {
+  padding: 3vw 0 3vw 0;
   font-weight: 500;
   font-size: 18px;
   color: #000;
@@ -385,10 +388,8 @@ article span.price-menu {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.content-menu .price-menu {
-  align-self: flex-end;
-}
-.content-menu::after {
+
+.price-menu::after {
   content: "\f058";
   font-family: "Font Awesome 6 Free";
   font-weight: 600;
@@ -401,14 +402,14 @@ article span.price-menu {
   overflow: hidden;
   right: -15px;
   top: -13.5px;
-  height: calc(100% + 27px);
+  height: 5vh;
   width: 0px;
   background: #99E2D0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   transition: width 600ms ease, border-bottom-right-radius 100ms ease, color 500ms;
 }
-.content-menu:hover::after {
+.price-menu:hover::after {
   width: 59px;
   color: white;
 }
