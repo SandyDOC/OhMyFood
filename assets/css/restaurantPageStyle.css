@@ -394,7 +394,6 @@ article {
   width: 85%;
   height: 69px;
   padding-left: 4vw;
-  padding-right: 4vw;
   background: #FFFFFF;
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
   border-radius: 15px;
@@ -405,12 +404,11 @@ article span.price-menu {
   font-weight: 700;
   font-size: 15px;
   color: #353535;
-  padding-left: 4vw;
   gap: 2vw;
 }
 
 .content-menu {
-  width: 64%;
+  width: 61%;
 }
 .content-menu .title-menu {
   padding: 3vw 0 3vw 0;
@@ -447,9 +445,19 @@ article span.price-menu {
   background: #99E2D0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  transition: width 600ms ease, border-bottom-right-radius 100ms ease, color 500ms;
 }
 .price-menu:hover::after {
   width: 59px;
   color: white;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
