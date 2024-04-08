@@ -1,4 +1,4 @@
-.step-group .number span, .location, .header-home, .button, .btn-home {
+.step-group .number span, .location, .loader__container__logo, .loader__container, .header-home, .button, .btn-home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,6 +47,20 @@ a {
   background: #F6F6F6;
 }
 
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  to {
+    visibility: hidden;
+    display: none;
+  }
+}
 @keyframes animationFade {
   0% {
     opacity: 0;
@@ -146,6 +160,8 @@ a {
 .like {
   stroke: none;
   stroke-width: 1px;
+  position: relative;
+  top: 2vw;
   cursor: pointer;
 }
 .like path {
@@ -161,6 +177,8 @@ a {
 .like--inactive {
   stroke: #000;
   stroke-width: 1px;
+  position: relative;
+  top: 1vw;
   cursor: pointer;
 }
 .like--inactive path {
@@ -223,12 +241,37 @@ footer {
 }
 
 .loader {
-  border: #F6F6F6;
-  border-top: #99E2D0;
+  z-index: 100;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  animation: loader 1s forwards;
+}
+.loader__container {
+  position: relative;
+  background: linear-gradient(#FF79DA, #9356DC);
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+.loader__container__logo {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  background-image: url("../../assets/images/logo/ohmyfood.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: invert(100%);
+}
+.loader__container__logo::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 16px solid #000;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
+  border-top: 16px solid transparent;
+  animation: spinner 3s linear infinite;
 }
 
 .location {
