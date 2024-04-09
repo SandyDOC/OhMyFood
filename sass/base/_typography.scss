@@ -1,8 +1,12 @@
 // Typography rules 
+*{
+  margin: 0px;
+  padding: 0px;
+}
 
 body {
   font-family: $fontText;
-  margin: 0px;
+  // margin: 0px;
 }
 
 .main-container {
@@ -19,17 +23,17 @@ a {
 
 .section-title {
   margin: 0px;
-  //  @include typography(large, bold, black); 
-  font-size: $size-large;
-  font-weight: $fontBold;
-  color: $black;
+@include typography($font-size:$size-large, $font-weight:$fontBold);
+  // font-size: $size-large;
+  // font-weight: $fontBold;
+  // color: $black;
   padding: 3vw;
 }
 
 .text {
-  //  @include typography(roboto, large, bold, black); 
-  font-size: $fontMedium;
-  font-size: $size-normal;
+  @include typography($color:none, $font-weight:$fontMedium);
+  // font-size: $fontMedium;
+  // font-size: $size-normal;
 }
 
 .hero,
@@ -38,3 +42,4 @@ a {
 .restaurant-presentation {
   background: $lightGrey;
 }
+

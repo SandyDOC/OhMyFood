@@ -4,6 +4,7 @@
     gap: 6vw;
     align-items: center;
     box-sizing: border-box;
+
     a {
         width: 90%;
     }
@@ -11,10 +12,11 @@
 
 .card {
     width: 100%;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    @include shadow($blur: 15px, $percent: 0.1);
     background: $white;
     border-radius: 15px;
-        
+
     .card-view {
         position: relative;
     }
@@ -33,20 +35,21 @@
     border-radius: 2px;
     width: 80px;
     height: 29px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    
-    color: $green-font;
-    font-size: $size-x-small;
-    font-weight: $fontMedium;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include shadow($vertical: 2px, $blur: 4px, $percent: 0.15);
+    // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 
     background: $tertiary-green;
-    position: absolute;
-    right: 15px;
-    top: 12px;
+    // position: absolute;
+    // right: 15px;
+    // top: 12px; 
+    // color: $green-font;
+    // font-size: $size-x-small;
+    // font-weight: $fontMedium;
+    @include typography($green-font, $size-x-small, $fontMedium);
+    @include absolute-element($right: 15px, $top: 12px);
+
+    @extend %flex-center;
+
 }
 
 .card-content {
@@ -54,23 +57,24 @@
     justify-content: space-around;
     gap: 15vw;
     align-items: baseline;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
 }
 
 .card-txt {
     .card-title {
-    font-size: $size-x-mediumSize;
-    font-weight: $fontBold;
-    margin-bottom: 0;
+        @include typography($font-size: $size-x-mediumSize, $font-weight: $fontBold);
+        // font-size: $size-x-mediumSize;
+        // font-weight: $fontBold;
+        margin-bottom: 0;
     }
+
     .card-subtitle {
-        font-size: $size-xx-mediumSize;
-        font-weight: $fontLight;
+        @include typography($font-size: $size-xx-mediumSize, $font-weight: $fontLight);
+        // font-size: $size-xx-mediumSize;
+        // font-weight: $fontLight;
         margin-top: 1vw;
     }
-} 
+}
 
 //Cards menu restaurants
-
-
-
-

@@ -1,4 +1,4 @@
-.btn-cmd, .restaurant-menu .card-menu, .loader__container__logo, .loader__container, .header-home, .button, .btn-home {
+.btn-cmd, .restaurant-menu .card-menu, .loader__container__logo, .loader__container, .header-home, .card-view span, .button, .btn-home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,9 +9,13 @@
   flex-direction: column;
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0px;
 }
 
 .main-container {
@@ -28,15 +32,16 @@ a {
 
 .section-title {
   margin: 0px;
-  font-size: 24px;
-  font-weight: 700;
   color: #000;
+  font-size: 1.5em;
+  font-weight: 700;
   padding: 3vw;
 }
 
 .text {
-  font-size: 500;
-  font-size: 16px;
+  color: none;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .hero,
@@ -75,16 +80,16 @@ a {
   }
 }
 .button, .btn-home {
+  text-align: center;
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(#FF79DA, #9356DC);
-  font-size: 16px;
-  font-weight: 500;
   color: #FFFFFF;
+  font-size: 500;
+  font-weight: 400;
   padding: 0.25%;
   height: 50px;
   width: 173px;
-  text-align: center;
 }
 .button:hover, .btn-home:hover {
   opacity: 0.68;
@@ -126,16 +131,16 @@ a {
   width: 80px;
   height: 29px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  color: #008766;
-  font-size: 14px;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #99E2D0;
+  color: #008766;
+  font-size: 0.875em;
+  font-weight: 500;
   position: absolute;
-  right: 15px;
   top: 12px;
+  right: 15px;
+  bottom: none;
+  left: none;
+  transform: translate(none, none);
 }
 
 .card-content {
@@ -143,15 +148,19 @@ a {
   justify-content: space-around;
   gap: 15vw;
   align-items: baseline;
+  padding-top: 1vw;
+  padding-bottom: 2vw;
 }
 
 .card-txt .card-title {
-  font-size: 18px;
+  color: #000;
+  font-size: 1.125em;
   font-weight: 700;
   margin-bottom: 0;
 }
 .card-txt .card-subtitle {
-  font-size: 17px;
+  color: #000;
+  font-size: 1.0625em;
   font-weight: 300;
   margin-top: 1vw;
 }
@@ -213,8 +222,6 @@ header .logo, .header-home .logo {
   justify-content: space-around;
   gap: 4vw;
   padding: 22px 25px 22px 25px;
-  font-size: 16px;
-  font-weight: 500;
 }
 .footer-home .logo img, footer .logo img {
   width: 137.58px;
@@ -298,7 +305,7 @@ header .banner .restaurant-name, .header-home .banner .restaurant-name {
 header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.75em;
   font-style: italic;
 }
 
@@ -362,7 +369,7 @@ header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
 }
 .restaurant-menu .type-menu {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1em;
   color: #000;
   text-transform: uppercase;
   width: 23px;
@@ -402,7 +409,7 @@ article span.price-menu {
   display: flex;
   align-items: flex-end;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9375em;
   color: #353535;
   gap: 2vw;
 }
@@ -413,7 +420,7 @@ article span.price-menu {
 .content-menu .title-menu {
   padding: 3vw 0 3vw 0;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125em;
   color: #000;
   margin: 0px;
   white-space: nowrap;
@@ -422,7 +429,7 @@ article span.price-menu {
 }
 .content-menu .txt-menu {
   font-weight: 300;
-  font-size: 15px;
+  font-size: 0.9375em;
   color: #000;
   margin: 0px;
   white-space: nowrap;

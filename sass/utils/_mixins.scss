@@ -1,25 +1,32 @@
 
-// @mixin typography($fontF, $fontS, $fontW, $lineH, $colorT){
-//     font-family: map-get(fonts.$fontFamily, $fontF);
-//     font-size: map-get(fonts.$fontSize, $fontS);
-//     font-weight: map-get(fonts.$fontWeight, $fontW);
-    
-//     line-height: map-get(fonts.$lineHeight, $lineH);
-    
-//     @if (fonts.$fontFamily == "Shrikhand"){
-//         font-style: italic;
-//     }
+@mixin typography ($color:$black, $font-size:$size-normal, $font-weight:$fontRegular){
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
 
-//     color: map-get(colors.$color, $colorT);
-// }
+@mixin absolute-element ($top:none, $right:none, $bottom:none, $left:none, $x:none, $y:none){
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    transform:translate($x,$y);
+}
 
-// @mixin borderRadius($topLeft, $topRight, $bottomRight, $bottomLeft){
-//     border-radius:($topLeft, $topRight, $bottomRight, $bottomLeft);
-// }
+@mixin pseudo-element ($display, $position:absolute, $content:'' ){
+    content:$content;
+    display: $display;
+    position: $position;
+}
 
-// @mixin title-shadow($color){
-//     text-shadow: .55rem .55rem $color;
-// }
+// box-shadow:0px 4px 10px rgba(0, 0, 0, 0.25);
+
+@mixin shadow ($horizontal:0px, $vertical:4px, $blur:10px, $percent:0.25) {
+    box-shadow: $horizontal $vertical $blur rgba(0, 0, 0, $percent);
+}
+
+// @mixin border-radius ($border-top)
 
 // filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));button
 // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));card

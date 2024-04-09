@@ -1,15 +1,16 @@
 .footer-home {
     background: $lightBlack;
     color:$white;
+    // @include typography($color:$white, $font-weight:$fontMedium);
 
    @extend %flex-column;
     justify-content: space-around;
     gap: 4vw;
     padding: 22px 25px 22px 25px;
 
-    font-size: $size-normal;
-    font-weight:  $fontMedium;
-     
+    // font-size: $size-normal;
+    // font-weight:  $fontMedium;
+
     .logo img{
         // width: 33%;
         width: 137.58px;
