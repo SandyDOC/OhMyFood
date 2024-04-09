@@ -11,4 +11,8 @@
     flex-direction: column;
 }
 
-
+%txt-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,4 +1,4 @@
-.step-group .number span, .location, .loader__container__logo, .loader__container, .header-home, .card-view span, .button, .btn-home {
+.step-group .number span, .location, .loader__container__logo, .loader__container, .header-home, .price-menu::after, .card-view span, .button, .btn-home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,6 +8,12 @@
 .restaurants, .hero, .footer-home .link, footer .link, .footer-home, footer, header, .header-home, .resto-cards {
   display: flex;
   flex-direction: column;
+}
+
+.content-menu .txt-menu, .content-menu .title-menu {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 * {
@@ -48,7 +54,8 @@ a {
 .hero,
 .indications,
 .restaurants,
-.restaurant-presentation {
+.restaurant-presentation,
+.restaurant-name {
   background: #F6F6F6;
 }
 
@@ -164,6 +171,64 @@ a {
   font-size: 1.0625em;
   font-weight: 300;
   margin-top: 1vw;
+}
+
+.card-menu article {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+  animation: animationFade 0.3s backwards;
+  width: 85%;
+  height: 69px;
+  padding-left: 4vw;
+  background: #FFFFFF;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+  border-radius: 15px;
+}
+.card-menu article span.price-menu {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 700;
+  font-size: 0.9375em;
+  color: #353535;
+  gap: 2vw;
+}
+
+.content-menu {
+  width: 61%;
+}
+.content-menu .title-menu {
+  padding: 3vw 0 3vw 0;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #000;
+  margin: 0px;
+}
+.content-menu .txt-menu {
+  font-weight: 300;
+  font-size: 0.9375em;
+  color: #000;
+  margin: 0px;
+}
+
+.price-menu::after {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+  height: 100%;
+  width: 0px;
+  background: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.price-menu:hover::after {
+  width: 59px;
+  color: white;
 }
 
 .like {

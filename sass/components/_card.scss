@@ -78,3 +78,108 @@
 }
 
 //Cards menu restaurants
+.card-menu article{
+    display: flex;
+    justify-content: space-between;
+
+    // position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor: pointer;
+    animation: animationFade 0.3s backwards;
+
+    width: 85%;
+    height: 69px;
+    padding-left: 4vw;
+    // padding-right: 4vw;
+
+    background: $white;
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+    // border: 3px solid black;
+    border-radius: 15px;
+
+    span.price-menu {
+        display: flex;
+        // justify-content: center;
+        align-items: flex-end;
+        // padding-bottom: 3vw;
+        // @extend %flex-center;
+        font-weight: $fontBold;
+        font-size: $size-small;
+        color: $lightBlack;
+
+        // padding-left: 4vw;
+        gap: 2vw;
+
+    }
+}
+
+
+.content-menu {
+    width: 61%;
+
+    .title-menu {
+        padding: 3vw 0 3vw 0; // width: 70%;
+        font-weight: $fontMedium;
+        font-size: $size-x-mediumSize;
+        color: $black;
+        margin: 0px;
+        @extend %txt-overflow;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+    }
+
+    .txt-menu {
+        // padding-left: 3vw;
+        // width: 73%;
+        font-weight: $fontLight;
+        font-size: $size-small;
+        color: $black;
+        margin: 0px;
+        @extend %txt-overflow;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+    }
+}
+
+.price-menu {
+        &::after{
+            content: "\f058"; 
+            font-family: 'Font Awesome 6 Free'; 
+            font-weight: 600; 
+            font-size: 20px; 
+            color: rgba(#fff, 0);
+
+            // position: relative;
+
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            @extend %flex-center;
+
+            overflow: hidden;
+
+            // right: -15px;
+            // top: -13.5px;
+
+            height: 100%;
+            // height: 5vh;
+            width: 0px;
+
+            background: #99E2D0; 
+
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+            // transition: 800ms ease infinite alternate slidein;
+            
+            // animation: 800ms ease infinite alternate slidein;
+            // transition: width 600ms ease, border-bottom-right-radius 100ms ease, color 500ms;
+        }
+        &:hover::after{
+            width: 59px;
+            color: rgba(#fff, 1);
+        }
+    }
