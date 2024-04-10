@@ -44,14 +44,14 @@ header {
     // margin-top: -5.063vw;
     padding-bottom: 5vw;
 
-    .restaurants {
-        padding-top: 3vw;
-        padding-left: 3vw;
+    // .restaurants {
+    //     padding-top: 3vw;
+    //     padding-left: 3vw;
 
-        box-sizing: border-box;
-        @extend %flex-column;
-        gap: 2vw;
-    }
+    //     box-sizing: border-box;
+    //     @extend %flex-column;
+    //     gap: 2vw;
+    // }
 }
 
 .restaurant-menu {

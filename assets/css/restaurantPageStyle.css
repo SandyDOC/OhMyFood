@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.restaurant-menu .card-menu, .restaurant-menu, .restaurant-presentation .restaurants, .footer-home .link, footer .link, .footer-home, footer, header, .header-home, .resto-cards {
+.restaurant-menu .card-menu, .restaurant-menu, .footer-home .link, footer .link, .footer-home, footer, header, .header-home, .resto-cards {
   display: flex;
   flex-direction: column;
 }
@@ -288,14 +288,33 @@ header .logo, .header-home .logo {
   gap: 4vw;
   padding: 22px 25px 22px 25px;
 }
+@media only screen and (min-width: 1024px) {
+  .footer-home, footer {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+}
 .footer-home .logo img, footer .logo img {
   width: 137.58px;
   object-fit: contain;
   padding-top: 3vw;
   filter: invert(100%);
 }
+@media only screen and (min-width: 1024px) {
+  .footer-home .logo img, footer .logo img {
+    padding-top: 0vw;
+  }
+}
 .footer-home .link, footer .link {
   gap: 2vw;
+}
+@media only screen and (min-width: 1024px) {
+  .footer-home .link, footer .link {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .footer-home .illustration, footer .illustration {
   display: flex;
@@ -376,12 +395,6 @@ header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
 
 .restaurant-presentation {
   padding-bottom: 5vw;
-}
-.restaurant-presentation .restaurants {
-  padding-top: 3vw;
-  padding-left: 3vw;
-  box-sizing: border-box;
-  gap: 2vw;
 }
 
 .restaurant-menu {

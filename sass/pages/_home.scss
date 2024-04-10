@@ -71,6 +71,9 @@
     @extend %flex-column;
     align-items: center;
     gap: 6vw;
+    @include breakpoints(desktop){
+        flex-direction: row;
+    }
     .step {
         display: flex;
         justify-content: flex-start;
@@ -82,6 +85,9 @@
         // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
         background: $lightGrey;
         position: relative;
+        @include breakpoints(desktop){
+           justify-content: center;
+        }
     }
     .number span {
         width: 24px;
@@ -102,6 +108,9 @@
         align-items: center;
         gap: 4vw;
         padding-left: 10vw;
+        @include breakpoints(desktop){
+            padding-left: 0vw;
+        }
     }
     i.icon {
         color:$icon ;
@@ -116,4 +125,13 @@
     // }
 }
 
+
+.restaurants {
+    padding-top: 3vw;
+    padding-left: 3vw;
+
+    box-sizing: border-box;
+    @extend %flex-column;
+    gap: 2vw;
+}
 

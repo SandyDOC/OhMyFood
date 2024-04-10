@@ -93,10 +93,14 @@ $fontText: "Roboto", sans-serif;
 
 //breakpoints (responsive)
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-  ) !default;
+    table: 768px,
+    desktop: 1024px,
+    );
+// $breakpoints: (
+//   'small': 320px,
+//   'medium': 768px,
+//   'large': 1024px,
+//   ) !default;
 
 //size
 $buttonSize: 173px;

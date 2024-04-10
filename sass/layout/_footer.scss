@@ -1,31 +1,50 @@
 .footer-home {
     background: $lightBlack;
-    color:$white;
+    color: $white;
     // @include typography($color:$white, $font-weight:$fontMedium);
 
-   @extend %flex-column;
+    @extend %flex-column;
     justify-content: space-around;
     gap: 4vw;
     padding: 22px 25px 22px 25px;
 
     // font-size: $size-normal;
     // font-weight:  $fontMedium;
+    @include breakpoints(desktop) {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
 
-    .logo img{
+    .logo img {
         // width: 33%;
         width: 137.58px;
         object-fit: contain;
         // height: 27px;
         padding-top: 3vw;
         filter: invert(100%);
+        @include breakpoints(desktop){
+            // display: none;
+            padding-top: 0vw;
+            // padding-left: 3vw;
+        }
     }
+
     .link {
         @extend %flex-column;
         gap: 2vw;
+
+        @include breakpoints(desktop) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
     }
+
     .illustration {
         display: flex;
         gap: 3px;
+
         i {
             height: 20px;
             width: 22px;
@@ -37,6 +56,5 @@
 
 footer {
     @extend .footer-home;
-  width: 100%;
+    width: 100%;
 }
-
