@@ -7,6 +7,9 @@
 
     @include breakpoints(desktop){
         flex-flow: wrap;
+        padding-left: 5vw;
+        padding-right: 3vw;
+        padding-bottom: 5vw;
     }
 
     a {
@@ -124,6 +127,10 @@
 
 .content-menu {
     width: 61%;
+    @include breakpoints(desktop){
+       width: 81%;
+       padding: 1vw;
+    }
 
     .title-menu {
         padding: 3vw 0 3vw 0; // width: 70%;
@@ -135,6 +142,10 @@
         // white-space: nowrap;
         // overflow: hidden;
         // text-overflow: ellipsis;
+        @include breakpoints(desktop){
+            padding:0vw;
+            // line-height: 0.005em;
+        }
     }
 
     .txt-menu {
@@ -148,6 +159,9 @@
         // white-space: nowrap;
         // overflow: hidden;
         // text-overflow: ellipsis;
+        // @include breakpoints(desktop){
+        //     line-height: 0.05em;
+        // }
     }
 }
 

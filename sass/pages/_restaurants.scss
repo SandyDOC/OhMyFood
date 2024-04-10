@@ -27,6 +27,15 @@ header {
             align-items: center;
 
             // left: 0; 
+
+            @include breakpoints(desktop){
+                max-width: 1000px;
+                // display: flex;
+                justify-content: flex-end;
+                top: 11vw;
+                left: 15.2vw;
+                gap: 23vw;
+            }
             h1 {
                 @include typography($font-size: $size-x-large);
                 font-family: $fontTitle;
@@ -37,6 +46,13 @@ header {
         }
 
     }
+}
+
+main {
+    @include breakpoints(desktop){
+        display: flex;
+        justify-content: center;
+      }
 }
 
 //restaurants
@@ -52,6 +68,10 @@ header {
     //     @extend %flex-column;
     //     gap: 2vw;
     // }
+    @include breakpoints(desktop){
+        max-width: 1000px;
+        width: 100%;
+    }
 }
 
 .restaurant-menu {

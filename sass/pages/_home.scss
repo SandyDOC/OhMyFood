@@ -7,12 +7,15 @@
     @include shadow($blur:4px, $percent: 0.25); 
 
     // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-      i {
+    i {
         color: $lightBlack;
-      }
-      .search {
+    }
+    .search {
         background: inherit;
         @include typography($font-weight:$fontMedium);
+        @include breakpoints(desktop){
+            padding-left: 1vw;
+        }
 
         // font-size: $size-normal;
         // font-weight: $fontMedium;
@@ -37,9 +40,16 @@
     @extend %flex-column;
     align-items: center;
     box-sizing: border-box;
+    @include breakpoints(desktop){
+        padding-top: 0vw;
+        padding-bottom: 4vw;
+    }
 
     h1 {
         margin-bottom: 2vw;
+        @include breakpoints(desktop){
+            padding-top: 2vw;
+        }
     }
     p {
         margin-top: 0px;
@@ -57,22 +67,29 @@
 
 .fonctionnement {
      background:$white;
+     @include breakpoints(desktop){
+        padding-top: 0vw;
+        padding-bottom: 5vw;
+    }
 
      h2 {
-        @include typography($size-large, $fontBold);
+        @include typography($font-size:$size-large, $font-weight:$fontBold);
         //  font-size: $size-large;
         //  font-weight: $fontBold;
         //  color: $black;
      }
  }   
 
-
+//cards instructions (fonctionnement)
 .step-group {
     @extend %flex-column;
     align-items: center;
     gap: 6vw;
     @include breakpoints(desktop){
         flex-direction: row;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        gap: 4vw;
     }
     .step {
         display: flex;
@@ -87,6 +104,7 @@
         position: relative;
         @include breakpoints(desktop){
            justify-content: center;
+           width: 45%;
         }
     }
     .number span {
@@ -133,5 +151,10 @@
     box-sizing: border-box;
     @extend %flex-column;
     gap: 2vw;
+
+    @include breakpoints(desktop){
+        padding: 0vw;
+        gap: 0vw;
+    }
 }
 

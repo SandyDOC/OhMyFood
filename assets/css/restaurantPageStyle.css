@@ -115,6 +115,9 @@ a {
 @media only screen and (min-width: 1024px) {
   .resto-cards {
     flex-flow: wrap;
+    padding-left: 5vw;
+    padding-right: 3vw;
+    padding-bottom: 5vw;
   }
 }
 .resto-cards a {
@@ -208,12 +211,23 @@ a {
 .content-menu {
   width: 61%;
 }
+@media only screen and (min-width: 1024px) {
+  .content-menu {
+    width: 81%;
+    padding: 1vw;
+  }
+}
 .content-menu .title-menu {
   padding: 3vw 0 3vw 0;
   font-weight: 500;
   font-size: 1.125em;
   color: #000;
   margin: 0px;
+}
+@media only screen and (min-width: 1024px) {
+  .content-menu .title-menu {
+    padding: 0vw;
+  }
 }
 .content-menu .txt-menu {
   font-weight: 300;
@@ -244,7 +258,7 @@ a {
   stroke: none;
   stroke-width: 1px;
   position: relative;
-  top: 2vw;
+  padding-right: 2vw;
   cursor: pointer;
 }
 .like path {
@@ -261,7 +275,7 @@ a {
   stroke: #000;
   stroke-width: 1px;
   position: relative;
-  top: 1vw;
+  padding-right: 2vw;
   cursor: pointer;
 }
 .like--inactive path {
@@ -281,6 +295,12 @@ header .logo-header, .header-home .logo-header {
   display: flex;
   align-items: center;
 }
+@media only screen and (min-width: 1024px) {
+  header .logo-header, .header-home .logo-header {
+    justify-content: flex-start;
+    gap: 21vw;
+  }
+}
 header .fa-arrow-left, .header-home .fa-arrow-left {
   padding: 0 20vw 0 4vw;
 }
@@ -289,6 +309,12 @@ header .logo, .header-home .logo {
   padding-top: 3vw;
   padding-bottom: 1.8vw;
   object-fit: contain;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo, .header-home .logo {
+    padding-top: 1vw;
+    padding-bottom: 0.8vw;
+  }
 }
 
 .footer-home, footer {
@@ -395,6 +421,15 @@ header .banner .restaurant-name, .header-home .banner .restaurant-name {
   justify-content: space-around;
   align-items: center;
 }
+@media only screen and (min-width: 1024px) {
+  header .banner .restaurant-name, .header-home .banner .restaurant-name {
+    max-width: 1000px;
+    justify-content: flex-end;
+    top: 11vw;
+    left: 15.2vw;
+    gap: 23vw;
+  }
+}
 header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
   color: #000;
   font-size: 1.75em;
@@ -403,8 +438,21 @@ header .banner .restaurant-name h1, .header-home .banner .restaurant-name h1 {
   font-style: italic;
 }
 
+@media only screen and (min-width: 1024px) {
+  main {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .restaurant-presentation {
   padding-bottom: 5vw;
+}
+@media only screen and (min-width: 1024px) {
+  .restaurant-presentation {
+    max-width: 1000px;
+    width: 100%;
+  }
 }
 
 .restaurant-menu {

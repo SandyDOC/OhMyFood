@@ -3,29 +3,31 @@
     stroke: none;
     stroke-width: 1px;
     position: relative;
-    top: 2vw;
+    padding-right: 2vw;
+    // top: 2vw;
     // fill:$gradient-color;
-
+    
     cursor: pointer;
-
+    
     path {
         fill-opacity: 1;
         transition: fill-opacity 400ms ease;
     }
-
+    
     &:hover {
         stroke: #000;
-
+        
         path {
             fill-opacity: 0;
         }
     }
-
+    
     &--inactive {
         stroke: #000;
         stroke-width: 1px;
         position: relative;
-        top: 1vw;
+        padding-right: 2vw;
+        // top: 1vw;
 
         cursor: pointer;
 
