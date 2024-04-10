@@ -112,8 +112,18 @@ a {
   align-items: center;
   box-sizing: border-box;
 }
+@media only screen and (min-width: 1024px) {
+  .resto-cards {
+    flex-flow: wrap;
+  }
+}
 .resto-cards a {
   width: 90%;
+}
+@media only screen and (min-width: 1024px) {
+  .resto-cards a {
+    width: 45%;
+  }
 }
 
 .card {

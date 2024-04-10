@@ -5,8 +5,15 @@
     align-items: center;
     box-sizing: border-box;
 
+    @include breakpoints(desktop){
+        flex-flow: wrap;
+    }
+
     a {
         width: 90%;
+        @include breakpoints(desktop){
+            width: 45%;
+        }
     }
 }
 
