@@ -167,10 +167,16 @@ a {
 .card-content {
   display: flex;
   justify-content: space-around;
-  gap: 15vw;
-  align-items: baseline;
-  padding-top: 1vw;
-  padding-bottom: 2vw;
+  gap: 22%;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+@media only screen and (min-width: 1024px) {
+  .card-content {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    gap: 45%;
+  }
 }
 
 .card-txt .card-title {
@@ -259,7 +265,6 @@ a {
   stroke: none;
   stroke-width: 1px;
   position: relative;
-  padding-right: 2vw;
   cursor: pointer;
 }
 .like path {
@@ -276,7 +281,6 @@ a {
   stroke: #000;
   stroke-width: 1px;
   position: relative;
-  padding-right: 2vw;
   cursor: pointer;
 }
 .like--inactive path {
@@ -295,11 +299,13 @@ header, .header-home {
 header .logo-header, .header-home .logo-header {
   display: flex;
   align-items: center;
+  aspect-ratio: 1/0.2;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-header, .header-home .logo-header {
     justify-content: flex-start;
     gap: 21vw;
+    aspect-ratio: 1/0.05;
   }
 }
 header .fa-arrow-left, .header-home .fa-arrow-left {

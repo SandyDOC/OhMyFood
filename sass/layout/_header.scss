@@ -6,9 +6,11 @@ header {
     .logo-header {
         display: flex;
         align-items: center;
+        aspect-ratio: 1/0.2;
         @include breakpoints(desktop){
             justify-content: flex-start;
             gap:21vw;
+            aspect-ratio: 1/0.05;
         }
     }
     .fa-arrow-left {

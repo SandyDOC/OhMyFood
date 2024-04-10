@@ -65,10 +65,16 @@
 .card-content {
     display: flex;
     justify-content: space-around;
-    gap: 15vw;
-    align-items: baseline;
-    padding-top: 1vw;
-    padding-bottom: 2vw;
+    // gap: 15vw;
+    gap: 22%;
+    // align-items: baseline;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    @include breakpoints(desktop){
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        gap: 45%;
+    }
 }
 
 .card-txt {

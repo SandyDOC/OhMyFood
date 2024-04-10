@@ -8,52 +8,61 @@ header {
             width: 100%;
 
         }
-
-        .restaurant-name {
-            position: absolute;
-            bottom: 0;
-            height: 70px;
-            width: 100%;
-
-            padding-top: 2vw;
-            padding-bottom: 2vw;
-
-            // background-color: $lightGrey;
-            border-top-left-radius: 40px;
-            border-top-right-radius: 40px;
-
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-            // left: 0; 
-
-            @include breakpoints(desktop){
-                max-width: 1000px;
-                // display: flex;
-                justify-content: flex-end;
-                top: 11vw;
-                left: 15.2vw;
-                gap: 23vw;
-            }
-            h1 {
-                @include typography($font-size: $size-x-large);
-                font-family: $fontTitle;
-                // font-weight: $fontRegular;
-                // font-size: $size-x-large;
-                font-style: italic;
-            }
-        }
-
     }
 }
 
+.restaurant-name {
+
+    position: relative;
+    // background-color: darken($white, 6%);
+    // border-radius: 25px 25px 0px 0px;
+    // padding: 2% 5% 5% 5%;
+    // z-index: 0;
+    top: -4vw;
+
+    // position: absolute;
+    // bottom: 0;
+    // height: 70px;
+    // width: 100%;
+
+    padding-top: 4vw;
+    // padding-bottom: 2vw;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    @include breakpoints(desktop) {
+        max-width: 1024px;
+        // display: flex;
+        justify-content: flex-end;
+        // top: 11vw;
+        // left: 15.2vw;
+        gap: 32%;
+    }
+
+    h1 {
+        @include typography($font-size: $size-x-large);
+        font-family: $fontTitle;
+        // font-weight: $fontRegular;
+        // font-size: $size-x-large;
+        font-style: italic;
+    }
+}
+
+
+
 main {
-    @include breakpoints(desktop){
+    @include breakpoints(desktop) {
         display: flex;
         justify-content: center;
-      }
+    }
 }
+
 
 //restaurants
 .restaurant-presentation {
@@ -68,7 +77,7 @@ main {
     //     @extend %flex-column;
     //     gap: 2vw;
     // }
-    @include breakpoints(desktop){
+    @include breakpoints(desktop) {
         max-width: 1000px;
         width: 100%;
     }
@@ -120,14 +129,14 @@ main {
     @extend %flex-center;
 }
 
-    // @keyframes slidein {
-    //     from {
-    //       margin-left: 100%;
-    //       width: 300%;
-    //     }
-      
-    //     to {
-    //       margin-left: 0%;
-    //       width: 100%;
-    //     }
-    //   }
+// @keyframes slidein {
+//     from {
+//       margin-left: 100%;
+//       width: 300%;
+//     }
+
+//     to {
+//       margin-left: 0%;
+//       width: 100%;
+//     }
+//   }
