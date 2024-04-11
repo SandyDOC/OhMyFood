@@ -1,6 +1,5 @@
-// animations 
+// Loader//
 
-// loader
 //circle around logo
 @keyframes spinner {
     0% { transform: rotate(0deg);}
@@ -15,6 +14,8 @@
         display: none;
     }
 }
+
+//Cards restaurants//
 
 //animation depart cards menu restaurants & price
 @keyframes animationFade{

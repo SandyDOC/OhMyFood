@@ -1,3 +1,4 @@
+// Header
 header {
     .banner {
         position: relative;
@@ -11,38 +12,41 @@ header {
     }
 }
 
+// Main
+main {
+    @include breakpoints(desktop) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.restaurant-presentation {
+    padding-bottom: 5vw;
+
+    @include breakpoints(desktop) {
+        max-width: 1000px;
+        width: 100%;
+    }
+}
+
 .restaurant-name {
 
     position: relative;
-    // background-color: darken($white, 6%);
-    // border-radius: 25px 25px 0px 0px;
-    // padding: 2% 5% 5% 5%;
-    // z-index: 0;
-    top: -4vw;
-
-    // position: absolute;
-    // bottom: 0;
-    // height: 70px;
-    // width: 100%;
+    top: -6vw;
 
     padding-top: 4vw;
-    // padding-bottom: 2vw;
 
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @extend %flex-center;
+    gap: 3vw;
 
     @include breakpoints(desktop) {
         max-width: 1024px;
-        // display: flex;
-        justify-content: flex-end;
-        // top: 11vw;
-        // left: 15.2vw;
-        gap: 32%;
     }
 
     h1 {
@@ -51,35 +55,6 @@ header {
         // font-weight: $fontRegular;
         // font-size: $size-x-large;
         font-style: italic;
-    }
-}
-
-
-
-main {
-    @include breakpoints(desktop) {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-
-//restaurants
-.restaurant-presentation {
-    // margin-top: -5.063vw;
-    padding-bottom: 5vw;
-
-    // .restaurants {
-    //     padding-top: 3vw;
-    //     padding-left: 3vw;
-
-    //     box-sizing: border-box;
-    //     @extend %flex-column;
-    //     gap: 2vw;
-    // }
-    @include breakpoints(desktop) {
-        max-width: 1000px;
-        width: 100%;
     }
 }
 
@@ -95,15 +70,14 @@ main {
         // font-size: $size-normal;
         // color: $black;
         text-transform: uppercase;
-        // border-bottom: 3px solid $tertiary-green;
         width: 23px;
 
-        // height: 3.5vh;
         margin-left: 3vw;
         margin-bottom: 3vw;
 
         position: relative;
         height: 27px;
+
         animation: animationFade 0.3s backwards;
 
         &::before {
@@ -128,15 +102,3 @@ main {
 .btn-cmd {
     @extend %flex-center;
 }
-
-// @keyframes slidein {
-//     from {
-//       margin-left: 100%;
-//       width: 300%;
-//     }
-
-//     to {
-//       margin-left: 0%;
-//       width: 100%;
-//     }
-//   }

@@ -1,53 +1,57 @@
-//Colors
+//Colors//
 
 // Couleurs principales
-$primary-purple:#9356DC;
-$secondary-pink:#FF79DA;
-$tertiary-green:#99E2D0;
+$primary-purple: #9356DC;
+$secondary-pink: #FF79DA;
+$tertiary-green: #99E2D0;
 
 // Utilitaires Couleurs
 $darkBlue: #003A68;
 $blue: #89C8FA;
 $green-font: #008766;
 
-$lightGrey:#F6F6F6;
-$grey:#EAEAEA;
-$white:#FFFFFF;
-$lightBlack:#353535;
+$lightGrey: #F6F6F6;
+$grey: #EAEAEA;
+$white: #FFFFFF;
+$lightBlack: #353535;
 
-$lightWhite:#F3F3F3;
-$shadow:#d5d5d5;
-$icon:#7E7E7E;
-$darkTitleRestaurant:#101010;
-$black:#000;
+$lightWhite: #F3F3F3;
+$shadow: #d5d5d5;
+$icon: #7E7E7E;
+$darkTitleRestaurant: #101010;
+$black: #000;
 
-$gradient-color:linear-gradient($secondary-pink, $primary-purple);
+$gradient-color: linear-gradient($secondary-pink, $primary-purple);
 
-//Fonts
+//Fonts//
 
 // fontFamily
 $fontTitle: "Shrikhand", sans-serif;
 $fontText: "Roboto", sans-serif;
 
 // fontSize 
-  $size-x-large: 1.75em; //28px
-  $size-large: 1.5em; //24px
-  $size-x-mediumSize: 1.125em; //18px
-  $size-xx-mediumSize: 1.0625em;//17px
-  $size-normal: 1em;
-  $size-small: 0.9375em;//15px
-  $size-x-small: 0.875em;//14px
+$size-x-large: 1.75em; //28px
+$size-large: 1.5em; //24px
+$size-x-mediumSize: 1.125em; //18px
+$size-xx-mediumSize: 1.0625em; //17px
+$size-normal: 1em;
+$size-small: 0.9375em; //15px
+$size-x-small: 0.875em; //14px
 
 // fontWeight
-  $fontBold:700;
-  $fontMedium:500;
-  $fontRegular:400;
-  $fontLight:300;
+$fontBold: 700;
+$fontMedium: 500;
+$fontRegular: 400;
+$fontLight: 300;
 
+// Utilitaires Position / Dimensions//
+$buttonSize: 173px;
 
-  // Utilitaires Position / Dimensions
-
-// color
+//breakpoints (responsive)//
+$breakpoints: (
+  table: 768px,
+  desktop: 1024px,
+);
 
 // $color: (
 //   primary-purple:#9356DC,
@@ -91,11 +95,6 @@ $fontText: "Roboto", sans-serif;
 //   fontLight:300,
 // );
 
-//breakpoints (responsive)
-$breakpoints: (
-    table: 768px,
-    desktop: 1024px,
-    );
 // $breakpoints: (
 //   'small': 320px,
 //   'medium': 768px,
@@ -103,7 +102,6 @@ $breakpoints: (
 //   ) !default;
 
 //size
-$buttonSize: 173px;
 
 // fontSize
 // $size-xx-large:40px;

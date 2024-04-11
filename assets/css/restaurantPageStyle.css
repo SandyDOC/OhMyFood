@@ -1,4 +1,4 @@
-.btn-cmd, .restaurant-menu .card-menu, .loader__container__logo, .loader__container, .header-home, .price-menu::after, .card-view span, .button, .btn-home {
+.btn-cmd, .restaurant-menu .card-menu, .restaurant-name, .loader__container__logo, .loader__container, .header-home, .price-menu::after, .card-view span, .button, .btn-home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,7 +112,7 @@ a {
   align-items: center;
   box-sizing: border-box;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .resto-cards {
     flex-flow: wrap;
     padding-left: 5vw;
@@ -123,7 +123,7 @@ a {
 .resto-cards a {
   width: 90%;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .resto-cards a {
     width: 45%;
   }
@@ -202,15 +202,15 @@ a {
   height: 69px;
   padding-left: 4vw;
   background: #FFFFFF;
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
 .card-menu article span.price-menu {
   display: flex;
   align-items: flex-end;
-  font-weight: 700;
-  font-size: 0.9375em;
   color: #353535;
+  font-size: 0.9375em;
+  font-weight: 700;
   gap: 2vw;
 }
 
@@ -225,20 +225,20 @@ a {
 }
 .content-menu .title-menu {
   padding: 3vw 0 3vw 0;
-  font-weight: 500;
-  font-size: 1.125em;
   color: #000;
+  font-size: 1.125em;
+  font-weight: 500;
   margin: 0px;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .content-menu .title-menu {
     padding: 0vw;
   }
 }
 .content-menu .txt-menu {
-  font-weight: 300;
-  font-size: 0.9375em;
   color: #000;
+  font-size: 0.9375em;
+  font-weight: 300;
   margin: 0px;
 }
 
@@ -298,12 +298,12 @@ header, .header-home {
 header .logo-header, .header-home .logo-header {
   display: flex;
   align-items: center;
-  aspect-ratio: 1/0.2;
+  gap: 10vw;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   header .logo-header, .header-home .logo-header {
     justify-content: flex-start;
-    gap: 21vw;
+    gap: 16vw;
     aspect-ratio: 1/0.05;
   }
 }
@@ -316,13 +316,6 @@ header .logo, .header-home .logo {
   padding-bottom: 1.8vw;
   object-fit: contain;
 }
-@media only screen and (min-width: 1024px) {
-  header .logo, .header-home .logo {
-    padding-top: 1vw;
-    padding-bottom: 0.8vw;
-  }
-}
-
 .footer-home, footer {
   background: #353535;
   color: #FFFFFF;
@@ -330,7 +323,7 @@ header .logo, .header-home .logo {
   gap: 4vw;
   padding: 22px 25px 22px 25px;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .footer-home, footer {
     flex-direction: row-reverse;
     justify-content: flex-start;
@@ -343,7 +336,7 @@ header .logo, .header-home .logo {
   padding-top: 3vw;
   filter: invert(100%);
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .footer-home .logo img, footer .logo img {
     padding-top: 0vw;
   }
@@ -351,7 +344,7 @@ header .logo, .header-home .logo {
 .footer-home .link, footer .link {
   gap: 2vw;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .footer-home .link, footer .link {
     flex-direction: row;
     justify-content: center;
@@ -415,31 +408,6 @@ header .banner img, .header-home .banner img {
   width: 100%;
 }
 
-.restaurant-name {
-  position: relative;
-  top: -4vw;
-  padding-top: 4vw;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-@media only screen and (min-width: 1024px) {
-  .restaurant-name {
-    max-width: 1024px;
-    justify-content: flex-end;
-    gap: 32%;
-  }
-}
-.restaurant-name h1 {
-  color: #000;
-  font-size: 1.75em;
-  font-weight: 400;
-  font-family: "Shrikhand", sans-serif;
-  font-style: italic;
-}
-
 @media only screen and (min-width: 1024px) {
   main {
     display: flex;
@@ -455,6 +423,27 @@ header .banner img, .header-home .banner img {
     max-width: 1000px;
     width: 100%;
   }
+}
+
+.restaurant-name {
+  position: relative;
+  top: -6vw;
+  padding-top: 4vw;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  gap: 3vw;
+}
+@media only screen and (min-width: 1024px) {
+  .restaurant-name {
+    max-width: 1024px;
+  }
+}
+.restaurant-name h1 {
+  color: #000;
+  font-size: 1.75em;
+  font-weight: 400;
+  font-family: "Shrikhand", sans-serif;
+  font-style: italic;
 }
 
 .restaurant-menu {

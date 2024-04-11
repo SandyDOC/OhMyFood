@@ -10,7 +10,7 @@
 
     // font-size: $size-normal;
     // font-weight:  $fontMedium;
-    @include breakpoints(desktop) {
+    @include breakpoints(table){
         flex-direction: row-reverse;
         justify-content: flex-start;
         box-sizing: border-box;
@@ -23,7 +23,7 @@
         // height: 27px;
         padding-top: 3vw;
         filter: invert(100%);
-        @include breakpoints(desktop){
+        @include breakpoints(table){
             // display: none;
             padding-top: 0vw;
             // padding-left: 3vw;
@@ -34,7 +34,7 @@
         @extend %flex-column;
         gap: 2vw;
 
-        @include breakpoints(desktop) {
+        @include breakpoints(table) {
             flex-direction: row;
             justify-content: center;
             align-items: center;
@@ -51,7 +51,6 @@
             object-fit: contain
         }
     }
-
 }
 
 footer {

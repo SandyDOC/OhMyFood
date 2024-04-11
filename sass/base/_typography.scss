@@ -1,18 +1,15 @@
 // Typography rules 
-*{
+* {
   margin: 0px;
   padding: 0px;
 }
 
 body {
   font-family: $fontText;
-  // height: 100vh;
-  // margin: 0px;
 }
 
 .main-container {
   width: 100%;
-  // height: 100%;
   min-width: 320px;
   box-sizing: border-box;
 }
@@ -25,7 +22,7 @@ a {
 
 .section-title {
   margin: 0px;
-@include typography($font-size:$size-large, $font-weight:$fontBold);
+  @include typography($font-size: $size-large, $font-weight: $fontBold);
   // font-size: $size-large;
   // font-weight: $fontBold;
   // color: $black;
@@ -33,7 +30,7 @@ a {
 }
 
 .text {
-  @include typography($color:none, $font-weight:$fontMedium);
+  @include typography($color: none, $font-weight: $fontMedium);
   // font-size: $fontMedium;
   // font-size: $size-normal;
 }
@@ -45,4 +42,3 @@ a {
 .restaurant-name {
   background: $lightGrey;
 }
-

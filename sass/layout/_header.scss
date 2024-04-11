@@ -6,32 +6,34 @@ header {
     .logo-header {
         display: flex;
         align-items: center;
-        aspect-ratio: 1/0.2;
-        @include breakpoints(desktop){
+        gap: 10vw;
+        // aspect-ratio: 1/0.2;
+
+        @include breakpoints(table) {
             justify-content: flex-start;
-            gap:21vw;
+            gap: 16vw;
             aspect-ratio: 1/0.05;
         }
     }
+
     .fa-arrow-left {
         padding: 0 20vw 0 4vw;
     }
+
     .logo {
         // width: 50.625vw;
         width: 162px;
         padding-top: 3vw;
         padding-bottom: 1.8vw;
         object-fit: contain;
-        @include breakpoints(desktop){
-            padding-top: 1vw;
-            padding-bottom: 0.8vw
+
+        @include breakpoints(table) {
+            // padding-top: 1vw;
+            // padding-bottom: 0.8vw
         }
-        }
+    }
 }
 
 .header-home {
     @extend header, %flex-center;
 }
-
-
- 

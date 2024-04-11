@@ -5,7 +5,7 @@
     align-items: center;
     box-sizing: border-box;
 
-    @include breakpoints(desktop){
+    @include breakpoints(table) {
         flex-flow: wrap;
         padding-left: 5vw;
         padding-right: 3vw;
@@ -14,7 +14,8 @@
 
     a {
         width: 90%;
-        @include breakpoints(desktop){
+
+        @include breakpoints(table) {
             width: 45%;
         }
     }
@@ -67,10 +68,10 @@
     justify-content: space-around;
     // gap: 15vw;
     gap: 22%;
-    // align-items: baseline;
     padding-top: 3vw;
     padding-bottom: 3vw;
-    @include breakpoints(desktop){
+
+    @include breakpoints(desktop) {
         padding-top: 1vw;
         padding-bottom: 1vw;
         gap: 45%;
@@ -94,14 +95,14 @@
 }
 
 //Cards menu restaurants
-.card-menu article{
+.card-menu article {
     display: flex;
     justify-content: space-between;
-
     // position: relative;
     overflow: hidden;
     box-sizing: border-box;
     cursor: pointer;
+
     animation: animationFade 0.3s backwards;
 
     width: 85%;
@@ -110,21 +111,17 @@
     // padding-right: 4vw;
 
     background: $white;
-    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
-    // border: 3px solid black;
+    @include shadow($blur: 15px, $percent: 0.1);
+    // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
     border-radius: 15px;
 
     span.price-menu {
         display: flex;
-        // justify-content: center;
         align-items: flex-end;
-        // padding-bottom: 3vw;
-        // @extend %flex-center;
-        font-weight: $fontBold;
-        font-size: $size-small;
-        color: $lightBlack;
-
-        // padding-left: 4vw;
+        @include typography($lightBlack, $size-small, $fontBold);
+        // font-weight: $fontBold;
+        // font-size: $size-small;
+        // color: $lightBlack;
         gap: 2vw;
 
     }
@@ -133,80 +130,71 @@
 
 .content-menu {
     width: 61%;
-    @include breakpoints(desktop){
-       width: 81%;
-       padding: 1vw;
+
+    @include breakpoints(desktop) {
+        width: 81%;
+        padding: 1vw;
     }
 
     .title-menu {
-        padding: 3vw 0 3vw 0; // width: 70%;
-        font-weight: $fontMedium;
-        font-size: $size-x-mediumSize;
-        color: $black;
+        padding: 3vw 0 3vw 0;
+        @include typography($font-size: $size-x-mediumSize, $font-weight: $fontMedium);
+        // font-weight: $fontMedium;
+        // font-size: $size-x-mediumSize;
+        // color: $black;
         margin: 0px;
         @extend %txt-overflow;
         // white-space: nowrap;
         // overflow: hidden;
         // text-overflow: ellipsis;
-        @include breakpoints(desktop){
-            padding:0vw;
-            // line-height: 0.005em;
+
+        @include breakpoints(table) {
+            padding: 0vw;
         }
     }
 
     .txt-menu {
-        // padding-left: 3vw;
-        // width: 73%;
-        font-weight: $fontLight;
-        font-size: $size-small;
-        color: $black;
+        @include typography($font-size: $size-small, $font-weight: $fontLight);
+        // font-weight: $fontLight;
+        // font-size: $size-small;
+        // color: $black;
         margin: 0px;
         @extend %txt-overflow;
         // white-space: nowrap;
         // overflow: hidden;
         // text-overflow: ellipsis;
-        // @include breakpoints(desktop){
-        //     line-height: 0.05em;
-        // }
     }
 }
 
 .price-menu {
-        &::after{
-            content: "\f058"; 
-            font-family: 'Font Awesome 6 Free'; 
-            font-weight: 600; 
-            font-size: 20px; 
-            color: rgba(#fff, 0);
+    &::after {
+        content: "\f058";
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 600;
+        font-size: 20px;
+        color: rgba(#fff, 0);
+        // position: relative;
+        @extend %flex-center;
+        overflow: hidden;
+        // right: -15px;
+        // top: -13.5px;
+        height: 100%;
+        // height: 5vh;
+        width: 0px;
 
-            // position: relative;
+        background: #99E2D0;
 
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;
-            @extend %flex-center;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
 
-            overflow: hidden;
+        // transition: 800ms ease infinite alternate slidein;
 
-            // right: -15px;
-            // top: -13.5px;
-
-            height: 100%;
-            // height: 5vh;
-            width: 0px;
-
-            background: #99E2D0; 
-
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-
-            // transition: 800ms ease infinite alternate slidein;
-            
-            // animation: 800ms ease infinite alternate slidein;
-            // transition: width 600ms ease, border-bottom-right-radius 100ms ease, color 500ms;
-        }
-        &:hover::after{
-            width: 59px;
-            color: rgba(#fff, 1);
-        }
+        // animation: 800ms ease infinite alternate slidein;
+        // transition: width 600ms ease, border-bottom-right-radius 100ms ease, color 500ms;
     }
+
+    &:hover::after {
+        width: 59px;
+        color: rgba(#fff, 1);
+    }
+}
