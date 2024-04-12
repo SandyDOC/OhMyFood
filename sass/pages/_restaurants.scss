@@ -50,7 +50,7 @@ main {
     }
 
     h1 {
-        @include typography($font-size: $size-x-large);
+        @include typography($color:#101010, $font-size: $size-x-large);
         font-family: $fontTitle;
         // font-weight: $fontRegular;
         // font-size: $size-x-large;

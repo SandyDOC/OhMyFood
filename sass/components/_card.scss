@@ -1,7 +1,7 @@
-// Cards "restaurants" sur Homepage
+// Card/Menu "restaurants" sur Homepage
 .resto-cards {
     @extend %flex-column;
-    gap: 6vw;
+    gap: 7vw;
     align-items: center;
     box-sizing: border-box;
 
@@ -13,7 +13,7 @@
     }
 
     a {
-        width: 90%;
+        width: 87%;
 
         @include breakpoints(table) {
             width: 45%;
@@ -41,6 +41,37 @@
     }
 }
 
+.card-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 18vw;
+    // gap: 22%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    
+    @include breakpoints(desktop) {
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        gap: 45%;
+    }
+}
+
+.card-txt {
+    .card-title {
+        @include typography($font-size: $size-x-mediumSize, $font-weight: $fontBold);
+        // font-size: $size-x-mediumSize;
+        // font-weight: $fontBold;
+        margin-bottom: 0;
+    }
+    
+    .card-subtitle {
+        @include typography($font-size: $size-mediumSize, $font-weight: $fontLight);
+        // font-size: $size-xx-mediumSize;
+        // font-weight: $fontLight;
+        margin-top: 1vw;
+    }
+}
+
 // Badge "nouveau"
 .card-view span {
     border-radius: 2px;
@@ -61,37 +92,6 @@
 
     @extend %flex-center;
 
-}
-
-.card-content {
-    display: flex;
-    justify-content: space-around;
-    // gap: 15vw;
-    gap: 22%;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-
-    @include breakpoints(desktop) {
-        padding-top: 1vw;
-        padding-bottom: 1vw;
-        gap: 45%;
-    }
-}
-
-.card-txt {
-    .card-title {
-        @include typography($font-size: $size-x-mediumSize, $font-weight: $fontBold);
-        // font-size: $size-x-mediumSize;
-        // font-weight: $fontBold;
-        margin-bottom: 0;
-    }
-
-    .card-subtitle {
-        @include typography($font-size: $size-xx-mediumSize, $font-weight: $fontLight);
-        // font-size: $size-xx-mediumSize;
-        // font-weight: $fontLight;
-        margin-top: 1vw;
-    }
 }
 
 //Cards menu restaurants

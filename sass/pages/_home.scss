@@ -13,9 +13,10 @@
 
     .search {
         background: inherit;
-        @include typography($font-weight: $fontMedium);
+        @include typography($color: $lightBlack, $font-weight: $fontMedium);
 
-        @include breakpoints(desktop) {
+
+        @include breakpoints(table) {
             padding-left: 1vw;
         }
 
@@ -35,36 +36,33 @@
 //hero
 .hero {
     text-align: center;
-    justify-content: space-evenly;
-    //   gap: 2vw;
-    aspect-ratio: 1/0.8;
-    // padding-left: 4vw;
-    // padding-right: 4vw;
-    // padding-top: 4vw;
-    // padding-bottom: 10vw;
+    justify-content: flex-start;
+    gap: 3vw;
+    aspect-ratio: 1/0.85;
 
     @extend %flex-column;
     align-items: center;
     box-sizing: border-box;
 
-    @include breakpoints(desktop) {
+    @include breakpoints(table) {
         padding-top: 0vw;
         padding-bottom: 4vw;
     }
 
     h1 {
-        // margin-bottom: 2vw;
         width: 89%;
+        padding-top: 6vw;
 
-        @include breakpoints(desktop) {
+        @include breakpoints(table) {
             padding-top: 2vw;
         }
     }
 
     p {
-        // margin-top: 0px;
-        width: 95%;
-        padding-bottom: 7vw;
+        width: 96%;
+        padding-bottom: 9vw;
+        //    font-size: $size-x-mediumSize;
+        //    font-weight: $fontLight;
         @include typography($lightBlack, $size-x-mediumSize, $fontLight);
     }
 }
@@ -73,8 +71,21 @@
 .fonctionnement,
 .restaurants {
     @extend %flex-column;
-    padding-top: 2vw;
-    padding-bottom: 7vw;
+    // padding-top: 2vw;
+    // padding-bottom: 7vw;
+    // padding-left: 2vw;
+    aspect-ratio: 1/1.2;
+}
+
+.fonctionnement h2,
+.restaurants h2 {
+    // @include typography($font-size: $size-large, $font-weight: $fontBold);
+    // font-size: $size-large;
+    // font-weight: $fontBold;
+    //  color: $black;
+    padding-top: 9vw;
+    padding-bottom: 5vw;
+    padding-left: 4vw;
 }
 
 .fonctionnement {
@@ -85,12 +96,13 @@
         padding-bottom: 5vw;
     }
 
-    h2 {
-        @include typography($font-size: $size-large, $font-weight: $fontBold);
-        //  font-size: $size-large;
-        //  font-weight: $fontBold;
-        //  color: $black;
-    }
+    // h2 {
+    //     // @include typography($font-size: $size-large, $font-weight: $fontBold);
+
+    //     padding-top: 3vw;
+    //     padding-bottom: 2vw;
+    //     padding-left: 4vw;
+    // }
 }
 
 //cards instructions (fonctionnement)
@@ -111,7 +123,8 @@
         justify-content: flex-start;
         border-radius: 20px;
 
-        width: 87%;
+        width: 83%;
+        max-width: 322.49px;
         height: 72.38px;
         @include shadow($blur: 15px, $percent: 0.15);
         // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
@@ -159,14 +172,15 @@
     }
 }
 
-//cars restaurants (restaurants)
+//card/menu restaurants (restaurants)
 .restaurants {
-    padding-top: 3vw;
-    padding-left: 3vw;
+    // padding-top: 3vw;
+    // padding-left: 3vw;
+    padding-bottom: 15vw;
 
     box-sizing: border-box;
     @extend %flex-column;
-    gap: 2vw;
+    // gap: 2vw;
 
     @include breakpoints(table) {
         padding: 0vw;
