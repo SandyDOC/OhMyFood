@@ -43,16 +43,18 @@
 
 .card-content {
     display: flex;
-    justify-content: space-around;
-    gap: 18vw;
+    justify-content: space-between;
+    // gap: 18vw;
     // gap: 22%;
     padding-top: 3vw;
     padding-bottom: 3vw;
-    
-    @include breakpoints(desktop) {
+    padding-left: 3vw;
+    width: 92%;
+
+    @include breakpoints(table) {
         padding-top: 1vw;
         padding-bottom: 1vw;
-        gap: 45%;
+        width: 86%;
     }
 }
 
@@ -63,7 +65,7 @@
         // font-weight: $fontBold;
         margin-bottom: 0;
     }
-    
+
     .card-subtitle {
         @include typography($font-size: $size-mediumSize, $font-weight: $fontLight);
         // font-size: $size-xx-mediumSize;
