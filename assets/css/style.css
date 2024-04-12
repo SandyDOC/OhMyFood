@@ -294,6 +294,7 @@ a {
 header, .header-home {
   margin: 0px;
   background-color: #FFFFFF;
+  padding-top: 1vw;
   aspect-ratio: 1/0.02;
 }
 header .logo-header, .header-home .logo-header {
@@ -427,29 +428,19 @@ footer {
 .hero {
   text-align: center;
   justify-content: flex-start;
-  gap: 3vw;
-  aspect-ratio: 1/0.85;
+  gap: 2vw;
+  padding-bottom: 8vw;
+  padding-top: 0vw;
   align-items: center;
   box-sizing: border-box;
 }
-@media only screen and (min-width: 768px) {
-  .hero {
-    padding-top: 0vw;
-    padding-bottom: 4vw;
-  }
-}
 .hero h1 {
   width: 89%;
-  padding-top: 6vw;
-}
-@media only screen and (min-width: 768px) {
-  .hero h1 {
-    padding-top: 2vw;
-  }
+  padding-top: 4vw;
 }
 .hero p {
   width: 96%;
-  padding-bottom: 9vw;
+  padding-bottom: 3vw;
   color: #353535;
   font-size: 1.125em;
   font-weight: 300;

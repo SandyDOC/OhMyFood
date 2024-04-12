@@ -293,6 +293,7 @@ a {
 header, .header-home {
   margin: 0px;
   background-color: #FFFFFF;
+  padding-top: 1vw;
   aspect-ratio: 1/0.02;
 }
 header .logo-header, .header-home .logo-header {
