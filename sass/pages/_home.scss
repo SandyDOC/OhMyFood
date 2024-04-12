@@ -38,7 +38,7 @@
     text-align: center;
     justify-content: flex-start;
     gap: 2vw;
-    padding-bottom: 8vw;
+    padding-bottom: 7vw;
     padding-top: 0vw;
     // aspect-ratio: 1/0.85;
 
@@ -47,8 +47,8 @@
     box-sizing: border-box;
 
     @include breakpoints(table) {
-        // padding-top: 0vw;
-        // padding-bottom: 4vw;
+        gap: 1vw;
+        padding-bottom: 4vw;
     }
 
     h1 {
@@ -76,7 +76,7 @@
     // padding-top: 2vw;
     // padding-bottom: 7vw;
     // padding-left: 2vw;
-    aspect-ratio: 1/1.2;
+    // aspect-ratio: 1/1.2;
 }
 
 .fonctionnement h2,
@@ -85,8 +85,8 @@
     // font-size: $size-large;
     // font-weight: $fontBold;
     //  color: $black;
-    padding-top: 9vw;
-    padding-bottom: 5vw;
+    padding-top: 3vw;
+    padding-bottom: 2vw;
     padding-left: 4vw;
 }
 
@@ -95,7 +95,7 @@
 
     @include breakpoints(table) {
         padding-top: 0vw;
-        padding-bottom: 5vw;
+        // padding-bottom: 5vw;
     }
 
     // h2 {
@@ -112,30 +112,35 @@
     @extend %flex-column;
     align-items: center;
     gap: 6vw;
+    padding-bottom: 8vw;
 
     @include breakpoints(table) {
         flex-direction: row;
-        margin-left: 5vw;
-        margin-right: 5vw;
-        gap: 4vw;
+        justify-content: center;
+        // margin-left: 5vw;
+        // margin-right: 5vw;
+        gap: 3vw;
+        padding-bottom: 5vw;
     }
 
     .step {
         display: flex;
-        justify-content: flex-start;
+        // justify-content: flex-start;
         border-radius: 20px;
 
+        // width: 84%;
         width: 83%;
-        max-width: 322.49px;
+        min-width: 213px;
+        max-width: 335px;
         height: 72.38px;
         @include shadow($blur: 15px, $percent: 0.15);
         // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
         background: $lightGrey;
         position: relative;
 
-        @include breakpoints(desktop) {
+        @include breakpoints(table) {
             justify-content: center;
-            width: 45%;
+            width: 30%;
         }
     }
 
@@ -157,11 +162,15 @@
     .indications {
         display: flex;
         align-items: center;
-        gap: 4vw;
-        padding-left: 10vw;
+        gap: 3vw;
+        position: relative;
+        left: 7vw;
+        // padding-left: 10vw;
 
         @include breakpoints(table) {
             padding-left: 0vw;
+            gap: 1vw;
+            left: 0vw;
         }
     }
 
