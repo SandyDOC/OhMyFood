@@ -23,8 +23,10 @@ header {
     .logo {
         // width: 50.625vw;
         width: 162px;
-        padding-top: 3vw;
-        padding-bottom: 1.8vw;
+        height: 44px;
+
+        // padding-top: 3vw;
+        // padding-bottom: 1.8vw;
         object-fit: contain;
 
         @include breakpoints(table) {

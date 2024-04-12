@@ -35,11 +35,13 @@
 //hero
 .hero {
     text-align: center;
-
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-top: 4vw;
-    padding-bottom: 10vw;
+    justify-content: space-evenly;
+    //   gap: 2vw;
+    aspect-ratio: 1/0.8;
+    // padding-left: 4vw;
+    // padding-right: 4vw;
+    // padding-top: 4vw;
+    // padding-bottom: 10vw;
 
     @extend %flex-column;
     align-items: center;
@@ -51,7 +53,8 @@
     }
 
     h1 {
-        margin-bottom: 2vw;
+        // margin-bottom: 2vw;
+        width: 89%;
 
         @include breakpoints(desktop) {
             padding-top: 2vw;
@@ -59,8 +62,10 @@
     }
 
     p {
-        margin-top: 0px;
-        padding-bottom: 5vw;
+        // margin-top: 0px;
+        width: 95%;
+        padding-bottom: 7vw;
+        @include typography($lightBlack, $size-x-mediumSize, $fontLight);
     }
 }
 
