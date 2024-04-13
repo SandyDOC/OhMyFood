@@ -326,11 +326,12 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
   .footer-home, footer {
     flex-direction: row-reverse;
     justify-content: flex-start;
-    box-sizing: border-box;
+    align-items: baseline;
   }
 }
 .footer-home .logo img, footer .logo img {
-  width: 137.58px;
+  max-width: 137.58px;
+  width: 58%;
   height: 27px;
   object-fit: contain;
   padding-top: 3vw;
@@ -338,7 +339,8 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
 }
 @media only screen and (min-width: 768px) {
   .footer-home .logo img, footer .logo img {
-    padding-top: 0vw;
+    position: relative;
+    top: 1vw;
   }
 }
 .footer-home .link, footer .link {
@@ -347,8 +349,8 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
 @media only screen and (min-width: 768px) {
   .footer-home .link, footer .link {
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    width: 92%;
   }
 }
 .footer-home .illustration, footer .illustration {
@@ -534,7 +536,7 @@ footer {
 }
 
 .restaurants {
-  padding-bottom: 15vw;
+  padding-bottom: 10vw;
   box-sizing: border-box;
 }
 @media only screen and (min-width: 768px) {
