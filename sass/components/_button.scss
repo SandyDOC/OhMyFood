@@ -1,4 +1,4 @@
-// Button 'Découvrez nos restaurants and 'Commandez'
+// Button 'Découvrez nos restaurants' and 'Commander'
 .button {
     @extend %flex-center;
     text-align: center;
@@ -15,7 +15,6 @@
     padding: 0.25%;
     height: 50px;
     width: $buttonSize;
-    // width: 70%;
 
     &:hover {
         opacity: 0.68;
@@ -24,6 +23,7 @@
     }
 }
 
+//Button 'Découvrez nos restaurants'
 .btn-home {
     @extend .button;
     width: $buttonSize + 60px;

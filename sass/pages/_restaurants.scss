@@ -1,4 +1,5 @@
-// Header
+// Restaurants menu (restaurants page)
+// Header (Restaurants menu) 
 header {
     .banner {
         position: relative;
@@ -7,12 +8,11 @@ header {
             height: 275px;
             object-fit: cover;
             width: 100%;
-
         }
     }
 }
 
-// Main
+// Main (Restaurants menu)
 main {
     @include breakpoints(desktop) {
         display: flex;
@@ -30,7 +30,6 @@ main {
 }
 
 .restaurant-name {
-
     position: relative;
     top: -6vw;
 
@@ -39,9 +38,6 @@ main {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     @extend %flex-center;
     gap: 3vw;
 
@@ -55,6 +51,45 @@ main {
         // font-weight: $fontRegular;
         // font-size: $size-x-large;
         font-style: italic;
+    }
+
+    .restaurant-menu {
+        @extend %flex-column;
+        padding-bottom: 4vw;
+    
+        @include cardsMenuAnimation;
+    
+        .type-menu {
+            @include typography($font-weight: $fontLight);
+            // font-weight: $fontLight;
+            // font-size: $size-normal;
+            // color: $black;
+            text-transform: uppercase;
+            width: 23px;
+    
+            margin-left: 3vw;
+            margin-bottom: 3vw;
+    
+            position: relative;
+            height: 27px;
+    
+            animation: animationFade 0.3s backwards;
+    
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 40px;
+                height: 3px;
+                background: #99E2D0;
+            }
+        }
+    
+        .card-menu {
+            @extend %flex-column, %flex-center;
+            gap: 3vw;
+        }
     }
 }
 
@@ -75,30 +110,30 @@ main {
         margin-left: 3vw;
         margin-bottom: 3vw;
 
-        position: relative;
+        // position: relative;
         height: 27px;
 
         animation: animationFade 0.3s backwards;
 
         &::before {
             content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
+            @include absolute-element($left: 0px, $bottom:0px);
+            // position: absolute;
+            // bottom: 0;
+            // left: 0;
             width: 40px;
             height: 3px;
             background: #99E2D0;
         }
-
     }
 
     .card-menu {
         @extend %flex-column, %flex-center;
         gap: 3vw;
-
     }
 }
 
+//Button 'Commander'
 .btn-cmd {
     @extend %flex-center;
 }

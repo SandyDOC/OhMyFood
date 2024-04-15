@@ -7,7 +7,7 @@
 
   animation: loader 1s forwards;
 
-  &__container {
+  &-container {
     position: relative;
     @extend %flex-center;
     background: $gradient-color;
@@ -15,7 +15,7 @@
     width: 100%;
     margin: 0px;
 
-    &__logo {
+    .loader-logo {
      @extend %flex-center;
       position: relative;
       width: 200px;

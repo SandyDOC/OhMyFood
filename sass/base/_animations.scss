@@ -1,12 +1,6 @@
-// Loader//
-
-//circle around logo
-@keyframes spinner {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg);}
-}
+//Loader
 //move to next page
-@keyframes loader{
+@keyframes loader {
     from{
     }
     to{
@@ -14,10 +8,14 @@
         display: none;
     }
 }
+//circle around logo
+@keyframes spinner {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
 
-//Cards restaurants//
-
-//animation depart cards menu restaurants & price
+//Cards restaurants menu//
+//animation starting cards menu restaurants & price
 @keyframes animationFade{
     0%{
         opacity: 0;
