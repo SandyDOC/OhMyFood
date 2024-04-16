@@ -1,5 +1,5 @@
 //Font, color
-@mixin typography ($color: $black, $font-size: $size-normal, $font-weight: $fontRegular) {
+@mixin typography ($color, $font-size, $font-weight) {
     color: $color;
     font-size: $font-size;
     font-weight: $font-weight;
@@ -17,13 +17,13 @@
 // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));instructions
 
 //Position
-@mixin absolute-element ($top: none, $right: none, $bottom: none, $left: none) {
-    position: absolute;
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-}
+// @mixin absolute-element ($top, $right, $bottom, $left) {
+//     position: absolute;
+//     top: $top;
+//     right: $right;
+//     bottom: $bottom;
+//     left: $left;
+// }
 
 // Animation cards menu
 @mixin cardsMenuAnimation {

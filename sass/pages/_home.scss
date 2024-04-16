@@ -15,7 +15,7 @@
 
     .search {
         background: inherit;
-        @include typography($color: $lightBlack, $font-weight: $fontMedium);
+        @include typography($lightBlack, $size-normal, $fontMedium);
         // font-size: $size-normal;
         // font-weight: $fontMedium;
         border: none;

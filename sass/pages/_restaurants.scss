@@ -46,7 +46,7 @@ main {
     }
 
     h1 {
-        @include typography($color:#101010, $font-size: $size-x-large);
+        @include typography($darkTitleRestaurant, $size-x-large, $fontRegular);
         font-family: $fontTitle;
         // font-weight: $fontRegular;
         // font-size: $size-x-large;
@@ -60,7 +60,7 @@ main {
         @include cardsMenuAnimation;
     
         .type-menu {
-            @include typography($font-weight: $fontLight);
+            @include typography($black, $size-normal, $fontLight);
             // font-weight: $fontLight;
             // font-size: $size-normal;
             // color: $black;
@@ -78,6 +78,7 @@ main {
                 content: "";
                 position: absolute;
                 bottom: 0px;
+                
                 // left:0px;
                 width: 40px;
                 height: 3px;
@@ -99,7 +100,7 @@ main {
     @include cardsMenuAnimation;
 
     .type-menu {
-        @include typography($font-weight: $fontLight);
+        @include typography($black, $size-normal, $fontLight);
         // font-weight: $fontLight;
         // font-size: $size-normal;
         // color: $black;
@@ -116,10 +117,11 @@ main {
 
         &::before {
             content: "";
-            @include absolute-element($left: 0px, $bottom:0px);
-            // position: absolute;
-            // bottom: 0;
-            // left: 0;
+            // @include absolute-element(0px,0px, 0px, 0px);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
             width: 40px;
             height: 3px;
             background: #99E2D0;

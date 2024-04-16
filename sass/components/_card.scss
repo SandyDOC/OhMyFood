@@ -40,7 +40,10 @@
         color: $white;
         background: $primary-purple;
 
-        @include absolute-element($top: 23px, $left: -12px);
+        // @include absolute-element(23px, 0px, 0px, -12px);
+        position: absolute;
+        top: 23px;
+        left: -12px;
     }
 
     .indications {
@@ -129,14 +132,14 @@
 
 .card-txt {
     .card-title {
-        @include typography($font-size: $size-x-mediumSize, $font-weight: $fontBold);
+        @include typography($black, $size-x-mediumSize, $fontBold);
         // font-size: $size-x-mediumSize;
         // font-weight: $fontBold;
         margin-bottom: 0;
     }
 
     .card-subtitle {
-        @include typography($font-size: $size-mediumSize, $font-weight: $fontLight);
+        @include typography($black, $size-mediumSize, $fontLight);
         // font-size: $size-xx-mediumSize;
         // font-weight: $fontLight;
         margin-top: 1vw;
@@ -163,8 +166,11 @@
     // font-size: $size-x-small;
     // font-weight: $fontMedium;
     @include typography($green-font, $size-x-small, $fontMedium);
-    @include absolute-element($right: 15px, $top: 12px);
-
+    // @include absolute-element(12px, 15px, 0px, 0px);
+    position: absolute;
+    top: 12px;
+    right:15px;
+    
     @extend %flex-center;
 
 }
@@ -188,71 +194,74 @@
     // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
     border-radius: 15px;
 
-    span.price-menu {
+    // &:hover>&.price-menu {
+    //     margin-right: 0px;
+
+        span.price-menu {
+            display: flex;
+            align-items: flex-end;
+            @include typography($lightBlack, $size-small, $fontBold);
+            // font-weight: $fontBold;
+            // font-size: $size-small;
+            // color: $lightBlack;
+            gap: 2vw;
+
+        }
+    }
+
+    .content-menu {
+        width: 61%;
         display: flex;
-        align-items: flex-end;
-        @include typography($lightBlack, $size-small, $fontBold);
-        // font-weight: $fontBold;
-        // font-size: $size-small;
-        // color: $lightBlack;
-        gap: 2vw;
+        flex-direction: column;
+        justify-content: space-evenly;
 
-    }
-}
+        @include breakpoints(desktop) {
+            width: 81%;
+        }
 
-.content-menu {
-    width: 61%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+        .title-menu {
+            @include typography($black, $size-x-mediumSize, $fontMedium);
+            // font-weight: $fontMedium;
+            // font-size: $size-x-mediumSize;
+            // color: $black;
+            @extend %txt-overflow;
+            // white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+        }
 
-    @include breakpoints(desktop) {
-        width: 81%;
-    }
-
-    .title-menu {
-        @include typography($font-size: $size-x-mediumSize, $font-weight: $fontMedium);
-        // font-weight: $fontMedium;
-        // font-size: $size-x-mediumSize;
-        // color: $black;
-        @extend %txt-overflow;
-        // white-space: nowrap;
-        // overflow: hidden;
-        // text-overflow: ellipsis;
-    }
-
-    .txt-menu {
-        @include typography($font-size: $size-small, $font-weight: $fontLight);
-        // font-weight: $fontLight;
-        // font-size: $size-small;
-        // color: $black;
-        @extend %txt-overflow;
-        // white-space: nowrap;
-        // overflow: hidden;
-        // text-overflow: ellipsis;
-    }
-}
-
-.price-menu {
-    &::after {
-        content: "\f058";
-        font-family: 'Font Awesome 6 Free';
-        font-weight: 600;
-        font-size: 20px;
-        color: rgba(#fff, 0);
-        @extend %flex-center;
-        overflow: hidden;
-        height: 100%;
-        width: 0px;
-
-        background: #99E2D0;
-
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
+        .txt-menu {
+            @include typography($black, $size-small, $fontLight);
+            // font-weight: $fontLight;
+            // font-size: $size-small;
+            // color: $black;
+            @extend %txt-overflow;
+            // white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+        }
     }
 
-    &:hover::after {
-        width: 59px;
-        color: rgba(#fff, 1);
+    .price-menu {
+        &::after {
+            content: "\f058";
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 600;
+            font-size: 20px;
+            color: rgba(#fff, 0);
+            @extend %flex-center;
+            overflow: hidden;
+            height: 100%;
+            width: 0px;
+
+            background: #99E2D0;
+
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        &:hover::after {
+            width: 59px;
+            color: rgba(#fff, 1);
+        }
     }
-}

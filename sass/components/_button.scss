@@ -10,7 +10,7 @@
     // font-size: $size-normal;
     // font-weight: $fontMedium;
     // color: color(white);
-    @include typography($white, $fontMedium);
+    @include typography($white, $size-normal, $fontMedium);
 
     padding: 0.25%;
     height: 50px;

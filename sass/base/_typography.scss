@@ -21,7 +21,7 @@ a {
 
 .section-title {
   margin: 0px;
-  @include typography($font-size: $size-large, $font-weight: $fontBold);
+  @include typography($black, $size-large,$fontBold);
   // font-size: $size-large;
   // font-weight: $fontBold;
   // color: $black;
@@ -29,7 +29,7 @@ a {
 }
 
 .text {
-  @include typography($color: none, $font-weight: $fontMedium);
+  @include typography($black, $size-normal, $fontMedium);
   // font-size: $fontMedium;
   // font-size: $size-normal;
 }

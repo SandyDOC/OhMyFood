@@ -45,7 +45,7 @@ a {
 }
 
 .text {
-  color: none;
+  color: #000;
   font-size: 1em;
   font-weight: 500;
 }
@@ -92,8 +92,8 @@ a {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(#FF79DA, #9356DC);
   color: #FFFFFF;
-  font-size: 500;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: 500;
   padding: 0.25%;
   height: 50px;
   width: 173px;
@@ -145,8 +145,6 @@ a {
   background: #9356DC;
   position: absolute;
   top: 23px;
-  right: none;
-  bottom: none;
   left: -12px;
 }
 .step-group .indications {
@@ -256,8 +254,6 @@ a {
   position: absolute;
   top: 12px;
   right: 15px;
-  bottom: none;
-  left: none;
 }
 
 .card-menu article {
@@ -397,6 +393,8 @@ header .logo, .header-home .logo {
 .footer-home, footer {
   background: #353535;
   color: #FFFFFF;
+  font-size: 1em;
+  font-weight: 500;
   justify-content: space-around;
   gap: 3vw;
   padding: 22px 25px 22px 25px;

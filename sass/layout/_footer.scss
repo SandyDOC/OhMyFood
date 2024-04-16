@@ -1,7 +1,9 @@
 //Footer (Homepage)
 .footer-home {
     background: $lightBlack;
-    color: $white;
+    // color: $white;
+    @include typography($white, $size-normal, $fontMedium);
+
 
     @extend %flex-column;
     justify-content: space-around;
@@ -35,6 +37,7 @@
     .link {
         @extend %flex-column;
         gap: 2vw;
+        // color: $white;
 
         @include breakpoints(table) {
             flex-direction: row;
@@ -46,6 +49,7 @@
     .illustration {
         display: flex;
         gap: 3px;
+        // color: $white;
 
         i {
             height: 20px;
