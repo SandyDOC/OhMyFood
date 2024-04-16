@@ -1,121 +1,112 @@
 //Font, color
-@mixin typography ($color:$black, $font-size:$size-normal, $font-weight:$fontRegular){
+@mixin typography ($color: $black, $font-size: $size-normal, $font-weight: $fontRegular) {
     color: $color;
     font-size: $font-size;
     font-weight: $font-weight;
 }
 
-//Positions
-@mixin absolute-element ($top:none, $right:none, $bottom:none, $left:none, $x:none, $y:none){
-    position: absolute;
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-    transform:translate($x,$y);
-}
-
-// @mixin pseudo-element ($display, $position:absolute, $content:'' ){
-//     content:$content;
-//     display: $display;
-//     position: $position;
-// }
-
 //Shadow
 // box-shadow:0px 4px 10px rgba(0, 0, 0, 0.25);
-@mixin shadow ($horizontal:0px, $vertical:4px, $blur:10px, $percent:0.25) {
+@mixin shadow ($horizontal: 0px, $vertical: 4px, $blur: 10px, $percent: 0.25) {
     box-shadow: $horizontal $vertical $blur rgba(0, 0, 0, $percent);
 }
+
 // filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));button
 // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));card
 // filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));badge
 // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));instructions
 
- //Breakpoints responsive
-@mixin breakpoints($device) {
-    @media only screen and (min-width: map-get($breakpoints, $device)) {
-        @content;
-    }
+//Position
+@mixin absolute-element ($top: none, $right: none, $bottom: none, $left: none) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
 }
 
 // Animation cards menu
-@mixin cardsMenuAnimation{
-    &:nth-child(2){
-        h2{
-            // animation-delay: 1.5s ease forwards;
-            animation-delay: 1.3s;
-        } 
+@mixin cardsMenuAnimation {
 
-        .card-menu{
-            & > :nth-child(1){
-                // animation-delay: 5.5s ease forwards;
+    //Entrées
+    &:nth-child(2) {
+        h2 {
+            animation-delay: 1.3s;
+        }
+
+        .card-menu {
+            &> :nth-child(1) {
                 animation-delay: 1.4s;
-                // animation-delay: 1.8s;
             }
 
-            & > :nth-child(2){
-                // animation-delay: 2s;
+            &> :nth-child(2) {
                 animation-delay: 1.5s;
             }
 
-            & > :nth-child(3){
-                // animation-delay: 2.2s;
+            &> :nth-child(3) {
                 animation-delay: 1.6s;
             }
 
-            & > :nth-child(4){
-                // animation-delay: 2.3s;
+            &> :nth-child(4) {
                 animation-delay: 1.7s;
             }
         }
-    } 
+    }
 
-    &:nth-child(3){
-        h2{
+    //Plats
+    &:nth-child(3) {
+        h2 {
             animation-delay: 1.8s;
         }
 
-        .card-menu{
-            & > :nth-child(1){
+        .card-menu {
+            &> :nth-child(1) {
                 animation-delay: 1.9s;
             }
 
-            & > :nth-child(2){
+            &> :nth-child(2) {
                 animation-delay: 2s;
             }
 
-            & > :nth-child(3){
+            &> :nth-child(3) {
                 animation-delay: 2.1s;
             }
 
-            & > :nth-child(4){
+            &> :nth-child(4) {
                 animation-delay: 2.2s;
             }
         }
     }
 
-    &:nth-child(4){
-        h2{
+    //Desserts
+    &:nth-child(4) {
+        h2 {
             animation-delay: 2.3s;
         }
 
-        .card-menu{
-            & > :nth-child(1){
+        .card-menu {
+            &> :nth-child(1) {
                 animation-delay: 2.4s;
             }
 
-            & > :nth-child(2){
+            &> :nth-child(2) {
                 animation-delay: 2.5s;
             }
 
-            & > :nth-child(3){
+            &> :nth-child(3) {
                 animation-delay: 2.6s;
             }
 
-            & > :nth-child(4){
+            &> :nth-child(4) {
                 animation-delay: 2.7s;
             }
         }
     }
 }
 
+//Breakpoints responsive
+@mixin breakpoints($device) {
+    @media only screen and (min-width: map-get($breakpoints, $device)) {
+        @content;
+    }
+}

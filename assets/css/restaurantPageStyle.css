@@ -1,4 +1,4 @@
-.btn-cmd, .restaurant-menu .card-menu, .restaurant-name .restaurant-menu .card-menu, .restaurant-name, .loader-container .loader-logo, .loader-container, .header-home, .price-menu::after, .card-view span, .step-group .number span, .button, .btn-home {
+.btn-cmd, .restaurant-menu .card-menu, .restaurant-name .restaurant-menu .card-menu, .restaurant-name, .loader-container .loader-logo, .loader-container, .header-home, header .logo-header, .header-home .logo-header, .price-menu::after, .card-view span, .step-group .number span, .button, .btn-home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,7 +147,6 @@ a {
   right: none;
   bottom: none;
   left: -12px;
-  transform: translate(none, none);
 }
 .step-group .indications {
   display: flex;
@@ -159,7 +158,7 @@ a {
 @media only screen and (min-width: 768px) {
   .step-group .indications {
     padding-left: 0vw;
-    gap: 1vw;
+    gap: 1.5vw;
     left: 0vw;
   }
 }
@@ -181,6 +180,7 @@ a {
     padding-left: 5vw;
     padding-right: 3vw;
     padding-bottom: 5vw;
+    gap: 4vw;
   }
 }
 .resto-cards a {
@@ -237,6 +237,11 @@ a {
   font-weight: 300;
   margin-top: 1vw;
 }
+@media only screen and (min-width: 768px) {
+  .card-txt .card-subtitle {
+    margin-top: 0;
+  }
+}
 
 .card-view span {
   border-radius: 2px;
@@ -252,7 +257,6 @@ a {
   right: 15px;
   bottom: none;
   left: none;
-  transform: translate(none, none);
 }
 
 .card-menu article {
@@ -355,20 +359,25 @@ header, .header-home {
   padding-top: 1vw;
   aspect-ratio: 1/0.02;
 }
+@media only screen and (min-width: 768px) {
+  header, .header-home {
+    padding-top: 3vw;
+    aspect-ratio: 0;
+  }
+}
 header .logo-header, .header-home .logo-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 header .fa-arrow-left, .header-home .fa-arrow-left {
   position: absolute;
-  left: 5vw;
+  left: 3vw;
   z-index: 1;
   top: 1.1vh;
 }
 @media only screen and (min-width: 768px) {
   header .fa-arrow-left, .header-home .fa-arrow-left {
-    top: 2.1vh;
+    left: 2vw;
+    top: 0.7vh;
   }
 }
 header .logo, .header-home .logo {
@@ -376,12 +385,19 @@ header .logo, .header-home .logo {
   height: 44px;
   object-fit: contain;
 }
+@media only screen and (min-width: 768px) {
+  header .logo, .header-home .logo {
+    width: 200px;
+    height: 34.2px;
+    padding-bottom: 3vw;
+  }
+}
 
 .footer-home, footer {
   background: #353535;
   color: #FFFFFF;
   justify-content: space-around;
-  gap: 4vw;
+  gap: 3vw;
   padding: 22px 25px 22px 25px;
 }
 @media only screen and (min-width: 768px) {
@@ -389,12 +405,12 @@ header .logo, .header-home .logo {
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: baseline;
+    padding: 30px 25px 30px 0px;
   }
 }
 .footer-home .logo img, footer .logo img {
-  max-width: 137.58px;
-  width: 58%;
-  height: 27px;
+  max-width: 105px;
+  height: 18px;
   object-fit: contain;
   padding-top: 3vw;
   filter: invert(100%);
@@ -402,8 +418,7 @@ header .logo, .header-home .logo {
 @media only screen and (min-width: 768px) {
   .footer-home .logo img, footer .logo img {
     position: relative;
-    top: 1vw;
-    width: 80%;
+    top: 0.4vw;
   }
 }
 .footer-home .link, footer .link {
@@ -492,7 +507,7 @@ header .banner img, .header-home .banner img {
   padding-top: 4vw;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  gap: 3vw;
+  gap: 3.5vw;
 }
 @media only screen and (min-width: 1024px) {
   .restaurant-name {
@@ -560,7 +575,7 @@ header .banner img, .header-home .banner img {
   font-weight: 300;
   text-transform: uppercase;
   width: 23px;
-  margin-left: 3vw;
+  margin-left: 8vw;
   margin-bottom: 3vw;
   position: relative;
   height: 27px;
@@ -569,8 +584,7 @@ header .banner img, .header-home .banner img {
 .restaurant-name .restaurant-menu .type-menu::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 0px;
   width: 40px;
   height: 3px;
   background: #99E2D0;
@@ -635,6 +649,7 @@ header .banner img, .header-home .banner img {
   width: 23px;
   margin-left: 3vw;
   margin-bottom: 3vw;
+  position: relative;
   height: 27px;
   animation: animationFade 0.3s backwards;
 }
@@ -645,7 +660,6 @@ header .banner img, .header-home .banner img {
   right: none;
   bottom: 0px;
   left: 0px;
-  transform: translate(none, none);
   width: 40px;
   height: 3px;
   background: #99E2D0;

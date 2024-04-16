@@ -6,27 +6,45 @@ header {
     padding-top: 1vw;
     aspect-ratio: 1/0.02;
 
+    @include breakpoints(table) {
+        padding-top: 3vw;
+        aspect-ratio: 0;
+    }
+
     .logo-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex-center;
+        position: relative;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
     }
 
     .fa-arrow-left {
         position: absolute;
-        left: 5vw;
+        left: 3vw;
         z-index: 1;
         top: 1.1vh;
 
-        @include breakpoints(table){
-            top: 2.1vh;
+        @include breakpoints(table) {
+            left: 2vw;
+            top: 0.7vh;
         }
+        // @include breakpoints(desktop) {
+        //     left: -10vw;
+        //     top: 1.7vh;
+        // }
     }
 
     .logo {
         width: 162px;
         height: 44px;
         object-fit: contain;
+
+        @include breakpoints(table) {
+            width: 200px;
+            height: 34.2px;
+            padding-bottom: 3vw;
+        }
     }
 }
 

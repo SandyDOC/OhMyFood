@@ -5,27 +5,30 @@
 
     @extend %flex-column;
     justify-content: space-around;
-    gap: 4vw;
+    gap: 3vw;
     padding: 22px 25px 22px 25px;
 
     @include breakpoints(table){
         flex-direction: row-reverse;
         justify-content: flex-end;
         align-items: baseline;
+        padding: 30px 25px 30px 0px;
     }
 
     .logo img{
-        max-width: 137.58px;
-        width: 58%;
-        height: 27px;
+        max-width: 105px;
+        // width: 58%;
+        height: 18px;
         object-fit: contain;
         padding-top: 3vw;
         filter: invert(100%);
 
         @include breakpoints(table){
             position: relative;
-            top: 1vw;
-            width: 80%;
+            // height: 18px;
+            // width: 98px;
+            top: 0.4vw;
+            // width: 80%;
         }
     }
 

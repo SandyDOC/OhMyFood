@@ -54,7 +54,8 @@
         padding-top: 4vw;
 
         @include breakpoints(table) {
-            // padding-top: 2vw;
+            font-size: 40px;
+            font-weight: $fontBold;
         }
     }
 

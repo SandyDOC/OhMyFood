@@ -39,7 +39,7 @@ main {
     border-top-right-radius: 30px;
 
     @extend %flex-center;
-    gap: 3vw;
+    gap: 3.5vw;
 
     @include breakpoints(desktop) {
         max-width: 1024px;
@@ -67,9 +67,8 @@ main {
             text-transform: uppercase;
             width: 23px;
     
-            margin-left: 3vw;
+            margin-left: 8vw;
             margin-bottom: 3vw;
-    
             position: relative;
             height: 27px;
     
@@ -78,8 +77,8 @@ main {
             &::before {
                 content: "";
                 position: absolute;
-                bottom: 0;
-                left: 0;
+                bottom: 0px;
+                // left:0px;
                 width: 40px;
                 height: 3px;
                 background: #99E2D0;
@@ -110,7 +109,7 @@ main {
         margin-left: 3vw;
         margin-bottom: 3vw;
 
-        // position: relative;
+        position: relative;
         height: 27px;
 
         animation: animationFade 0.3s backwards;
