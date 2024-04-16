@@ -6,8 +6,8 @@ header {
 
         img {
             height: 275px;
-            object-fit: cover;
             width: 100%;
+            object-fit: cover;
         }
     }
 }
@@ -24,22 +24,21 @@ main {
     padding-bottom: 5vw;
 
     @include breakpoints(desktop) {
-        max-width: 1000px;
+        max-width: 1024px;
         width: 100%;
     }
 }
 
 .restaurant-name {
+    @extend %flex-center;
     position: relative;
     top: -6vw;
 
     padding-top: 4vw;
+    gap: 3.5vw;
 
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-
-    @extend %flex-center;
-    gap: 3.5vw;
 
     @include breakpoints(desktop) {
         max-width: 1024px;
@@ -48,41 +47,34 @@ main {
     h1 {
         @include typography($darkTitleRestaurant, $size-x-large, $fontRegular);
         font-family: $fontTitle;
-        // font-weight: $fontRegular;
-        // font-size: $size-x-large;
         font-style: italic;
     }
 
     .restaurant-menu {
         @extend %flex-column;
         padding-bottom: 4vw;
-    
+        
         @include cardsMenuAnimation;
-    
+
         .type-menu {
             @include typography($black, $size-normal, $fontLight);
-            // font-weight: $fontLight;
-            // font-size: $size-normal;
-            // color: $black;
             text-transform: uppercase;
+            position: relative;
+            
             width: 23px;
-    
+            height: 27px;
             margin-left: 8vw;
             margin-bottom: 3vw;
-            position: relative;
-            height: 27px;
     
             animation: animationFade 0.3s backwards;
     
             &::before {
                 content: "";
                 position: absolute;
+                background: #99E2D0;
                 bottom: 0px;
-                
-                // left:0px;
                 width: 40px;
                 height: 3px;
-                background: #99E2D0;
             }
         }
     
@@ -101,30 +93,25 @@ main {
 
     .type-menu {
         @include typography($black, $size-normal, $fontLight);
-        // font-weight: $fontLight;
-        // font-size: $size-normal;
-        // color: $black;
         text-transform: uppercase;
+        position: relative;
+        
         width: 23px;
-
+        height: 27px;
         margin-left: 3vw;
         margin-bottom: 3vw;
-
-        position: relative;
-        height: 27px;
 
         animation: animationFade 0.3s backwards;
 
         &::before {
             content: "";
-            // @include absolute-element(0px,0px, 0px, 0px);
+            background: #99E2D0;
             position: absolute;
             bottom: 0;
             left: 0;
 
             width: 40px;
             height: 3px;
-            background: #99E2D0;
         }
     }
 

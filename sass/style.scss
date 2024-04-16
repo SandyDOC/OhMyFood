@@ -1,7 +1,6 @@
 @import 
 "utils/variables",
 "utils/mixins",
-"utils/functions",
 "utils/placeholders";
 
 @import 
@@ -18,9 +17,7 @@
  "layout/footer",
  "layout/loader";
 
-@import 
- "pages/home";
-//  "pages/restaurants";
+@import "pages/home";
 
 
 

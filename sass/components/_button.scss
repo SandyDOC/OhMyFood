@@ -1,25 +1,20 @@
 // Button 'Découvrez nos restaurants' and 'Commander'
 .button {
     @extend %flex-center;
+    @include typography($white, $size-normal, $fontMedium);
+    @include shadow (0px, 4px, 10px, 0.25);
+
     text-align: center;
     border-radius: 25px;
-    // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    @include shadow;
     background: $gradient-color;
-
-    // font-size: $size-normal;
-    // font-weight: $fontMedium;
-    // color: color(white);
-    @include typography($white, $size-normal, $fontMedium);
-
+   
     padding: 0.25%;
     height: 50px;
     width: $buttonSize;
 
     &:hover {
+        @include shadow(0px, 4px, 10px, 0.45);
         opacity: 0.68;
-        @include shadow($percent: 0.45) 
-        // box-shadow:0px 4px 10px rgba(0, 0, 0, 0.45);
     }
 }
 

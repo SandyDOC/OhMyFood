@@ -1,6 +1,5 @@
 * {
   margin: 0px;
-  padding: 0px;
 }
 
 body {
@@ -22,16 +21,10 @@ a {
 .section-title {
   margin: 0px;
   @include typography($black, $size-large,$fontBold);
-  // font-size: $size-large;
-  // font-weight: $fontBold;
-  // color: $black;
-  // padding: 3vw;
 }
 
 .text {
   @include typography($black, $size-normal, $fontMedium);
-  // font-size: $fontMedium;
-  // font-size: $size-normal;
 }
 
 .hero,

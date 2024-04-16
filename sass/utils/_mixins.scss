@@ -6,28 +6,12 @@
 }
 
 //Shadow
-// box-shadow:0px 4px 10px rgba(0, 0, 0, 0.25);
-@mixin shadow ($horizontal: 0px, $vertical: 4px, $blur: 10px, $percent: 0.25) {
+@mixin shadow ($horizontal, $vertical, $blur, $percent) {
     box-shadow: $horizontal $vertical $blur rgba(0, 0, 0, $percent);
 }
 
-// filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));button
-// filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));card
-// filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));badge
-// filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));instructions
-
-//Position
-// @mixin absolute-element ($top, $right, $bottom, $left) {
-//     position: absolute;
-//     top: $top;
-//     right: $right;
-//     bottom: $bottom;
-//     left: $left;
-// }
-
 // Animation cards menu
 @mixin cardsMenuAnimation {
-
     //Entrées
     &:nth-child(2) {
         h2 {

@@ -2,8 +2,8 @@
 .step-group {
     @extend %flex-column;
     align-items: center;
-    gap: 6vw;
     padding-bottom: 8vw;
+    gap: 6vw;
 
     @include breakpoints(table) {
         flex-direction: row;
@@ -13,6 +13,10 @@
     }
 
     .step {
+        @include shadow(0px, 4px, 15px, 0.15);
+        background: $lightGrey;
+        position: relative;
+
         display: flex;
         border-radius: 20px;
 
@@ -20,10 +24,6 @@
         min-width: 213px;
         max-width: 335px;
         height: 72.38px;
-        @include shadow($blur: 15px, $percent: 0.15);
-        // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
-        background: $lightGrey;
-        position: relative;
 
         @include breakpoints(table) {
             justify-content: center;
@@ -32,18 +32,17 @@
     }
 
     .number span {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-
         @extend %flex-center;
-        color: $white;
         background: $primary-purple;
+        color: $white;
 
-        // @include absolute-element(23px, 0px, 0px, -12px);
         position: absolute;
         top: 23px;
         left: -12px;
+
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
     }
 
     .indications {
@@ -74,9 +73,9 @@
 // Card "restaurants" (Homepage)
 .resto-cards {
     @extend %flex-column;
-    gap: 7vw;
-    align-items: center;
     box-sizing: border-box;
+    align-items: center;
+    gap: 7vw;
 
     @include breakpoints(table) {
         flex-flow: wrap;
@@ -96,28 +95,28 @@
 }
 
 .card {
-    width: 100%;
-    // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    @include shadow($blur: 15px, $percent: 0.1);
+    @include shadow(0px, 4px, 15px, 0.1);
     background: $white;
     border-radius: 15px;
+    width: 100%;
 
     .card-view {
         position: relative;
     }
 
     img {
-        width: 100%;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        height: 231px;
         object-fit: cover;
+        width: 100%;
+        height: 231px;
     }
 }
 
 .card-content {
     display: flex;
     justify-content: space-between;
+
     padding-top: 3vw;
     padding-bottom: 3vw;
     padding-left: 3vw;
@@ -133,15 +132,11 @@
 .card-txt {
     .card-title {
         @include typography($black, $size-x-mediumSize, $fontBold);
-        // font-size: $size-x-mediumSize;
-        // font-weight: $fontBold;
         margin-bottom: 0;
     }
 
     .card-subtitle {
         @include typography($black, $size-mediumSize, $fontLight);
-        // font-size: $size-xx-mediumSize;
-        // font-weight: $fontLight;
         margin-top: 1vw;
 
         @include breakpoints(table) {
@@ -152,36 +147,30 @@
 
 // Badge "nouveau" (Homepage)
 .card-view span {
-    border-radius: 2px;
-    width: 80px;
-    height: 29px;
-    @include shadow($vertical: 2px, $blur: 4px, $percent: 0.15);
-    // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-
-    background: $tertiary-green;
-    // position: absolute;
-    // right: 15px;
-    // top: 12px; 
-    // color: $green-font;
-    // font-size: $size-x-small;
-    // font-weight: $fontMedium;
     @include typography($green-font, $size-x-small, $fontMedium);
-    // @include absolute-element(12px, 15px, 0px, 0px);
+    @include shadow(0px, 2px, 4px,0.15);
+    @extend %flex-center;
+    background: $tertiary-green;
+    border-radius: 2px;
+
     position: absolute;
     top: 12px;
     right:15px;
     
-    @extend %flex-center;
-
+    width: 80px;
+    height: 29px;
 }
-
 
 //Cards menu restaurants (Restaurants menu)
 .card-menu article {
+    @include shadow(0px, 4px, 15px, 0.1);
+    background: $white;
+    box-sizing: border-box;
+    border-radius: 15px;
+
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    box-sizing: border-box;
     cursor: pointer;
 
     animation: animationFade 0.3s backwards;
@@ -189,31 +178,20 @@
     width: 85%;
     height: 69px;
     padding-left: 2vw;
-    background: $white;
-    @include shadow($blur: 15px, $percent: 0.1);
-    // filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
-    border-radius: 15px;
-
-    // &:hover>&.price-menu {
-    //     margin-right: 0px;
-
+  
         span.price-menu {
+            @include typography($lightBlack, $size-small, $fontBold);
             display: flex;
             align-items: flex-end;
-            @include typography($lightBlack, $size-small, $fontBold);
-            // font-weight: $fontBold;
-            // font-size: $size-small;
-            // color: $lightBlack;
             gap: 2vw;
-
         }
     }
 
     .content-menu {
-        width: 61%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        width: 61%;
 
         @include breakpoints(desktop) {
             width: 81%;
@@ -221,40 +199,29 @@
 
         .title-menu {
             @include typography($black, $size-x-mediumSize, $fontMedium);
-            // font-weight: $fontMedium;
-            // font-size: $size-x-mediumSize;
-            // color: $black;
             @extend %txt-overflow;
-            // white-space: nowrap;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
         }
 
         .txt-menu {
             @include typography($black, $size-small, $fontLight);
-            // font-weight: $fontLight;
-            // font-size: $size-small;
-            // color: $black;
             @extend %txt-overflow;
-            // white-space: nowrap;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
         }
     }
 
     .price-menu {
         &::after {
+            @extend %flex-center;
             content: "\f058";
+            color: rgba(#fff, 0);
+            background: #99E2D0;
+            
             font-family: 'Font Awesome 6 Free';
             font-weight: 600;
             font-size: 20px;
-            color: rgba(#fff, 0);
-            @extend %flex-center;
             overflow: hidden;
+
             height: 100%;
             width: 0px;
-
-            background: #99E2D0;
 
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;

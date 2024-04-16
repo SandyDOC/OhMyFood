@@ -2,24 +2,22 @@
 
 //Location (Header)
 .location {
-    height: 50px;
-    background: $grey;
     @extend %flex-center;
+    @include shadow(0px, 4px, 4px,0.25);
+    background: $grey;
+
+    height: 50px;
     width: 100%;
-    @include shadow($blur: 4px, $percent: 0.25);
-    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
     i {
         color: $lightBlack;
     }
 
     .search {
-        background: inherit;
         @include typography($lightBlack, $size-normal, $fontMedium);
-        // font-size: $size-normal;
-        // font-weight: $fontMedium;
-        border: none;
+        background: inherit;
         text-align: center;
+        border: none;
 
         @include breakpoints(table) {
             padding-left: 1vw;
@@ -34,15 +32,15 @@
 
 //Hero
 .hero {
-    text-align: center;
-    justify-content: flex-start;
-    gap: 2vw;
-    padding-bottom: 7vw;
-    padding-top: 0vw;
-
     @extend %flex-column;
-    align-items: center;
     box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    padding-top: 0vw;
+    padding-bottom: 7vw;
+    gap: 2vw;
 
     @include breakpoints(table) {
         gap: 1vw;
@@ -60,11 +58,9 @@
     }
 
     p {
-        width: 96%;
-        padding-bottom: 3vw;
-        //    font-size: $size-x-mediumSize;
-        //    font-weight: $fontLight;
         @include typography($lightBlack, $size-x-mediumSize, $fontLight);
+        padding-bottom: 3vw;
+        width: 96%;
     }
 }
 
@@ -76,10 +72,6 @@
 
 .fonctionnement h2,
 .restaurants h2 {
-    // @include typography($font-size: $size-large, $font-weight: $fontBold);
-    // font-size: $size-large;
-    // font-weight: $fontBold;
-    //  color: $black;
     padding-top: 3vw;
     padding-bottom: 2vw;
     padding-left: 4vw;
@@ -95,9 +87,9 @@
 
 // Restaurants (Homepage)
 .restaurants {
-    padding-bottom: 10vw;
-    box-sizing: border-box;
     @extend %flex-column;
+    box-sizing: border-box;
+    padding-bottom: 10vw;
 
     @include breakpoints(table) {
         padding: 0vw;

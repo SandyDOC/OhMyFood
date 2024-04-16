@@ -1,14 +1,12 @@
 //Footer (Homepage)
 .footer-home {
-    background: $lightBlack;
-    // color: $white;
     @include typography($white, $size-normal, $fontMedium);
-
-
     @extend %flex-column;
     justify-content: space-around;
-    gap: 3vw;
+    background: $lightBlack;
+
     padding: 22px 25px 22px 25px;
+    gap: 3vw;
 
     @include breakpoints(table){
         flex-direction: row-reverse;
@@ -18,26 +16,21 @@
     }
 
     .logo img{
-        max-width: 105px;
-        // width: 58%;
-        height: 18px;
         object-fit: contain;
+        max-width: 105px;
+        height: 18px;
         padding-top: 3vw;
         filter: invert(100%);
 
         @include breakpoints(table){
             position: relative;
-            // height: 18px;
-            // width: 98px;
             top: 0.4vw;
-            // width: 80%;
         }
     }
 
     .link {
         @extend %flex-column;
         gap: 2vw;
-        // color: $white;
 
         @include breakpoints(table) {
             flex-direction: row;
@@ -49,7 +42,6 @@
     .illustration {
         display: flex;
         gap: 3px;
-        // color: $white;
 
         i {
             height: 20px;
