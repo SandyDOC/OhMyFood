@@ -147,16 +147,16 @@
 
 // Badge "nouveau" (Homepage)
 .card-view span {
-    @include typography($green-font, $size-x-small, $fontMedium);
-    @include shadow(0px, 2px, 4px,0.15);
     @extend %flex-center;
+    @include typography($green-font, $size-x-small, $fontMedium);
+    @include shadow(0px, 2px, 4px, 0.15);
     background: $tertiary-green;
     border-radius: 2px;
 
     position: absolute;
     top: 12px;
-    right:15px;
-    
+    right: 15px;
+
     width: 80px;
     height: 29px;
 }
@@ -173,51 +173,29 @@
     overflow: hidden;
     cursor: pointer;
 
-    animation: animationFade 0.3s backwards;
+    animation: animationFade 0.3s alternate;
 
     width: 85%;
     height: 69px;
     padding-left: 2vw;
-  
-        span.price-menu {
-            @include typography($lightBlack, $size-small, $fontBold);
-            display: flex;
-            align-items: flex-end;
-            gap: 2vw;
-        }
-    }
-
-    .content-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 61%;
-
-        @include breakpoints(desktop) {
-            width: 81%;
-        }
-
-        .title-menu {
-            @include typography($black, $size-x-mediumSize, $fontMedium);
-            @extend %txt-overflow;
-        }
-
-        .txt-menu {
-            @include typography($black, $size-small, $fontLight);
-            @extend %txt-overflow;
-        }
-    }
 
     .price-menu {
+        @include typography($lightBlack, $size-small, $fontBold);
+        display: flex;
+        align-items: flex-end;
+        gap: 2vw;
+
         &::after {
             @extend %flex-center;
             content: "\f058";
-            color: rgba(#fff, 0);
-            background: #99E2D0;
-            
             font-family: 'Font Awesome 6 Free';
+            
+            color: rgba(#fff, 0);
+            
             font-weight: 600;
             font-size: 20px;
+
+            background: #99E2D0;
             overflow: hidden;
 
             height: 100%;
@@ -228,7 +206,30 @@
         }
 
         &:hover::after {
-            width: 59px;
+            width: 60px;
             color: rgba(#fff, 1);
         }
     }
+}
+
+.content-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 61%;
+
+    @include breakpoints(desktop) {
+        width: 81%;
+    }
+
+    .title-menu {
+        @extend %txt-overflow;
+        @include typography($black, $size-x-mediumSize, $fontMedium);
+    }
+
+    .txt-menu {
+        @extend %txt-overflow;
+        @include typography($black, $size-small, $fontLight);
+    }
+
+}

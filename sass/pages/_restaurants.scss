@@ -49,40 +49,6 @@ main {
         font-family: $fontTitle;
         font-style: italic;
     }
-
-    .restaurant-menu {
-        @extend %flex-column;
-        padding-bottom: 4vw;
-        
-        @include cardsMenuAnimation;
-
-        .type-menu {
-            @include typography($black, $size-normal, $fontLight);
-            text-transform: uppercase;
-            position: relative;
-            
-            width: 23px;
-            height: 27px;
-            margin-left: 8vw;
-            margin-bottom: 3vw;
-    
-            animation: animationFade 0.3s backwards;
-    
-            &::before {
-                content: "";
-                position: absolute;
-                background: #99E2D0;
-                bottom: 0px;
-                width: 40px;
-                height: 3px;
-            }
-        }
-    
-        .card-menu {
-            @extend %flex-column, %flex-center;
-            gap: 3vw;
-        }
-    }
 }
 
 .restaurant-menu {
@@ -95,14 +61,15 @@ main {
         @include typography($black, $size-normal, $fontLight);
         text-transform: uppercase;
         position: relative;
-        
+
         width: 23px;
         height: 27px;
-        margin-left: 3vw;
+        margin-left: 7vw;
         margin-bottom: 3vw;
 
         animation: animationFade 0.3s backwards;
 
+        //Underline
         &::before {
             content: "";
             background: #99E2D0;
