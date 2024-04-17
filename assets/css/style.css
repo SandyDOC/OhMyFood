@@ -1,4 +1,4 @@
-.location, .loader-container .loader-logo, .loader-container, .header-home, header .logo-header, .header-home .logo-header, .card-menu article .price-menu::after, .card-view span, .step-group .number span, .button, .btn-home {
+.location, .loader_container_logo, .loader_container, .header-home, header .header-menus, .header-home .header-menus, .card-menu article .price-menu::after, .card-view span, .step-group .number, .button, .btn-home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 
-.content-menu .txt-menu, .content-menu .title-menu {
+.content-menu p, .content-menu h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -136,7 +136,7 @@ a {
     width: 30%;
   }
 }
-.step-group .number span {
+.step-group .number {
   background: #9356DC;
   color: #FFFFFF;
   position: absolute;
@@ -306,12 +306,12 @@ a {
     width: 81%;
   }
 }
-.content-menu .title-menu {
+.content-menu h3 {
   color: #000;
   font-size: 1.125em;
   font-weight: 500;
 }
-.content-menu .txt-menu {
+.content-menu p {
   color: #000;
   font-size: 0.9375em;
   font-weight: 300;
@@ -360,7 +360,19 @@ header, .header-home {
     aspect-ratio: 0;
   }
 }
-header .logo-header, .header-home .logo-header {
+header .logo, .header-home .logo {
+  width: 162px;
+  height: 44px;
+  object-fit: contain;
+}
+@media only screen and (min-width: 768px) {
+  header .logo, .header-home .logo {
+    width: 200px;
+    height: 34.2px;
+    padding-bottom: 3vw;
+  }
+}
+header .header-menus, .header-home .header-menus {
   position: relative;
 }
 header .fa-arrow-left, .header-home .fa-arrow-left {
@@ -373,18 +385,6 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
   header .fa-arrow-left, .header-home .fa-arrow-left {
     left: 2vw;
     top: 0.7vh;
-  }
-}
-header .logo, .header-home .logo {
-  width: 162px;
-  height: 44px;
-  object-fit: contain;
-}
-@media only screen and (min-width: 768px) {
-  header .logo, .header-home .logo {
-    width: 200px;
-    height: 34.2px;
-    padding-bottom: 3vw;
   }
 }
 
@@ -445,14 +445,14 @@ header .logo, .header-home .logo {
   height: 100vh;
   animation: loader 1s forwards;
 }
-.loader-container {
+.loader_container {
   position: relative;
   background: linear-gradient(#FF79DA, #9356DC);
   height: 100%;
   width: 100%;
   margin: 0px;
 }
-.loader-container .loader-logo {
+.loader_container_logo {
   position: relative;
   width: 200px;
   height: 40px;
@@ -461,7 +461,7 @@ header .logo, .header-home .logo {
   background-size: contain;
   filter: invert(100%);
 }
-.loader-container .loader-logo::before {
+.loader_container_logo::before {
   content: "";
   position: absolute;
   width: 280px;

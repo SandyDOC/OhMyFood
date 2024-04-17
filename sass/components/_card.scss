@@ -31,7 +31,7 @@
         }
     }
 
-    .number span {
+    .number {
         @extend %flex-center;
         background: $primary-purple;
         color: $white;
@@ -222,12 +222,12 @@
         width: 81%;
     }
 
-    .title-menu {
+    h3 {
         @extend %txt-overflow;
         @include typography($black, $size-x-mediumSize, $fontMedium);
     }
 
-    .txt-menu {
+    p {
         @extend %txt-overflow;
         @include typography($black, $size-small, $fontLight);
     }

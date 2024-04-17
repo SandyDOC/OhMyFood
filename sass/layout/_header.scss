@@ -10,8 +10,19 @@ header {
         padding-top: 3vw;
         aspect-ratio: 0;
     }
+    
+    .logo {
+        width: 162px;
+        height: 44px;
+        object-fit: contain;
 
-    .logo-header {
+        @include breakpoints(table) {
+            width: 200px;
+            height: 34.2px;
+            padding-bottom: 3vw;
+        }
+    }
+    .header-menus {
         @extend %flex-center;
         position: relative;
     }
@@ -28,17 +39,6 @@ header {
         }
     }
 
-    .logo {
-        width: 162px;
-        height: 44px;
-        object-fit: contain;
-
-        @include breakpoints(table) {
-            width: 200px;
-            height: 34.2px;
-            padding-bottom: 3vw;
-        }
-    }
 }
 
 //Header (Homepage)

@@ -57,7 +57,7 @@ main {
 
     @include cardsMenuAnimation;
 
-    .type-menu {
+    h2 {
         @include typography($black, $size-normal, $fontLight);
         text-transform: uppercase;
         position: relative;
