@@ -1,4 +1,5 @@
-.location, .loader_container_logo, .loader_container, .header-home, header .header-menus, .header-home .header-menus, .card-menu article .price-menu::after, .card-view span, .step-group .number, .button, .btn-home {
+@charset "UTF-8";
+.location, .loader_container_logo, .loader_container, .header-home, header .header-menus, .header-home .header-menus, .card-view span, .step-group .number, .button, .btn-home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,12 +9,6 @@
 .restaurants, .hero, .footer-home .link, footer .link, .footer-home, footer, header, .header-home, .resto-cards, .step-group {
   display: flex;
   flex-direction: column;
-}
-
-.content-menu p, .content-menu h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 * {
@@ -255,57 +250,38 @@ a {
   height: 29px;
 }
 
+/* Style pour l'article */
 .card-menu article {
+  position: relative;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   background: #FFFFFF;
-  box-sizing: border-box;
-  border-radius: 15px;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  cursor: pointer;
-  animation: animationFade 0.3s alternate;
   width: 85%;
+  border-radius: 15px;
   height: 69px;
-  padding-left: 2vw;
-}
-.card-menu article .price-menu {
-  color: #353535;
-  font-size: 0.9375em;
-  font-weight: 700;
-  display: flex;
-  align-items: flex-end;
-  gap: 2vw;
-}
-.card-menu article .price-menu::after {
-  content: "\f058";
-  font-family: "Font Awesome 6 Free";
-  color: rgba(255, 255, 255, 0);
-  font-weight: 600;
-  font-size: 20px;
-  background: #99E2D0;
-  overflow: hidden;
-  height: 100%;
-  width: 0px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-.card-menu article .price-menu:hover::after {
-  width: 60px;
-  color: white;
 }
 
-.content-menu {
+/* Style pour le conteneur du contenu et du prix */
+.content-price {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 61%;
+  /* Utilisation de flexbox pour aligner les éléments enfants */
 }
-@media only screen and (min-width: 1024px) {
-  .content-menu {
-    width: 81%;
-  }
+
+/* Style pour le contenu du menu */
+.content-menu {
+  display: inline-block;
+  /* Affichage en ligne pour permettre le rétrécissement en douceur */
+  vertical-align: top;
+  /* Alignement vertical en haut */
+  width: 80%;
+  /* Largeur calculée pour occuper l'espace restant moins la taille de l'overlay */
+  height: auto;
+  /* Hauteur aautomatique */
+  border: 1px solid red;
+  /* Bordure pour le contenu du menu */
+  transition: width 0.5s ease;
+  /* Animation de transition pour le rétrécissement du contenu */
 }
+
 .content-menu h3 {
   color: #000;
   font-size: 1.125em;
@@ -315,6 +291,87 @@ a {
   color: #000;
   font-size: 0.9375em;
   font-weight: 300;
+}
+
+.content-price .price-menu {
+  color: #353535;
+  font-size: 0.9375em;
+  font-weight: 700;
+}
+
+/* Style pour l'overlay */
+.overlay {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  /* Position absolue pour être positionné par rapport à l'article */
+  bottom: 0;
+  /* Alignement en bas */
+  right: 0;
+  /* Alignement à droite */
+  background-color: #99E2D0;
+  /* Couleur de fond de l'overlay */
+  overflow: hidden;
+  /* Masquage du contenu dépassant */
+  width: 0;
+  /* Largeur initiale à zéro */
+  height: 100%;
+  /* Hauteur égale à celle de l'article */
+  transition: width 0.5s ease;
+  /* Animation de transition pour l'ouverture de l'overlay */
+}
+
+article:hover {
+  cursor: pointer;
+  /* Changement de curseur au survol */
+}
+
+/* Style pour l'overlay lors du survol de l'article */
+article:hover .overlay {
+  width: 20%;
+  /* Largeur de l'overlay lors du survol */
+}
+
+/* Style pour le titre du menu */
+article:hover .content-menu h3 {
+  width: 80%;
+  /* Rétrécissement du titre lors du survol de l'article */
+  overflow: hidden;
+  /* Masquage du contenu dépassant */
+  white-space: nowrap;
+  /* Empêche le saut de ligne */
+  text-overflow: ellipsis;
+  /* Ajout de points de suspension pour le texte qui dépasse */
+}
+
+/* Style pour le prix du menu */
+article:hover .price-menu {
+  transform: translateX(-100%);
+  /* Décalage complet du prix vers la gauche lors du survol de l'article */
+  transition: transform 0.5s ease;
+  /* Animation de transition pour le décalage du prix */
+}
+
+/* Style pour l'icône de l'overlay */
+.overlay_icon {
+  color: white;
+  /* Couleur de l'icône */
+  font-size: 20px;
+  /* Taille de police de l'icône */
+  position: absolute;
+  /* Position absolue pour être positionné au centre de l'overlay */
+  top: 50%;
+  /* Alignement vertical au centre */
+  left: 50%;
+  /* Alignement horizontal au centre */
+  transform: translate(-50%, -50%);
+  /* Décalage de moitié de la largeur et de la hauteur pour être centré */
+  white-space: nowrap;
+  /* Empêche le saut de ligne */
+}
+
+.overlay_icon svg {
+  filter: invert(100%);
 }
 
 .like {
