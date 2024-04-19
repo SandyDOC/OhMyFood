@@ -170,6 +170,8 @@
     border-radius: 15px;
     height: 69px;
 
+    animation: animationFade 0.3s backwards;
+
     &:hover {
         cursor: pointer;
     }

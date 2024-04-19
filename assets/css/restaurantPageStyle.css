@@ -261,6 +261,7 @@ a {
   width: 85%;
   border-radius: 15px;
   height: 69px;
+  animation: animationFade 0.3s backwards;
 }
 .card-menu article:hover {
   cursor: pointer;
