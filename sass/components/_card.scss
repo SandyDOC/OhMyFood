@@ -162,79 +162,6 @@
 }
 
 //Cards menu restaurants (Restaurants menu)
-// .card-menu article {
-//     @include shadow(0px, 4px, 15px, 0.1);
-//     background: $white;
-//     box-sizing: border-box;
-//     border-radius: 15px;
-
-//     display: flex;
-//     justify-content: space-between;
-//     overflow: hidden;
-//     cursor: pointer;
-
-//     animation: animationFade 0.3s alternate;
-
-//     width: 85%;
-//     height: 69px;
-//     padding-left: 2vw;
-
-//     .price-menu {
-        // @include typography($lightBlack, $size-small, $fontBold);
-//         display: flex;
-//         align-items: flex-end;
-//         gap: 2vw;
-
-//         &::after {
-//             @extend %flex-center;
-//             content: "\f058";
-//             font-family: 'Font Awesome 6 Free';
-
-//             color: rgba(#fff, 0);
-
-//             font-weight: 600;
-//             font-size: 20px;
-
-//             background: #99E2D0;
-//             overflow: hidden;
-
-//             height: 100%;
-//             width: 0px;
-
-//             border-top-right-radius: 15px;
-//             border-bottom-right-radius: 15px;
-//         }
-
-//         &:hover::after {
-//             width: 60px;
-//             color: rgba(#fff, 1);
-//         }
-//     }
-// }
-
-// .content-menu {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-evenly;
-//     width: 61%;
-
-//     @include breakpoints(desktop) {
-//         width: 81%;
-//     }
-
-//     h3 {
-//         @extend %txt-overflow;
-//         @include typography($black, $size-x-mediumSize, $fontMedium);
-//     }
-
-//     p {
-//         @extend %txt-overflow;
-//         @include typography($black, $size-small, $fontLight);
-//     }
-
-// }
-
-/* Style pour l'article */
 .card-menu article {
     position: relative;
     @include shadow(0px, 4px, 15px, 0.1);
@@ -242,125 +169,99 @@
     width: 85%;
     border-radius: 15px;
     height: 69px;
-    //     padding-left: 2vw;
 
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-/* Style pour le conteneur du contenu et du prix */
 .content-price {
     display: flex;
-    /* Utilisation de flexbox pour aligner les éléments enfants */
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-top: 0.7vw;
+    padding-left: 1vw;
+    gap: 10vw;
+
+    .price-menu {
+        @include typography($lightBlack, $size-small, $fontBold);
+        position: absolute;
+        right: 2vw;
+    }
 }
 
-/* Style pour le contenu du menu */
 .content-menu {
-    display: inline-block;
-    /* Affichage en ligne pour permettre le rétrécissement en douceur */
-    vertical-align: top;
-    /* Alignement vertical en haut */
+    @extend %flex-column;
+    @extend %txt-overflow;
+    align-items: flex-start;
     width: calc(100% - 20%);
-    /* Largeur calculée pour occuper l'espace restant moins la taille de l'overlay */
     height: auto;
-    /* Hauteur aautomatique */
-    border: 1px solid red;
-    /* Bordure pour le contenu du menu */
+    padding-top: 0.8vh;
+    padding-left: 1vw;
+    gap: 0.4vw;
     transition: width 0.5s ease;
-    /* Animation de transition pour le rétrécissement du contenu */
-}
 
-.content-menu {
-        h3 {
-        // @extend %txt-overflow;
+    h3 {
         @include typography($black, $size-x-mediumSize, $fontMedium);
+        align-self: flex-start;
     }
 
     p {
-        // @extend %txt-overflow;
         @include typography($black, $size-small, $fontLight);
     }
 }
 
-.content-price .price-menu {
-            @include typography($lightBlack, $size-small, $fontBold);
-
-}
-
-/* Style pour l'overlay */
 .overlay {
-
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    background-color: $tertiary-green;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    position: absolute;
-    /* Position absolue pour être positionné par rapport à l'article */
-    bottom: 0;
-    /* Alignement en bas */
-    right: 0;
-    /* Alignement à droite */
-    background-color: $tertiary-green;
-    /* Couleur de fond de l'overlay */
-    overflow: hidden;
-    /* Masquage du contenu dépassant */
-    width: 0;
-    /* Largeur initiale à zéro */
-    height: 100%;
-    /* Hauteur égale à celle de l'article */
-    transition: width 0.5s ease;
-    /* Animation de transition pour l'ouverture de l'overlay */
+
+    &_icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+        width: 18%;
+
+        @include breakpoints(table) {
+            width: 10%;
+        }
+    }
 }
 
-article:hover {
-    cursor: pointer;
-    /* Changement de curseur au survol */
-}
-
-
-
-/* Style pour l'overlay lors du survol de l'article */
 article:hover .overlay {
+    width: 18%;
 
-    width: 20%;
-    /* Largeur de l'overlay lors du survol */
+    @include breakpoints(table) {
+        width: 10%;
+    }
 
 }
 
-/* Style pour le titre du menu */
 article:hover .content-menu h3 {
     width: calc(100% - 20%);
-    /* Rétrécissement du titre lors du survol de l'article */
-    overflow: hidden;
-    /* Masquage du contenu dépassant */
-    white-space: nowrap;
-    /* Empêche le saut de ligne */
-    text-overflow: ellipsis;
-    /* Ajout de points de suspension pour le texte qui dépasse */
+    @extend %txt-overflow;
 }
 
-/* Style pour le prix du menu */
 article:hover .price-menu {
+    right: 15%;
     transform: translateX(-100%);
-    /* Décalage complet du prix vers la gauche lors du survol de l'article */
     transition: transform 0.5s ease;
-    /* Animation de transition pour le décalage du prix */
+
+    @include breakpoints(table) {
+        right: 10%;
+    }
 }
 
-/* Style pour l'icône de l'overlay */
-.overlay_icon {
-    color: white;
-    /* Couleur de l'icône */
-    font-size: 20px;
-    /* Taille de police de l'icône */
-    position: absolute;
-    /* Position absolue pour être positionné au centre de l'overlay */
-    top: 50%;
-    /* Alignement vertical au centre */
-    left: 50%;
-    /* Alignement horizontal au centre */
-    transform: translate(-50%, -50%);
-    /* Décalage de moitié de la largeur et de la hauteur pour être centré */
-    white-space: nowrap;
-    /* Empêche le saut de ligne */
-}
-
-.overlay_icon svg {
+.overlay_icon i {
     filter: invert(100%);
 }
