@@ -249,7 +249,7 @@ article:hover .overlay {
 
 }
 
-article:hover .content-menu h3 {
+article:hover .content-menu h3, p {
     width: calc(100% - 20%);
     @extend %txt-overflow;
 }

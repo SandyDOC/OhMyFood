@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 
-article:hover .content-menu h3, .content-menu {
+article:hover .content-menu h3, p, .content-menu {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -340,7 +340,7 @@ article:hover .overlay {
   }
 }
 
-article:hover .content-menu h3 {
+article:hover .content-menu h3, p {
   width: 80%;
 }
 
