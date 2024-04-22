@@ -57,7 +57,7 @@ a {
 }
 
 @keyframes loader {
-  to {
+  100% {
     visibility: hidden;
     display: none;
   }

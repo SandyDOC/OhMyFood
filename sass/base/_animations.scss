@@ -1,9 +1,7 @@
 //Loader
 //move to next page
 @keyframes loader {
-    from{
-    }
-    to{
+   100%{
         visibility: hidden;
         display: none;
     }
