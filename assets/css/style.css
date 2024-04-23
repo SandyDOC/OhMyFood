@@ -10,7 +10,8 @@
   flex-direction: column;
 }
 
-article:hover .content-menu h3, p, .content-menu {
+article:hover .content-menu h3,
+article:hover .content-menu p, .content-menu p, .content-menu h3, .content-menu {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -285,6 +286,48 @@ a {
   right: 2vw;
 }
 
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #99E2D0;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: width 0.5s ease, right 0.5s ease;
+}
+.overlay .overlay_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay:hover {
+  width: 20%;
+  right: 0;
+}
+
+.price-menu {
+  color: #353535;
+  font-size: 0.9375em;
+  font-weight: 700;
+  position: absolute;
+  right: 2vw;
+  transition: transform 0.5s ease, right 0.5s ease;
+}
+
+article:hover .overlay {
+  width: 20%;
+  right: 0;
+}
+
+article:hover .price-menu {
+  right: calc(20% + 2vw);
+  transform: translateX(calc(-20% - 2vw));
+}
+
 .content-menu {
   align-items: flex-start;
   width: 80%;
@@ -298,7 +341,6 @@ a {
   color: #000;
   font-size: 1.125em;
   font-weight: 500;
-  align-self: flex-start;
 }
 .content-menu p {
   color: #000;
@@ -306,54 +348,9 @@ a {
   font-weight: 300;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  width: 0;
-  height: 100%;
-  background-color: #99E2D0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-.overlay_icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.overlay:hover {
-  width: 18%;
-}
-@media only screen and (min-width: 768px) {
-  .overlay:hover {
-    width: 10%;
-  }
-}
-
-article:hover .overlay {
-  width: 18%;
-}
-@media only screen and (min-width: 768px) {
-  article:hover .overlay {
-    width: 10%;
-  }
-}
-
-article:hover .content-menu h3, p {
+article:hover .content-menu h3,
+article:hover .content-menu p {
   width: 80%;
-}
-
-article:hover .price-menu {
-  right: 15%;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease;
-}
-@media only screen and (min-width: 768px) {
-  article:hover .price-menu {
-    right: 10%;
-  }
 }
 
 .overlay_icon i {
