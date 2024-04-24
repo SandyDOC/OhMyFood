@@ -176,20 +176,18 @@
         cursor: pointer;
     }
 
-    .price-menu {
-        @include typography($lightBlack, $size-small, $fontBold);
-        position: absolute;
-        right: 10px;
-    
-        transition: transform 0.5s ease, right 0.5s ease; 
-    
-        // &:hover {
-        //     transform: translateX(-63px); 
-        // }
+    &:hover .content-menu h3, p {
+        width: calc(100% - 63px);
+        @extend %txt-overflow;
     }
 
-    &:hover .price-menu{
-        transform: translateX(-63px); 
+    &:hover .price-menu {
+        transform: translateX(-63px);
+    }
+
+    &:hover .overlay {
+        width: 63px;
+        right: 0;
     }
 }
 
@@ -200,6 +198,33 @@
     padding-top: 0.7vw;
     padding-left: 1vw;
     gap: 10vw;
+
+    .content-menu {
+        @extend %flex-column;
+        width: calc(100% - 57px);
+        height: auto;
+        padding-top: 0.8vh;
+        padding-left: 1vw;
+        gap: 0.4vw;
+
+        h3 {
+            @include typography($black, $size-x-mediumSize, $fontMedium);
+            @extend %txt-overflow;
+        }
+
+        p {
+            @include typography($black, $size-small, $fontLight);
+            @extend %txt-overflow;
+        }
+    }
+
+    .price-menu {
+        @include typography($lightBlack, $size-small, $fontBold);
+        position: absolute;
+        right: 10px;
+
+        transition: transform 0.5s ease, right 0.5s ease;
+    }
 }
 
 .overlay {
@@ -220,55 +245,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        i {
+            filter: invert(100%);
+        }
     }
-}
-
-// .price-menu {
-//     @include typography($lightBlack, $size-small, $fontBold);
-//     position: absolute;
-//     right: 10px;
-
-//     transition: transform 0.5s ease, right 0.5s ease; 
-
-//     &:hover {
-//         transform: translateX(-63px); 
-//     }
-// }
-
-article:hover .overlay {
-    width: 63px;
-    right: 0;
-}
-
-// article:hover .price-menu {
-//     transform: translateX(-63px); 
-// }
-
-.content-menu {
-    @extend %flex-column;
-    width: calc(100% - 57px); 
-    height: auto;
-    padding-top: 0.8vh;
-    padding-left: 1vw;
-    gap: 0.4vw;
-
-    h3 {
-        @include typography($black, $size-x-mediumSize, $fontMedium);
-        @extend %txt-overflow;
-    }
-
-    p {
-        @include typography($black, $size-small, $fontLight);
-        @extend %txt-overflow;
-    }
-}
-
-article:hover .content-menu h3,
-article:hover .content-menu p {
-    width: calc(100% - 63px);
-    @extend %txt-overflow;
-}
-
-.overlay_icon i {
-    filter: invert(100%);
 }

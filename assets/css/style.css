@@ -5,13 +5,12 @@
 }
 
 .fonctionnement,
-.restaurants, .hero, .footer-home .link, footer .link, .footer-home, footer, header, .header-home, .content-menu, .resto-cards, .step-group {
+.restaurants, .hero, .footer-home .link, footer .link, .footer-home, footer, header, .header-home, .content-price .content-menu, .resto-cards, .step-group {
   display: flex;
   flex-direction: column;
 }
 
-article:hover .content-menu h3,
-article:hover .content-menu p, .content-menu p, .content-menu h3 {
+.content-price .content-menu p, .content-price .content-menu h3, .card-menu article:hover .content-menu h3, .card-menu article p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -269,16 +268,15 @@ a {
 .card-menu article:hover {
   cursor: pointer;
 }
-.card-menu article .price-menu {
-  color: #353535;
-  font-size: 0.9375em;
-  font-weight: 700;
-  position: absolute;
-  right: 10px;
-  transition: transform 0.5s ease, right 0.5s ease;
+.card-menu article:hover .content-menu h3, .card-menu article p {
+  width: calc(100% - 63px);
 }
 .card-menu article:hover .price-menu {
   transform: translateX(-63px);
+}
+.card-menu article:hover .overlay {
+  width: 63px;
+  right: 0;
 }
 
 .content-price {
@@ -288,6 +286,31 @@ a {
   padding-top: 0.7vw;
   padding-left: 1vw;
   gap: 10vw;
+}
+.content-price .content-menu {
+  width: calc(100% - 57px);
+  height: auto;
+  padding-top: 0.8vh;
+  padding-left: 1vw;
+  gap: 0.4vw;
+}
+.content-price .content-menu h3 {
+  color: #000;
+  font-size: 1.125em;
+  font-weight: 500;
+}
+.content-price .content-menu p {
+  color: #000;
+  font-size: 0.9375em;
+  font-weight: 300;
+}
+.content-price .price-menu {
+  color: #353535;
+  font-size: 0.9375em;
+  font-weight: 700;
+  position: absolute;
+  right: 10px;
+  transition: transform 0.5s ease, right 0.5s ease;
 }
 
 .overlay {
@@ -308,36 +331,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-article:hover .overlay {
-  width: 63px;
-  right: 0;
-}
-
-.content-menu {
-  width: calc(100% - 57px);
-  height: auto;
-  padding-top: 0.8vh;
-  padding-left: 1vw;
-  gap: 0.4vw;
-}
-.content-menu h3 {
-  color: #000;
-  font-size: 1.125em;
-  font-weight: 500;
-}
-.content-menu p {
-  color: #000;
-  font-size: 0.9375em;
-  font-weight: 300;
-}
-
-article:hover .content-menu h3,
-article:hover .content-menu p {
-  width: calc(100% - 63px);
-}
-
-.overlay_icon i {
+.overlay .overlay_icon i {
   filter: invert(100%);
 }
 
