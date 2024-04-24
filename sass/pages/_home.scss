@@ -34,15 +34,15 @@
     align-items: center;
     text-align: center;
 
-    padding-top: 20px;
-    padding-bottom: 45px;
+    // padding-top: 20px;
+    // padding-bottom: 45px;
     gap: 15px;
 
     h1 {
         width: 89%;
-        
+
         @include breakpoints(table) {
-            font-size: 2.5em;//40px
+            font-size: 2.5em; //40px
             font-weight: $fontBold;
         }
     }
@@ -53,6 +53,13 @@
     }
 }
 
+.hero,
+.fonctionnement,
+.restaurants {
+    padding-top: 30px;
+    padding-bottom: 55px;
+}
+
 //Fonctionnement
 .fonctionnement,
 .restaurants {
@@ -61,26 +68,27 @@
 
 .fonctionnement h2,
 .restaurants h2 {
-    padding-top: 3vw;
-    padding-bottom: 2vw;
-    padding-left: 4vw;
+    // padding-top: 3vw;
+    // padding-bottom: 2vw;
+    padding-left: 5vw;
+    padding-bottom: 23px;
+    // padding: 0px 0px 19px 18px;
 }
 
 .fonctionnement {
     background: $white;
-
-    @include breakpoints(table) {
-        padding-top: 0vw;
-    }
+    // @include breakpoints(table) {
+    //     padding-top: 0vw;
+    // }
 }
 
 // Restaurants (Homepage)
 .restaurants {
     @extend %flex-column;
     box-sizing: border-box;
-    padding-bottom: 10vw;
+    // padding-bottom: 10vw;
 
-    @include breakpoints(table) {
-        padding: 0vw;
-    }
+    // @include breakpoints(table) {
+    //     padding: 0vw;
+    // }
 }

@@ -1,12 +1,17 @@
 * {
-  margin: 0px;
+  // margin: 0px;
 }
 
 body {
   font-family: $fontText;
+  margin: 0px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .main-container {
+  // margin: 0px;
+  // height: 100%;
   width: 100%;
   min-width: 320px;
   box-sizing: border-box;
