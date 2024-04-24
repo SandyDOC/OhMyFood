@@ -19,14 +19,13 @@
         text-align: center;
         border: none;
 
-        @include breakpoints(table) {
-            padding-left: 1vw;
+        input::placeholder {
+            color: $lightBlack;
+            opacity: 1;
         }
-    }
-
-    input::placeholder {
-        color: $lightBlack;
-        opacity: 1;
+        // @include breakpoints(table) {
+        //     padding-left: 1vw;
+        // }
     }
 }
 
