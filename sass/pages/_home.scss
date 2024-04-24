@@ -3,7 +3,7 @@
 //Location (Header)
 .location {
     @extend %flex-center;
-    @include shadow(0px, 4px, 4px,0.25);
+    @include shadow(0px, 4px, 4px, 0.25);
     background: $grey;
 
     height: 50px;
@@ -23,9 +23,6 @@
             color: $lightBlack;
             opacity: 1;
         }
-        // @include breakpoints(table) {
-        //     padding-left: 1vw;
-        // }
     }
 }
 
@@ -37,28 +34,21 @@
     align-items: center;
     text-align: center;
 
-    padding-top: 0vw;
-    padding-bottom: 7vw;
-    gap: 2vw;
-
-    @include breakpoints(table) {
-        gap: 1vw;
-        padding-bottom: 4vw;
-    }
+    padding-top: 20px;
+    padding-bottom: 45px;
+    gap: 15px;
 
     h1 {
         width: 89%;
-        padding-top: 4vw;
-
+        
         @include breakpoints(table) {
-            font-size: 40px;
+            font-size: 2.5em;//40px
             font-weight: $fontBold;
         }
     }
 
     p {
         @include typography($lightBlack, $size-x-mediumSize, $fontLight);
-        padding-bottom: 3vw;
         width: 96%;
     }
 }

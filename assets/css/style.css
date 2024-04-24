@@ -93,6 +93,7 @@ a {
   text-align: center;
   border-radius: 25px;
   background: linear-gradient(#FF79DA, #9356DC);
+  margin-top: 20px;
   padding: 0.25%;
   height: 50px;
   width: 173px;
@@ -508,23 +509,16 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  padding-top: 0vw;
-  padding-bottom: 7vw;
-  gap: 2vw;
-}
-@media only screen and (min-width: 768px) {
-  .hero {
-    gap: 1vw;
-    padding-bottom: 4vw;
-  }
+  padding-top: 20px;
+  padding-bottom: 45px;
+  gap: 15px;
 }
 .hero h1 {
   width: 89%;
-  padding-top: 4vw;
 }
 @media only screen and (min-width: 768px) {
   .hero h1 {
-    font-size: 40px;
+    font-size: 2.5em;
     font-weight: 700;
   }
 }
@@ -532,7 +526,6 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
   color: #353535;
   font-size: 1.125em;
   font-weight: 300;
-  padding-bottom: 3vw;
   width: 96%;
 }
 
