@@ -31,8 +31,8 @@
         width: 280px;
         height: 280px;
         border: 16px solid $black;
-        border-radius: 50%;
         border-top: 16px solid transparent;
+        border-radius: 50%;
         animation: spinner 3s linear infinite;
       }
     }

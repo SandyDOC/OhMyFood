@@ -9,8 +9,7 @@
   flex-direction: column;
 }
 
-.content-price .content-menu p, .content-price .content-menu h3, .card-menu article:hover .content-menu h3,
-.card-menu article p {
+.content-price .content-menu p, .content-price .content-menu h3, .card-menu article:hover .content-menu p, .card-menu article:hover .content-menu h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -260,8 +259,10 @@ i.fa-store {
 .card-menu article:hover {
   cursor: pointer;
 }
-.card-menu article:hover .content-menu h3,
-.card-menu article p {
+.card-menu article:hover .content-menu h3 {
+  width: calc(100% - 63px);
+}
+.card-menu article:hover .content-menu p {
   width: calc(100% - 63px);
 }
 .card-menu article:hover .price-menu {
@@ -276,9 +277,6 @@ i.fa-store {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  padding-top: 0.7vw;
-  padding-left: 1vw;
-  gap: 10vw;
 }
 @media only screen and (min-width: 1024px) {
   .content-price {
@@ -286,11 +284,11 @@ i.fa-store {
   }
 }
 .content-price .content-menu {
-  width: calc(100% - 57px);
+  width: 78%;
   height: auto;
-  padding-top: 0.8vh;
-  padding-left: 1vw;
-  gap: 0.4vw;
+  padding-top: 12px;
+  padding-left: 12px;
+  gap: 3px;
 }
 .content-price .content-menu h3 {
   color: #000;
@@ -492,8 +490,8 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
   width: 280px;
   height: 280px;
   border: 16px solid #000;
-  border-radius: 50%;
   border-top: 16px solid transparent;
+  border-radius: 50%;
   animation: spinner 3s linear infinite;
 }
 
@@ -540,7 +538,6 @@ header .banner img, .header-home .banner img {
 @media only screen and (min-width: 1024px) {
   .restaurant-name {
     max-width: 1024px;
-    margin: auto;
   }
 }
 .restaurant-name h1 {

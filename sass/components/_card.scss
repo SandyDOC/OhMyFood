@@ -9,7 +9,7 @@
         justify-content: center;
     }
 
-    @include breakpoints(desktop){
+    @include breakpoints(desktop) {
         gap: 3%;
     }
 
@@ -82,7 +82,8 @@ i.fa-store {
         flex-flow: wrap;
         justify-content: center;
     }
-    @include breakpoints(desktop){
+
+    @include breakpoints(desktop) {
         width: 85%;
         margin: auto;
     }
@@ -119,9 +120,6 @@ i.fa-store {
 .card-content {
     display: flex;
     justify-content: space-between;
-
-    // padding-left: 20px;
-    // padding-right: 20px;
     padding: 14px 20px 16px 20px;
 }
 
@@ -134,10 +132,6 @@ i.fa-store {
     .card-subtitle {
         @include typography($black, $size-mediumSize, $fontLight);
         margin-top: 3px;
-
-        // @include breakpoints(table) {
-        //     margin-top: 0;
-        // }
     }
 }
 
@@ -172,8 +166,12 @@ i.fa-store {
         cursor: pointer;
     }
 
-    &:hover .content-menu h3,
-    p {
+    &:hover .content-menu h3 {
+        width: calc(100% - 63px);
+        @extend %txt-overflow;
+    }
+
+    &:hover .content-menu p {
         width: calc(100% - 63px);
         @extend %txt-overflow;
     }
@@ -192,22 +190,19 @@ i.fa-store {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    padding-top: 0.7vw;
-    padding-left: 1vw;
-    gap: 10vw;
-
-    @include breakpoints(desktop){
+ 
+    @include breakpoints(desktop) {
         padding-top: 0px;
     }
 
     .content-menu {
         @extend %flex-column;
-        width: calc(100% - 57px);
+        width: 78%;
         height: auto;
-        padding-top: 0.8vh;
-        padding-left: 1vw;
-        gap: 0.4vw;
-
+        padding-top: 12px;
+        padding-left: 12px;
+        gap: 3px;
+    
         h3 {
             @include typography($black, $size-x-mediumSize, $fontMedium);
             @extend %txt-overflow;
