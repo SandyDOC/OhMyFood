@@ -81,6 +81,7 @@ i.fa-store {
     box-sizing: border-box;
     align-items: center;
     gap: 25px;
+    // max-width: 1080px;
 
     @include breakpoints(table) {
         flex-flow: wrap;
@@ -90,6 +91,7 @@ i.fa-store {
 
     a {
         width: 87%;
+        max-width: 490px;
 
         @include breakpoints(table) {
             width: 45%;
@@ -120,21 +122,9 @@ i.fa-store {
     display: flex;
     justify-content: space-between;
 
-    padding-left: 20px;
-    padding-right: 20px;
-    // padding-top: 3vw;
-    // padding-bottom: 3vw;
-    // padding-left: 3vw;
-    // margin-bottom: 0px;
-    // margin-top: 3px;
-
-    // width: 92%;
-
-    // @include breakpoints(table) {
-    //     // padding-top: 1vw;
-    //     // padding-bottom: 1vw;
-    //     width: 91%;
-    // }
+    // padding-left: 20px;
+    // padding-right: 20px;
+    padding: 12px 20px 16px 20px;
 }
 
 .card-txt {

@@ -16,6 +16,10 @@
   text-overflow: ellipsis;
 }
 
+* {
+  margin: 0px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -24,6 +28,7 @@ body {
 }
 
 .main-container {
+  height: 100%;
   width: 100%;
   min-width: 320px;
   box-sizing: border-box;
@@ -170,6 +175,7 @@ i.fa-store {
   box-sizing: border-box;
   align-items: center;
   gap: 25px;
+  max-width: 1080px;
 }
 @media only screen and (min-width: 768px) {
   .resto-cards {
@@ -179,6 +185,7 @@ i.fa-store {
 }
 .resto-cards a {
   width: 87%;
+  max-width: 490px;
 }
 @media only screen and (min-width: 768px) {
   .resto-cards a {
@@ -206,8 +213,7 @@ i.fa-store {
 .card-content {
   display: flex;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 12px 20px 16px 20px;
 }
 
 .card-txt .card-title {
@@ -322,7 +328,6 @@ i.fa-store {
   stroke-width: 1px;
   position: relative;
   cursor: pointer;
-  top: 18px;
 }
 .like path {
   fill-opacity: 1;
@@ -339,7 +344,6 @@ i.fa-store {
   stroke-width: 1px;
   position: relative;
   cursor: pointer;
-  top: 18px;
 }
 .like--inactive path {
   fill-opacity: 0;
