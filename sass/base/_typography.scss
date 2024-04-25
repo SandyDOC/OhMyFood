@@ -1,21 +1,33 @@
 * {
   margin: 0px;
+  padding: 0px;
 }
+
+// $footer-height: 120px; // Hauteur du footer
 
 body {
   font-family: $fontText;
-  margin: 0px;
-  height: 100%;
-  box-sizing: border-box;
+  //   min-width: 320px;
+  margin: 0; // Enlever les marges par défaut du body
+  min-height: 100vh; // Hauteur minimum de la fenêtre visible
+  display: flex;
+  flex-direction: column;
 }
 
-.main-container {
-  // margin: 0px;
-  height: 100%;
-  width: 100%;
-  min-width: 320px;
-  box-sizing: border-box;
-}
+// body {
+//   font-family: $fontText;
+//   margin: 0px;
+//   height: 100%;
+//   box-sizing: border-box;
+// }
+
+// .main-container {
+//   // margin: 0px;
+//   height: 100%;
+//   width: 100%;
+//   min-width: 320px;
+//   box-sizing: border-box;
+// }
 
 a {
   color: inherit;

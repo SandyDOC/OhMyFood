@@ -5,37 +5,57 @@
     justify-content: space-around;
     background: $lightBlack;
 
-    padding: 22px 25px 22px 25px;
-    gap: 3vw;
+    margin-top: auto; // Pousse le footer en bas de la page
 
-    @include breakpoints(table){
+    padding: 22px 25px 22px 25px;
+    gap: 12px;
+    // gap: 3vw;
+
+    @include breakpoints(table) {
         flex-direction: row-reverse;
         justify-content: flex-end;
         align-items: baseline;
-        padding: 30px 25px 30px 0px;
+        padding: 32px 0px 25px 0px;
+        gap: 25px;
+    }
+    @include breakpoints(desktop){
+        gap: 60px;
     }
 
-    .logo img{
+    .logo img {
         object-fit: contain;
         max-width: 105px;
         height: 18px;
-        padding-top: 3vw;
+        padding-top: 12px;
+        // padding-top: 3vw;
         filter: invert(100%);
 
-        @include breakpoints(table){
+        @include breakpoints(table) {
             position: relative;
-            top: 0.4vw;
+            top: 4px;
+            // top: 0.4vw;
+        }
+
+        @include breakpoints(desktop){
+            right: 30px;
         }
     }
 
     .link {
         @extend %flex-column;
-        gap: 2vw;
+        // gap: 2vw;
+        gap: 7px;
 
         @include breakpoints(table) {
             flex-direction: row;
             justify-content: flex-end;
-            width: 94%;
+            width:81%;
+            gap: 25px;
+            // width: 94%;
+        }
+
+        @include breakpoints(desktop){
+            width: 100%;
         }
     }
 

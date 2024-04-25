@@ -18,20 +18,15 @@
 
 * {
   margin: 0px;
+  padding: 0px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0px;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.main-container {
-  height: 100%;
-  width: 100%;
-  min-width: 320px;
-  box-sizing: border-box;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -114,12 +109,17 @@ a {
 
 .step-group {
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 @media only screen and (min-width: 768px) {
   .step-group {
     flex-direction: row;
     justify-content: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .step-group {
+    gap: 3%;
   }
 }
 .step-group .step {
@@ -174,13 +174,18 @@ i.fa-store {
 .resto-cards {
   box-sizing: border-box;
   align-items: center;
-  gap: 25px;
-  max-width: 1080px;
+  gap: 4vw;
 }
 @media only screen and (min-width: 768px) {
   .resto-cards {
     flex-flow: wrap;
     justify-content: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .resto-cards {
+    width: 85%;
+    margin: auto;
   }
 }
 .resto-cards a {
@@ -213,7 +218,7 @@ i.fa-store {
 .card-content {
   display: flex;
   justify-content: space-between;
-  padding: 12px 20px 16px 20px;
+  padding: 14px 20px 16px 20px;
 }
 
 .card-txt .card-title {
@@ -274,6 +279,11 @@ i.fa-store {
   padding-top: 0.7vw;
   padding-left: 1vw;
   gap: 10vw;
+}
+@media only screen and (min-width: 1024px) {
+  .content-price {
+    padding-top: 0px;
+  }
 }
 .content-price .content-menu {
   width: calc(100% - 57px);
@@ -391,38 +401,56 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
   font-weight: 500;
   justify-content: space-around;
   background: #353535;
+  margin-top: auto;
   padding: 22px 25px 22px 25px;
-  gap: 3vw;
+  gap: 12px;
 }
 @media only screen and (min-width: 768px) {
   .footer-home, footer {
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: baseline;
-    padding: 30px 25px 30px 0px;
+    padding: 32px 0px 25px 0px;
+    gap: 25px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer-home, footer {
+    gap: 60px;
   }
 }
 .footer-home .logo img, footer .logo img {
   object-fit: contain;
   max-width: 105px;
   height: 18px;
-  padding-top: 3vw;
+  padding-top: 12px;
   filter: invert(100%);
 }
 @media only screen and (min-width: 768px) {
   .footer-home .logo img, footer .logo img {
     position: relative;
-    top: 0.4vw;
+    top: 4px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer-home .logo img, footer .logo img {
+    right: 30px;
   }
 }
 .footer-home .link, footer .link {
-  gap: 2vw;
+  gap: 7px;
 }
 @media only screen and (min-width: 768px) {
   .footer-home .link, footer .link {
     flex-direction: row;
     justify-content: flex-end;
-    width: 94%;
+    width: 81%;
+    gap: 25px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer-home .link, footer .link {
+    width: 100%;
   }
 }
 .footer-home .illustration, footer .illustration {
@@ -486,7 +514,7 @@ header .banner img, .header-home .banner img {
 }
 
 .restaurant-presentation {
-  padding-bottom: 5vw;
+  padding-bottom: 45px;
 }
 @media only screen and (min-width: 1024px) {
   .restaurant-presentation {
@@ -497,15 +525,22 @@ header .banner img, .header-home .banner img {
 
 .restaurant-name {
   position: relative;
-  top: -6vw;
-  padding-top: 4vw;
-  gap: 3.5vw;
+  z-index: 0;
+  top: -50px;
+  padding-top: 15px;
+  gap: 15px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .restaurant-name {
+    gap: 30px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .restaurant-name {
     max-width: 1024px;
+    margin: auto;
   }
 }
 .restaurant-name h1 {
@@ -517,7 +552,8 @@ header .banner img, .header-home .banner img {
 }
 
 .restaurant-menu {
-  padding-bottom: 4vw;
+  padding-bottom: 18px;
+  gap: 7px;
 }
 .restaurant-menu:nth-child(2) h2 {
   animation-delay: 1.3s;
@@ -572,8 +608,8 @@ header .banner img, .header-home .banner img {
   position: relative;
   width: 23px;
   height: 27px;
-  margin-left: 7vw;
-  margin-bottom: 3vw;
+  margin-left: 8%;
+  margin-bottom: 10px;
   animation: animationFade 0.3s backwards;
 }
 .restaurant-menu h2::before {
@@ -585,6 +621,11 @@ header .banner img, .header-home .banner img {
   width: 40px;
   height: 3px;
 }
+@media only screen and (min-width: 768px) {
+  .restaurant-menu h2 {
+    margin-left: 74px;
+  }
+}
 .restaurant-menu .card-menu {
-  gap: 3vw;
+  gap: 20px;
 }

@@ -21,7 +21,8 @@ main {
 }
 
 .restaurant-presentation {
-    padding-bottom: 5vw;
+    // padding-bottom: 5vw;
+    padding-bottom: 45px;
 
     @include breakpoints(desktop) {
         max-width: 1024px;
@@ -32,16 +33,25 @@ main {
 .restaurant-name {
     @extend %flex-center;
     position: relative;
-    top: -6vw;
+    z-index: 0;
+    top: -50px;
+    // top: -6vw;
 
-    padding-top: 4vw;
-    gap: 3.5vw;
+    padding-top: 15px;
+    gap: 15px;
+    // padding-top: 4vw;
+    // gap: 3.5vw;
 
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    
+    @include breakpoints(table){
+        gap: 30px;
+    }
 
     @include breakpoints(desktop) {
         max-width: 1024px;
+        margin: auto;
     }
 
     h1 {
@@ -53,7 +63,9 @@ main {
 
 .restaurant-menu {
     @extend %flex-column;
-    padding-bottom: 4vw;
+    padding-bottom: 18px;
+    gap: 7px;
+    // padding-bottom: 4vw;
 
     @include cardsMenuAnimation;
 
@@ -64,8 +76,11 @@ main {
 
         width: 23px;
         height: 27px;
-        margin-left: 7vw;
-        margin-bottom: 3vw;
+
+        margin-left: 8%;
+        margin-bottom: 10px;
+        // margin-left: 7vw;
+        // margin-bottom: 3vw;
 
         animation: animationFade 0.3s backwards;
 
@@ -80,11 +95,16 @@ main {
             width: 40px;
             height: 3px;
         }
+
+        @include breakpoints(table){
+            margin-left: 74px;
+        }
     }
 
     .card-menu {
         @extend %flex-column, %flex-center;
-        gap: 3vw;
+        // gap: 3vw;
+        gap: 20px;
     }
 }
 

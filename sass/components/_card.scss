@@ -2,14 +2,15 @@
 .step-group {
     @extend %flex-column;
     align-items: center;
-    // padding-bottom: 8vw;
-    gap: 20px;
+    gap: 25px;
 
     @include breakpoints(table) {
         flex-direction: row;
         justify-content: center;
-        // gap: 3vw;
-        // padding-bottom: 5vw;
+    }
+
+    @include breakpoints(desktop){
+        gap: 3%;
     }
 
     .step {
@@ -48,21 +49,15 @@
     .indications {
         display: flex;
         align-items: center;
-        // gap: 3vw;
-
-        // position: relative;
-        // left: 7vw;
         gap: 25px;
+
         position: relative;
         left: 37px;
 
         @include breakpoints(table) {
-            // padding-left: 0vw;
-            // gap: 11px;
             left: 4px;
+            // gap: 5px;
             gap: 1.7vw;
-            // gap: 1.5vw;
-            // left: 2px;
         }
     }
 }
@@ -80,13 +75,16 @@ i.fa-store {
     @extend %flex-column;
     box-sizing: border-box;
     align-items: center;
-    gap: 25px;
-    // max-width: 1080px;
+    // gap: 30px;
+    gap: 4vw;
 
     @include breakpoints(table) {
         flex-flow: wrap;
         justify-content: center;
-        // padding-left: 9px;
+    }
+    @include breakpoints(desktop){
+        width: 85%;
+        margin: auto;
     }
 
     a {
@@ -124,7 +122,7 @@ i.fa-store {
 
     // padding-left: 20px;
     // padding-right: 20px;
-    padding: 12px 20px 16px 20px;
+    padding: 14px 20px 16px 20px;
 }
 
 .card-txt {
@@ -197,6 +195,10 @@ i.fa-store {
     padding-top: 0.7vw;
     padding-left: 1vw;
     gap: 10vw;
+
+    @include breakpoints(desktop){
+        padding-top: 0px;
+    }
 
     .content-menu {
         @extend %flex-column;
