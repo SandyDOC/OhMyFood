@@ -75,12 +75,12 @@ i.fa-store {
     @extend %flex-column;
     box-sizing: border-box;
     align-items: center;
-    // gap: 30px;
-    gap: 4vw;
-
+    gap: 25px;
+    
     @include breakpoints(table) {
         flex-flow: wrap;
         justify-content: center;
+        gap: 4vw;
     }
 
     @include breakpoints(desktop) {

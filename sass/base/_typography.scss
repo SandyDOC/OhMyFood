@@ -9,9 +9,10 @@ body {
   font-family: $fontText;
   //   min-width: 320px;
   margin: 0; // Enlever les marges par défaut du body
-  min-height: 100vh; // Hauteur minimum de la fenêtre visible
-  display: flex;
-  flex-direction: column;
+  // min-height: 100vh; // Hauteur minimum de la fenêtre visible
+  // display: flex;
+  // flex-direction: column;
+  margin-top: auto; // Pousse le footer en bas de la page
 }
 
 // body {

@@ -24,9 +24,7 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin-top: auto;
 }
 
 a {
@@ -174,12 +172,13 @@ i.fa-store {
 .resto-cards {
   box-sizing: border-box;
   align-items: center;
-  gap: 4vw;
+  gap: 25px;
 }
 @media only screen and (min-width: 768px) {
   .resto-cards {
     flex-flow: wrap;
     justify-content: center;
+    gap: 4vw;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -409,7 +408,7 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: baseline;
-    padding: 32px 0px 25px 0px;
+    padding: 52px 0px 25px 0px;
     gap: 25px;
   }
 }
