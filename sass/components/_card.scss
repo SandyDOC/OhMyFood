@@ -78,13 +78,14 @@ i.fa-store {
     gap: 25px;
     
     @include breakpoints(table) {
-        flex-flow: wrap;
+        flex-flow: row wrap;
         justify-content: center;
-        gap: 4vw;
+        gap: 28px;
     }
 
     @include breakpoints(desktop) {
-        width: 85%;
+        width: 80%;
+        // width: 85%;
         margin: auto;
     }
 

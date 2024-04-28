@@ -176,14 +176,14 @@ i.fa-store {
 }
 @media only screen and (min-width: 768px) {
   .resto-cards {
-    flex-flow: wrap;
+    flex-flow: row wrap;
     justify-content: center;
-    gap: 4vw;
+    gap: 28px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .resto-cards {
-    width: 85%;
+    width: 80%;
     margin: auto;
   }
 }
@@ -522,6 +522,8 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 55px;
   gap: 15px;
 }
 .hero h1 {
@@ -540,35 +542,70 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
   width: 96%;
 }
 
-.hero,
 .fonctionnement,
 .restaurants {
-  padding-top: 30px;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 80px;
   padding-bottom: 55px;
 }
-
-.fonctionnement h2,
-.restaurants h2 {
-  padding-bottom: 22px;
-  margin-left: 47px;
-}
-@media only screen and (min-width: 1024px) {
-  .fonctionnement h2,
-  .restaurants h2 {
-    margin-left: 11%;
+@media only screen and (min-width: 768px) {
+  .fonctionnement,
+  .restaurants {
+    padding-top: 80px;
   }
 }
 
 .fonctionnement {
   background: #FFFFFF;
 }
-
-.restaurants {
-  box-sizing: border-box;
+.fonctionnement h2 {
+  position: absolute;
+  top: 15px;
+  left: 29%;
+  transform: translateX(-50%);
+  padding: 10px 20px 5px 40px;
+  z-index: 1;
+}
+@media only screen and (min-width: 768px) {
+  .fonctionnement h2 {
+    left: 14%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .fonctionnement {
+    width: 100%;
+    margin: auto;
+  }
 }
 @media only screen and (min-width: 1024px) {
-  .restaurants {
+  .fonctionnement {
+    width: 78%;
+  }
+}
+
+.restaurants h2 {
+  position: absolute;
+  top: 17px;
+  left: 27%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  /* Ajoutez un peu d'espace autour du texte */
+  z-index: 1;
+}
+@media only screen and (min-width: 768px) {
+  .restaurants h2 {
+    left: -2%;
+    top: 20px;
+    padding-left: 250px;
     margin: auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants h2 {
+    left: 9%;
+    margin: auto;
+    padding-left: 26vw;
   }
 }
 
