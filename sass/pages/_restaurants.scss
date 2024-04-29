@@ -34,7 +34,6 @@ main {
     position: relative;
     z-index: 0;
     top: -28px;
-    // top: -50px;
   
     padding-top: 15px;
     gap: 19px;
@@ -49,7 +48,6 @@ main {
     @include breakpoints(desktop) {
         max-width: 1024px;
         top: -50px;
-        // margin: auto;
     }
 
     h1 {

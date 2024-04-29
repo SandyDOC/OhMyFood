@@ -104,23 +104,19 @@
         left: 27%;
         transform: translateX(-50%);
         padding: 10px 20px;
-        /* Ajoutez un peu d'espace autour du texte */
         z-index: 1;
 
         @include breakpoints(table) {
-            // margin-left: 11%;
             left: -2%;
             top: 20px;
             padding-left: 250px;
             margin: auto;
-            // width: 100%;
         }
 
         @include breakpoints(desktop) {
-            // width: 78%;
             left: 9%;
-            margin: auto;
             padding-left: 26vw;
+            margin: auto;
         }
     }
 }

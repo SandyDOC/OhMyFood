@@ -56,7 +56,6 @@
 
         @include breakpoints(table) {
             left: 4px;
-            // gap: 5px;
             gap: 1.7vw;
         }
     }
@@ -75,17 +74,17 @@ i.fa-store {
     @extend %flex-column;
     box-sizing: border-box;
     align-items: center;
-    gap: 25px;
+    gap: 1.7em;
     
     @include breakpoints(table) {
         flex-flow: row wrap;
         justify-content: center;
-        gap: 28px;
+        gap: 2em;
     }
-
+    
     @include breakpoints(desktop) {
         width: 80%;
-        // width: 85%;
+        gap: 3em;
         margin: auto;
     }
 

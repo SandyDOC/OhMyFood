@@ -23,7 +23,7 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  margin-top: auto;
+  min-height: 100vh;
 }
 
 a {
@@ -171,18 +171,19 @@ i.fa-store {
 .resto-cards {
   box-sizing: border-box;
   align-items: center;
-  gap: 25px;
+  gap: 1.7em;
 }
 @media only screen and (min-width: 768px) {
   .resto-cards {
     flex-flow: row wrap;
     justify-content: center;
-    gap: 28px;
+    gap: 2em;
   }
 }
 @media only screen and (min-width: 1024px) {
   .resto-cards {
     width: 80%;
+    gap: 3em;
     margin: auto;
   }
 }
@@ -398,7 +399,6 @@ header .fa-arrow-left, .header-home .fa-arrow-left {
   font-weight: 500;
   justify-content: space-around;
   background: #353535;
-  margin-top: auto;
   padding: 22px 25px 22px 25px;
   gap: 12px;
 }
