@@ -160,13 +160,14 @@ i.fa-store {
     border-radius: 15px;
     height: 69px;
 
+    //Start of plate card (effet fluide, fondu)
     animation: animationFade 0.3s backwards;
 
     &:hover {
         cursor: pointer;
     }
 
-    &:hover .content-menu h3 {
+    &:hover .content-menu h3{
         width: calc(100% - 63px);
         @extend %txt-overflow;
     }
