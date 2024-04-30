@@ -255,6 +255,7 @@ i.fa-store {
   width: 85%;
   border-radius: 15px;
   height: 69px;
+  overflow: hidden;
   animation: animationFade 0.3s backwards;
 }
 .card-menu article:hover {
@@ -270,8 +271,7 @@ i.fa-store {
   transform: translateX(-63px);
 }
 .card-menu article:hover .overlay {
-  width: 63px;
-  right: 0;
+  margin-right: 0;
 }
 
 .content-price {
@@ -307,7 +307,7 @@ i.fa-store {
   font-weight: 700;
   position: absolute;
   right: 10px;
-  transition: transform 0.5s ease, right 0.5s ease;
+  transition: transform 0.5s ease, margin-right 0.5s ease;
 }
 
 .overlay {
@@ -315,12 +315,12 @@ i.fa-store {
   bottom: 0;
   right: 0;
   background-color: #99E2D0;
-  overflow: hidden;
-  width: 0;
+  margin-right: -63px;
+  width: 63px;
   height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  transition: width 0.5s ease, right 0.5s ease;
+  transition: margin-right 0.5s ease;
 }
 .overlay .overlay_icon {
   position: absolute;
